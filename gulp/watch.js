@@ -17,7 +17,7 @@ gulp.task('watch', watchDeps, function () {
   // Start browserSync
   browserSync.init({
     server: {
-      basedir: './',
+      basedir: './public',
     },
   }, () => { browserSync.initialized = true; });
 

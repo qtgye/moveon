@@ -5,7 +5,7 @@ let rollup = require('rollup');
 let uglify = require('rollup-plugin-uglify');
 let notifier = require('node-notifier');
 
-let output = projectRoot('dist/scripts/app.js');
+let output = projectRoot('public/scripts/app.js');
 let isDev = isDevelopment || isLocal ? true : false;
 let isProd = isStaging || isProduction ? true : false;
 

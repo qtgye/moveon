@@ -5,7 +5,7 @@ let gulp = require('gulp');
 let jshint = require('gulp-jshint');
 let notifier = require('node-notifier');
 
-let src = projectRoot('source/scripts/**/*.js');
+let src = projectRoot('src/scripts/**/*.js');
 
 
 module.exports = {

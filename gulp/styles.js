@@ -10,8 +10,8 @@ let cleanCSS = require('gulp-clean-css');
 let notifier = require('node-notifier');
 
 let isDev = isLocal || isDevelopment ? true : false;
-let src = projectRoot('source/styles/main.scss');
-let dest = projectRoot('dist/styles');
+let src = projectRoot('src/styles/main.scss');
+let dest = projectRoot('public/styles');
 
 module.exports = {
 
@@ -27,7 +27,7 @@ module.exports = {
             .pipe(gulp.dest(dest).on('end', onStylesDone));
   },
 
-  watchFiles: projectRoot('source/styles/**/*.scss'),
+  watchFiles: projectRoot('src/styles/**/*.scss'),
 
   deps: isDev ? ['lint-styles'] : [],
 

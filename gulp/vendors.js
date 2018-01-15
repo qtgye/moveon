@@ -16,8 +16,8 @@ let notifier = require('node-notifier');
 
 let configFile = projectRoot('vendors.config.js');
 let dest = {
-  styles: projectRoot('dist/styles'),
-  scripts: projectRoot('dist/scripts')
+  styles: projectRoot('public/styles'),
+  scripts: projectRoot('public/scripts')
 };
 
 let isDev = isDevelopment || isLocal ? true : false;

@@ -1,6 +1,6 @@
 let { projectRoot } = require('gulp-tasks-preset');
 let gulp = require('gulp');
-let src = projectRoot('source/styles/**/*.scss');
+let src = projectRoot('src/styles/**/*.scss');
 let sassLint = require('gulp-sass-lint');
 
 module.exports = {

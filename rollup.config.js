@@ -8,7 +8,7 @@ let uglify = require('rollup-plugin-uglify');
 
 let isDev = isDevelopment || isLocal ? true : false;
 let isProd = isStaging || isProduction ? true : false;
-let entry = projectRoot('source/scripts/app.js');
+let entry = projectRoot('src/scripts/app.js');
 let rollupPlugins = isProd ? [ uglify() ] : [];
 rollupPlugins = rollupPlugins.concat([
   babel(),

@@ -7,6 +7,7 @@
 // MIXINS
 @import "mixins/breakpoint";
 @import "mixins/respond";
+@import "mixins/aspect-ratio";
 
 // CONFIGS
 @include define-breakpoints($breakpoints);
@@ -19,3 +20,6 @@
 
 @import 'components/header';
 @import 'components/nav';
+
+// PER PAGE COMPONENTS
+@import "components/home-hero";

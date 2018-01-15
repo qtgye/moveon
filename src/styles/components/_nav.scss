@@ -1,0 +1,294 @@
+.nav {
+  top: 0;
+  left: 0;
+  @include respond((
+    width: 100%,
+    height: 100%,
+    position: fixed null relative,
+    background-color: $white null transparent,
+    display: block null flex,
+    justify-content: flex-end,
+    align-items: flex-end,
+    padding-bottom: null null 19px,
+  ));
+
+  &__toggle {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 17px;
+    left: 16px;
+    z-index: 900;
+    @include respond((
+      display: block null none,
+    ));
+
+    svg {
+      width: 18px;
+      height: 12px;
+      fill: $white;
+    }
+  }
+
+  &__close {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    z-index: 900;
+    @include respond((
+      display: block null none,
+    ));
+
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: $azure;
+    }
+  }
+
+  &__title {
+    padding: 11px 0 11px 72px;
+    font-family: 'Roboto Condensed Bold';
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1.11;
+    align-items: center;
+    height: 58px;
+    @include respond((
+      display: flex null none,
+    ));
+  }
+
+  li > a {
+    transition: all .3s;
+    @include respond((
+      display: flex,
+      align-items: center,
+      height: 48px null 36px,
+      font-family: 'Roboto Regular' null null 'Roboto Condensed',
+      font-weight: normal null null bolder,
+      font-size: 16px,
+      line-height: 1.25,
+      padding-left: 16px null 0,
+      padding-right: 16px null 0,
+      text-transform: null null uppercase,
+    ));
+
+    &:link,
+    &:visited {
+      @include respond((
+        color: $black null $white,
+      ));
+    }
+
+    &:hover,
+    &:active {
+      color: $azure;
+
+      svg {
+        fill: $azure;
+      }
+    }
+
+    svg {
+      transition: all .3s;
+      @include respond((
+        fill: $black null $white,
+      ));
+    }
+  }
+
+
+  &__primary {
+    @include respond((
+      padding-top: 8px null 0,
+      padding-bottom: 8px null 0,
+      margin-left: null null percentage(430px/$bp-xl),
+      margin-right: null null auto,
+    ));
+
+    li {
+      @include respond((
+        display: block null inline-flex,
+      ));
+
+      &:not(:first-child) {
+        @include respond((
+          margin-left: null null 24px,
+        ));
+      }
+    }
+
+    &__caret {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      margin-right: 0;
+      margin-left: auto;
+      background-color: transparent;
+      @include respond((
+        margin-left: null null 4px,
+      ));
+
+      svg {
+        width: 12px;
+        height: 8px;
+        background-color: transparent;
+        @include respond((
+          fill: $black null $white,
+        ));
+      }
+    }
+
+    &__dropdown {
+
+      a {
+
+      }
+
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  &__secondary {
+    @include respond((
+      margin-right: null null percentage(130px/$bp-xl),
+      margin-left: null null auto,
+    ));
+
+    &__top {
+      @include respond((
+        display: null null flex,
+        justify-content: flex-end,
+        border-top: (1px solid $gray) null 0,
+        border-bottom: (1px solid $gray) null 0,
+        padding-top: 8px null 0,
+        padding-bottom: 8px null 0,
+        margin-bottom: null null 20px,
+      ));
+
+      li:not(:first-child) {
+        @include respond((
+          margin-left: null null 24px,
+        ));
+      }
+
+      li a {
+        @include respond((
+          text-transform: null null none,
+        ));
+      }
+    }
+
+    &__bottom {
+      @include respond((
+        display: null null flex,
+        align-items: flex-end,
+        white-space: null null nowrap,
+        padding-top: 8px null 0,
+        padding-bottom: 8px null 0,
+      ));
+
+      li:not(:first-child) {
+        @include respond((
+          margin-left: null null 24px,
+        ));
+      }
+
+      li {
+        @include respond((
+          display: null null inline-flex
+        ));
+      }
+
+      li a {
+        @include respond((
+          text-transform: null null none,
+        ));
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        @include respond((
+          display: none null inline-flex,
+        ));
+      }
+    }
+  }
+
+  .nav__primary__subnav {
+    @include respond((
+      display: null null flex,
+      align-items: center,
+      height: null null 91px,
+      position: relative null absolute,
+      top: null null 100%,
+      left: null null 0,
+      width: null null 100%,
+      padding-left: null null percentage(430px/$bp-xl),
+      background-color: null null $dark-gray,
+    ));
+
+    li {
+      &:not(:first-child) {
+        @include respond((
+          margin-left: null null 70px
+        ));
+      }
+    }
+
+    a {
+      @include respond((
+        padding-left: 72px null 0
+      ));
+    }
+  }
+
+
+  // STATES
+  @include breakpoint(md down) {
+    &:not(.nav--visible) {
+      display: none;
+    }
+  }
+
+  .nav__dropdown--expanded {
+
+    & > a:link,
+    & > a:active,
+    & > a:visited {
+      color: $azure;
+    }
+
+    .nav__primary__caret {
+      transform: rotate(180deg);
+
+      svg {
+        fill: $azure;
+      }
+    }
+  }
+
+  .nav__dropdown:not(.nav__dropdown--expanded) {
+    ul {
+      display: none;
+    }
+  }
+}
+
+
+// LARGE LAYOUT
+@include breakpoint(lg) {
+
+}

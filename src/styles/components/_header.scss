@@ -1,0 +1,26 @@
+.header {
+  display: block;
+  position: relative;
+  background-color: black;
+  width: 100%;
+  @include respond((
+    height: 57px null 130px,
+  ));
+
+  .logo {
+    display: block;
+    position: absolute;
+    @include respond((
+      width: 85px null 180px,
+      height: 45px null 86px,
+      top: 27px null 66px,
+      left: 50% null percentage(130px/$bp-xl),
+      transform: translateX(-50%) null none,
+      z-index: null null 1000,
+    ));
+
+    img {
+      width: 100%;
+    }
+  }
+}

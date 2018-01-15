@@ -45,7 +45,7 @@ module.exports = {
   deps: isDev ? [ 'lint-scripts' ] : [],
 
 
-  watchFiles: projectRoot('source/scripts/**/*.js'),
+  watchFiles: projectRoot('src/scripts/**/*.js'),
 
 
 }

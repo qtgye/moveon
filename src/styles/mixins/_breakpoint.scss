@@ -1,0 +1,84 @@
+/*
+IMPROVED BREAKPOINT MIXINS
+USAGE:
+1. Define your breakpoints:
+    @include define-breakpoints((
+      small: null,
+      medium: 768,
+      large: 1280 1920,
+      // $name: $sizes
+    ));
+    - $name:    A breakpoint name
+    - $sizes:   (number) The min-width. Max-width value will be computed as next breakpoint - 1.
+                (list) Min-width and max-width.
+2. Use a breakpoint:
+    @include breakpoint(medium only) {
+      // Styles here
+    }
+    - parameters: $name $scope
+        $name - One of the defined breakpoints
+        $scope (optional)
+            - only - Uses min-width and max-width
+            - down - Uses max-width only
+    - If both min-width and max-width computed values are null, no media query will be used.
+ */
+
+@mixin define-breakpoints($breakpoints-map: ()) {
+  @if type-of($breakpoints-map) == map {
+    // Define globals
+    $_breakpoints-min:    () !global;
+    $_breakpoints-max:    () !global;
+    $_breakpoints-names:  () !global;
+    // Fill up globals
+    @each $key, $value in $breakpoints-map {
+      $_breakpoints-names: append($_breakpoints-names, $key) !global;
+      $_min: if(type-of($value) == list and length($value) > 0, nth($value, 1), $value);
+      $_breakpoints-min: map-merge($_breakpoints-min, ( $key: $_min)) !global;
+    }
+    // Fill up max-breakpoints
+    @for $index from 1 through length($_breakpoints-names) {
+      $_name: nth($_breakpoints-names, $index);
+      $_sizes: map-get($breakpoints-map, $_name);
+      $_max: if(type-of($_sizes) == list and length($_sizes) >= 2, nth($_sizes, 2), null);
+
+      @if not $_max {
+        $_next-name: if($index < length($_breakpoints-names), nth($_breakpoints-names, $index + 1), null);
+        $_next-min: if($_next-name, map-get($_breakpoints-min, $_next-name), null);
+        $_max: if($_next-min, $_next-min - 1, null);
+      }
+
+      $_breakpoints-max: map-merge($_breakpoints-max, ( $_name: $_max )) !global;
+    }
+  }
+  @else {
+    @error "define-breakpoints(): Please provide a valid breakpoint map.";
+  }
+}
+@mixin breakpoint( $breakpoint-args: false) {
+  @if not variable-exists(_breakpoints-min) {@error "breakpoint(): Please define your breakpoints using define-breakpoints."};
+  @if not $breakpoint-args {@error "breakpoint(): Please provide a valid breakpoint argument. e.g. breakpoint($name [$scope])"};
+  // Normalize args
+  @if not (type-of($breakpoint-args) == list) { $breakpoint-args: append((), $breakpoint-args); }
+  $_name: nth($breakpoint-args, 1);
+  $_min: map-get($_breakpoints-min, $_name);
+  $_min: if( type-of($_min) == number and unitless($_min), #{$_min}px, $_min);
+  $_scope: if(length($breakpoint-args) >= 2, nth($breakpoint-args, 2), null);
+  // Build query
+  $query: null;
+  @if not $_scope {
+    $query: if( $_min, "(min-width: #{$_min})", null);
+  } @else {
+    $_max: map-get($_breakpoints-max, $_name);
+    $_max: if(type-of($_max) == number and unitless($_max), "#{$_max}px", $_max);
+    $query: if( $_scope == only and $_min, "(min-width: #{$_min}) and ", "" );
+    $query: if( $_max, "#{$query}(max-width: #{$_max})", "" );
+  }
+  @if $query {
+    @media #{$query} {
+      @content;
+    }
+  }
+  @else {
+    @content;
+  }
+}

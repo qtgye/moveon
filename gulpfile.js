@@ -13,6 +13,9 @@ let tasks = [
   'styles',
   'scripts',
   'pages',
+  'images',
+  'fonts',
+  'sprites',
 ];
 
 

@@ -1,0 +1,40 @@
+/*
+  RESPOND MIXIN
+  Declare your property styles for multiple breakpoints in one line.
+  CONFIG
+  Within the mixin, assign your breakpoint names list to the $breakpoints variable.
+  USAGE:
+  An example showing different possible rules-set formats:
+  .selector {
+    @include respond((
+      display: inline-block block flex,
+      position: relative null absolute,
+      margin-top: 60px,
+      box-shadow: ( inset 0 0 10px blue,   inset 10px 10px 10px green,   none )
+      // $property: $rules-set
+    ));
+  }
+  - Params:
+    $property   - Any valid css property
+    $rules-set  - (list)  a list of properties for each breakpoint.
+                          If a list item is null, it will skip the rule for that corresponding breakpoint
+                - (single value) rule for the first breakpoint, or base.
+ */
+$_breakpoints-names: map-get-key($breakpoints);
+@mixin respond( $styles-map ) {
+  @if not (type-of($styles-map) == map) { @error "$styles-map needs to be a map of properties and rules."; }
+  $breakpoints: $_breakpoints-names;
+  @for $i from 1 through length($breakpoints) {
+    $_name: nth($breakpoints, $i);
+    @include breakpoint($_name) {
+      @each $property, $rules-set in $styles-map {
+        @if type-of($rules-set) == list and $i <= length($rules-set){
+          #{$property}: #{nth($rules-set, $i)};
+        }
+        @else if $i == 1 {
+          #{$property}: #{$rules-set};
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<header id="header" class="header">
+
+  <a href="/" class="logo">
+    <img src="/images/logo.svg" alt="Move On Logo">
+  </a>
+
+  <nav id="nav" class="nav">
+    <span class="nav__title">Menu</span>
+    <ul class="nav__primary">
+      <li><a href="/">Home</a></li>
+      <li class="nav__dropdown">
+        <a href="/">
+          Petitions
+          <button class="nav__primary__caret">
+            <svg><use xlink:href="#caret-down"/></svg>
+          </button>
+        </a>
+        <ul class="nav__primary__subnav">
+          <li><a href="#">Sublink</a></li>
+          <li><a href="#">Sublink</a></li>
+          <li><a href="#">Sublink</a></li>
+        </ul>
+      </li>
+      <li class="nav__dropdown">
+        <a href="/">
+          Campaigns
+          <button class="nav__primary__caret">
+            <svg><use xlink:href="#caret-down"/></svg>
+          </button>
+        </a>
+        <ul class="nav__primary__subnav">
+          <li><a href="#">Sublink</a></li>
+          <li><a href="#">Sublink</a></li>
+          <li><a href="#">Sublink</a></li>
+        </ul>
+      </li>
+      <li><a href="/">Events</a></li>
+      <li><a href="/">About Us</a></li>
+    </ul>
+    <div class="nav__secondary">
+      <ul class="nav__secondary__top">
+        <li><a href="#">News</a></li>
+        <li><a href="#">Store</a></li>
+      </ul>
+      <ul class="nav__secondary__bottom">
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">{% include 'components/svg' with {id: 'document-add'} %}Start A Petition</a></li>
+      </ul>
+    </div>
+
+    <button class="nav__close">
+      {% include 'components/svg' with {id: 'close' } only %}
+    </button>
+  </nav>
+
+  <button class="nav__toggle">
+    {% include 'components/svg' with {id: 'burger' } only %}
+  </button>
+</header>

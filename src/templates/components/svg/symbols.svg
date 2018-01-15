@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+	
+		<symbol id="burger" viewBox="">
+			<path d="M0 12h18v-2H0v2zm0-5h18V5H0v2zm0-7v2h18V0H0z"></path>
+		</symbol>
+	
+		<symbol id="caret-down" viewBox="">
+			<path d="M10.6.6L6 5.2 1.4.6 0 2l6 6 6-6z"></path>
+		</symbol>
+	
+		<symbol id="close" viewBox="">
+			<path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"></path>
+		</symbol>
+	
+		<symbol id="document-add" viewBox="">
+			<path d="M0 2h2v17H0zm13 6h2v12h-2z"></path><path d="M0 2h9v2H0zm11 0h6v2h-6z"></path><path d="M13 0h2v6h-2zM4 6h7v2H4zm0 4h7v2H4zm0 4h4v2H4zm-4 4h15v2H0z"></path>
+		</symbol>
+	
+</svg>

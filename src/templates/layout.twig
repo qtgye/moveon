@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Move On{% endblock %}</title>
+        <link rel="stylesheet" href="/styles/main.css" />
+    </head>
+    <body>
+        <div style="display:none">{% include 'components/svg/symbols.svg' %}</div>
+        <div class="wrapper">
+          {% include 'components/header' %}
+          <div id="content" class="container">{% block content %}{% endblock %}</div>
+          {% include 'components/footer' %}
+        </div>
+        <script src="/scripts/vendors.js"></script>
+        <script src="/scripts/app.js"></script>
+    </body>
+</html>

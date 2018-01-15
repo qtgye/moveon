@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Move On</title>
+        <link rel="stylesheet" href="/styles/main.css" />
+    </head>
+    <body>
+        <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+	
+		<symbol id="burger" viewBox="">
+			<path d="M0 12h18v-2H0v2zm0-5h18V5H0v2zm0-7v2h18V0H0z"></path>
+		</symbol>
+	
+		<symbol id="caret-down" viewBox="">
+			<path d="M10.6.6L6 5.2 1.4.6 0 2l6 6 6-6z"></path>
+		</symbol>
+	
+		<symbol id="close" viewBox="">
+			<path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"></path>
+		</symbol>
+	
+		<symbol id="document-add" viewBox="">
+			<path d="M0 2h2v17H0zm13 6h2v12h-2z"></path><path d="M0 2h9v2H0zm11 0h6v2h-6z"></path><path d="M13 0h2v6h-2zM4 6h7v2H4zm0 4h7v2H4zm0 4h4v2H4zm-4 4h15v2H0z"></path>
+		</symbol>
+	
+</svg>
+</div>
+        <div class="wrapper">
+          <header id="header" class="header">
+
+  <a href="/" class="logo">
+    <img src="/images/logo.svg" alt="Move On Logo">
+  </a>
+
+  <nav id="nav" class="nav">
+    <span class="nav__title">Menu</span>
+    <ul class="nav__primary">
+      <li><a href="/">Home</a></li>
+      <li class="nav__dropdown">
+        <a href="/">
+          Petitions
+          <button class="nav__primary__caret">
+            <svg><use xlink:href="#caret-down"/></svg>
+          </button>
+        </a>
+        <ul class="nav__primary__subnav">
+          <li><a href="#">Sublink</a></li>
+          <li><a href="#">Sublink</a></li>
+          <li><a href="#">Sublink</a></li>
+        </ul>
+      </li>
+      <li class="nav__dropdown">
+        <a href="/">
+          Campaigns
+          <button class="nav__primary__caret">
+            <svg><use xlink:href="#caret-down"/></svg>
+          </button>
+        </a>
+        <ul class="nav__primary__subnav">
+          <li><a href="#">Sublink</a></li>
+          <li><a href="#">Sublink</a></li>
+          <li><a href="#">Sublink</a></li>
+        </ul>
+      </li>
+      <li><a href="/">Events</a></li>
+      <li><a href="/">About Us</a></li>
+    </ul>
+    <div class="nav__secondary">
+      <ul class="nav__secondary__top">
+        <li><a href="#">News</a></li>
+        <li><a href="#">Store</a></li>
+      </ul>
+      <ul class="nav__secondary__bottom">
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#"><svg class="">
+  <use xlink:href="#document-add"/>
+</svg>Start A Petition</a></li>
+      </ul>
+    </div>
+
+    <button class="nav__close">
+      <svg class="">
+  <use xlink:href="#close"/>
+</svg>    </button>
+  </nav>
+
+  <button class="nav__toggle">
+    <svg class="">
+  <use xlink:href="#burger"/>
+</svg>  </button>
+</header>          <div id="content" class="container">
+</div>
+          <div id="footer">
+    &copy; Copyright 2011 by <a href="http://domain.invalid/">you</a>.
+</div>        </div>
+        <script src="/scripts/vendors.js"></script>
+        <script src="/scripts/app.js"></script>
+    </body>
+</html>

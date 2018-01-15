@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto-Regular, sans-serif; }
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url("/fonts/RobotoCondensed-Regular.ttf"); }
+
+@font-face {
+  font-family: 'Roboto Condensed Bold';
+  src: url("/fonts/RobotoCondensed-Bold.ttf");
+  font-weight: bolder; }
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url("/fonts/Roboto-Regular.ttf"); }
+
+/*
+IMPROVED BREAKPOINT MIXINS
+USAGE:
+1. Define your breakpoints:
+    @include define-breakpoints((
+      small: null,
+      medium: 768,
+      large: 1280 1920,
+      // $name: $sizes
+    ));
+    - $name:    A breakpoint name
+    - $sizes:   (number) The min-width. Max-width value will be computed as next breakpoint - 1.
+                (list) Min-width and max-width.
+2. Use a breakpoint:
+    @include breakpoint(medium only) {
+      // Styles here
+    }
+    - parameters: $name $scope
+        $name - One of the defined breakpoints
+        $scope (optional)
+            - only - Uses min-width and max-width
+            - down - Uses max-width only
+    - If both min-width and max-width computed values are null, no media query will be used.
+ */
+/*
+  RESPOND MIXIN
+  Declare your property styles for multiple breakpoints in one line.
+  CONFIG
+  Within the mixin, assign your breakpoint names list to the $breakpoints variable.
+  USAGE:
+  An example showing different possible rules-set formats:
+  .selector {
+    @include respond((
+      display: inline-block block flex,
+      position: relative null absolute,
+      margin-top: 60px,
+      box-shadow: ( inset 0 0 10px blue,   inset 10px 10px 10px green,   none )
+      // $property: $rules-set
+    ));
+  }
+  - Params:
+    $property   - Any valid css property
+    $rules-set  - (list)  a list of properties for each breakpoint.
+                          If a list item is null, it will skip the rule for that corresponding breakpoint
+                - (single value) rule for the first breakpoint, or base.
+ */
+.container {
+  max-width: 1440px; }
+
+button,
+.btn {
+  -webkit-appearance: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer; }
+  button svg,
+  .btn svg {
+    width: 100%;
+    height: 100%; }
+
+ul,
+ol {
+  display: block; }
+  ul li,
+  ol li {
+    display: block;
+    list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+.header {
+  display: block;
+  position: relative;
+  background-color: black;
+  width: 100%; }
+  @media (min-width: 320px) {
+    .header {
+      height: 57px; } }
+  @media (min-width: 1024px) {
+    .header {
+      height: 130px; } }
+  .header .logo {
+    display: block;
+    position: absolute; }
+    @media (min-width: 320px) {
+      .header .logo {
+        width: 85px;
+        height: 45px;
+        top: 27px;
+        left: 50%;
+        transform: translateX(-50%); } }
+    @media (min-width: 1024px) {
+      .header .logo {
+        width: 180px;
+        height: 86px;
+        top: 66px;
+        left: 9.02778%;
+        transform: none;
+        z-index: 1000; } }
+    .header .logo img {
+      width: 100%; }
+
+.nav {
+  top: 0;
+  left: 0; }
+  @media (min-width: 320px) {
+    .nav {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background-color: #ffffff;
+      display: block;
+      justify-content: flex-end;
+      align-items: flex-end; } }
+  @media (min-width: 1024px) {
+    .nav {
+      position: relative;
+      background-color: transparent;
+      display: flex;
+      padding-bottom: 19px; } }
+  .nav__toggle {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 17px;
+    left: 16px;
+    z-index: 900; }
+    @media (min-width: 320px) {
+      .nav__toggle {
+        display: block; } }
+    @media (min-width: 1024px) {
+      .nav__toggle {
+        display: none; } }
+    .nav__toggle svg {
+      width: 18px;
+      height: 12px;
+      fill: #ffffff; }
+  .nav__close {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    z-index: 900; }
+    @media (min-width: 320px) {
+      .nav__close {
+        display: block; } }
+    @media (min-width: 1024px) {
+      .nav__close {
+        display: none; } }
+    .nav__close svg {
+      width: 15px;
+      height: 15px;
+      fill: #00abff; }
+  .nav__title {
+    padding: 11px 0 11px 72px;
+    font-family: 'Roboto Condensed Bold';
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1.11;
+    align-items: center;
+    height: 58px; }
+    @media (min-width: 320px) {
+      .nav__title {
+        display: flex; } }
+    @media (min-width: 1024px) {
+      .nav__title {
+        display: none; } }
+  .nav li > a {
+    transition: all .3s; }
+    @media (min-width: 320px) {
+      .nav li > a {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        font-family: Roboto Regular;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 1.25;
+        padding-left: 16px;
+        padding-right: 16px; } }
+    @media (min-width: 1024px) {
+      .nav li > a {
+        height: 36px;
+        padding-left: 0;
+        padding-right: 0;
+        text-transform: uppercase; } }
+    @media (min-width: 1440px) {
+      .nav li > a {
+        font-family: Roboto Condensed;
+        font-weight: bolder; } }
+    @media (min-width: 320px) {
+      .nav li > a:link, .nav li > a:visited {
+        color: #000000; } }
+    @media (min-width: 1024px) {
+      .nav li > a:link, .nav li > a:visited {
+        color: #ffffff; } }
+    .nav li > a:hover, .nav li > a:active {
+      color: #00abff; }
+      .nav li > a:hover svg, .nav li > a:active svg {
+        fill: #00abff; }
+    .nav li > a svg {
+      transition: all .3s; }
+      @media (min-width: 320px) {
+        .nav li > a svg {
+          fill: #000000; } }
+      @media (min-width: 1024px) {
+        .nav li > a svg {
+          fill: #ffffff; } }
+  @media (min-width: 320px) {
+    .nav__primary {
+      padding-top: 8px;
+      padding-bottom: 8px; } }
+  @media (min-width: 1024px) {
+    .nav__primary {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-left: 29.86111%;
+      margin-right: auto; } }
+  @media (min-width: 320px) {
+    .nav__primary li {
+      display: block; } }
+  @media (min-width: 1024px) {
+    .nav__primary li {
+      display: inline-flex; } }
+  @media (min-width: 1024px) {
+    .nav__primary li:not(:first-child) {
+      margin-left: 24px; } }
+  .nav__primary__caret {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: transparent; }
+    @media (min-width: 1024px) {
+      .nav__primary__caret {
+        margin-left: 4px; } }
+    .nav__primary__caret svg {
+      width: 12px;
+      height: 8px;
+      background-color: transparent; }
+      @media (min-width: 320px) {
+        .nav__primary__caret svg {
+          fill: #000000; } }
+      @media (min-width: 1024px) {
+        .nav__primary__caret svg {
+          fill: #ffffff; } }
+  .nav__primary__dropdown ul {
+    display: none; }
+  @media (min-width: 1024px) {
+    .nav__secondary {
+      margin-right: 9.02778%;
+      margin-left: auto; } }
+  @media (min-width: 320px) {
+    .nav__secondary__top {
+      justify-content: flex-end;
+      border-top: 1px solid #cacaca;
+      border-bottom: 1px solid #cacaca;
+      padding-top: 8px;
+      padding-bottom: 8px; } }
+  @media (min-width: 1024px) {
+    .nav__secondary__top {
+      display: flex;
+      border-top: 0;
+      border-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 20px; } }
+  @media (min-width: 1024px) {
+    .nav__secondary__top li:not(:first-child) {
+      margin-left: 24px; } }
+  @media (min-width: 1024px) {
+    .nav__secondary__top li a {
+      text-transform: none; } }
+  @media (min-width: 320px) {
+    .nav__secondary__bottom {
+      align-items: flex-end;
+      padding-top: 8px;
+      padding-bottom: 8px; } }
+  @media (min-width: 1024px) {
+    .nav__secondary__bottom {
+      display: flex;
+      white-space: nowrap;
+      padding-top: 0;
+      padding-bottom: 0; } }
+  @media (min-width: 1024px) {
+    .nav__secondary__bottom li:not(:first-child) {
+      margin-left: 24px; } }
+  @media (min-width: 1024px) {
+    .nav__secondary__bottom li {
+      display: inline-flex; } }
+  @media (min-width: 1024px) {
+    .nav__secondary__bottom li a {
+      text-transform: none; } }
+  .nav__secondary__bottom svg {
+    width: 24px;
+    height: 24px; }
+    @media (min-width: 320px) {
+      .nav__secondary__bottom svg {
+        display: none; } }
+    @media (min-width: 1024px) {
+      .nav__secondary__bottom svg {
+        display: inline-flex; } }
+  @media (min-width: 320px) {
+    .nav .nav__primary__subnav {
+      align-items: center;
+      position: relative; } }
+  @media (min-width: 1024px) {
+    .nav .nav__primary__subnav {
+      display: flex;
+      height: 91px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding-left: 29.86111%;
+      background-color: #222222; } }
+  @media (min-width: 1024px) {
+    .nav .nav__primary__subnav li:not(:first-child) {
+      margin-left: 70px; } }
+  @media (min-width: 320px) {
+    .nav .nav__primary__subnav a {
+      padding-left: 72px; } }
+  @media (min-width: 1024px) {
+    .nav .nav__primary__subnav a {
+      padding-left: 0; } }
+  @media (max-width: 1023px) {
+    .nav:not(.nav--visible) {
+      display: none; } }
+  .nav .nav__dropdown--expanded > a:link,
+  .nav .nav__dropdown--expanded > a:active,
+  .nav .nav__dropdown--expanded > a:visited {
+    color: #00abff; }
+  .nav .nav__dropdown--expanded .nav__primary__caret {
+    transform: rotate(180deg); }
+    .nav .nav__dropdown--expanded .nav__primary__caret svg {
+      fill: #00abff; }
+  .nav .nav__dropdown:not(.nav__dropdown--expanded) ul {
+    display: none; }
+
+/*# sourceMappingURL=main.css.map */

@@ -11,6 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-tasks-preset": "^0.3.4"
+    "gulp-tasks-preset": "^0.3.4",
+    "klaw-sync": "^3.0.2",
+    "twig": "^1.10.5"
   }
 }

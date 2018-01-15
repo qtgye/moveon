@@ -11,7 +11,8 @@
 let tasks = [
   'vendors',
   'styles',
-  'scripts'
+  'scripts',
+  'pages',
 ];
 
 

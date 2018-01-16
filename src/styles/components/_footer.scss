@@ -1,0 +1,233 @@
+.footer {
+  display: block;
+  @include respond((
+    padding: 30px null 0,
+    padding-top: null null 40px,
+    background-color: null null $black,
+  ));
+
+
+  &__logo {
+    @include respond((
+      width: 100px null 80px,
+      margin-left: null null percentage(130px/$bp-xl),
+    ));
+
+    img {
+      width: 100%;
+    }
+  }
+
+
+  &__top {
+    margin-top: 30px;
+    @include respond((
+      display: null null flex,
+      padding-top: null null 30px,
+      padding-bottom: null null 39px,
+      padding-left: null null percentage(130px/$bp-xl),
+      padding-right: null null percentage(130px/$bp-xl),
+      border-bottom: null null (1px solid $white),
+    ));
+  }
+
+
+  &__nav {
+    @include respond((
+      display: block null flex,
+      flex-wrap: wrap,
+      padding-bottom: 30px null 0,
+      margin-right: null null 55px,
+      border-bottom: (1px solid #CACACA) null 0,
+    ));
+
+
+    &__column {
+      @include respond((
+        width: null null percentage(145/580),
+      ));
+
+      &:not(:first-child) {
+        @include respond((
+          margin-left: null null 55px,
+        ));
+        @include breakpoint(md down) {
+          margin-top: 30px;
+        }
+      }
+
+      &-heading {
+        @include font(roboto-bold);
+        @include respond((
+          color: null null $white,
+          font-size: 16px,
+          line-height: 35px,
+        ));
+      }
+
+      &-links {
+        @include respond((
+          margin-top: 6px,
+        ));
+
+        a {
+          display: block;
+          @include font(roboto-regular);
+          @include respond((
+            font-size: 16px,
+            line-height: 35px,
+            color: $azure null $white,
+          ));
+        }
+      }
+    }
+
+    &__cta {
+      align-self: flex-end;
+      @include respond((
+        width: null null 100%,
+      ));
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+        @include font(roboto-condensed-bold);
+        @include respond((
+          border: (2px solid $azure) null 0,
+          width: 130px null auto,
+          height: 36px,
+          font-size: 14px,
+          margin-top: 46px,
+          color: $azure null $white,
+        ));
+      }
+
+
+      svg {
+        fill: $white;
+        @include respond((
+          display: none null inline-block,
+        ));
+
+        &:first-child {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+        }
+
+        &:last-child {
+          width: 7.4px;
+          height: 12px;
+          margin-left: 9px;
+        }
+
+      }
+    }
+  }
+
+  &__text {
+    @include respond((
+      width: null null percentage(580/1180),
+      padding: (27px 0) null 0,
+    ));
+
+    &__item {
+      @include font(roboto-regular);
+      @include respond((
+        font-size: 11px,
+        line-height: 18px,
+        color: null null $white,
+      ));
+
+      &:not(:first-child) {
+        @include respond((
+          margin-top: 30px null 40px,
+        ));
+      }
+    }
+
+    &__cta {
+      display: flex;
+      white-space: nowrap;
+      font-weight: bolder;
+
+      &:link,
+      &:visited,
+      &:active {
+        @include font(roboto-bold);
+        @include respond((
+          font-size: 14px,
+          line-height: 20px,
+          margin-top: 1em,
+          color: $azure null $white,
+        ));
+      }
+
+      svg {
+
+      }
+    }
+  }
+
+
+
+  &__bottom {
+    display: flex;
+    @include respond((
+      justify-content: null null space-between,
+      padding: null null (40px percentage(130px/$bp-xl)),
+      padding-top: 30px nul null,
+    ));
+  }
+
+
+  &__social {
+    @include respond((
+      display: none null flex,
+      align-items: center,
+      flex-shrink: 1,
+    ));
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+
+    svg {
+      fill: $white;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+
+  &__fineprint {
+    @include font(roboto);
+    @include respond((
+      width: null null percentage(579/1180),
+      border: (1px solid #979797) null,
+      font-size: 11px,
+      line-height: 20px,
+      color: $black null $white,
+      padding: (11px 15px) null,
+    ));
+
+    strong {
+      font-weight: bolder;
+      @include font(roboto-medium);
+      @include respond((
+        color: $azure null inherit,
+      ));
+    }
+  }
+}

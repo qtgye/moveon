@@ -19,12 +19,18 @@
   src: url('/fonts/Roboto-Medium.ttf');
 }
 
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('/fonts/Roboto-Bold.ttf');
+}
+
 
 $fonts: (
   roboto: ('Roboto Regular', sans-serif),
   roboto-condensed: ('Roboto Condensed', sans-serif),
   roboto-condensed-bold: ('Roboto Condensed Bold', sans-serif),
   roboto-medium: ('Roboto Medium', sans-serif),
+  roboto-bold: ('Roboto Bold', sans-serif),
 );
 
 

@@ -1,0 +1,204 @@
+.home-carousel {
+  @include respond((
+    background-color: $off-white null rgba(0, 0, 0, 0.75),
+    padding: 48px null (100px percentage(130px/$bp-xl)),
+  ));
+
+  &__content {
+
+  }
+
+
+  &__heading-group {
+
+  }
+
+  &__heading {
+    @include font(roboto-condensed-bold);
+    @include respond((
+      color: $black null $white,
+      width: null null 300px,
+      font-size: 22px null 48px,
+      line-height: 1 null .9,
+    ));
+  }
+
+  &__subheading {
+    @include font(roboto);
+    @include respond((
+      width: null null 320px,
+      margin-top: 22px null 40px,
+      color: $azure null $white,
+      font-size: 14px null 16px,
+      line-height: 20px null 24px,
+    ));
+  }
+
+
+  &__carousel {
+    font-size: 0;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    @include respond((
+      margin-top: 50px,
+      padding-bottom: 50px,
+    ));
+  }
+
+
+  &__slide {
+    position: relative;
+    @include respond((
+      display: block null inline-block,
+      width: 100% null percentage(380px/1180px),
+    ));
+
+    &:not(:first-child) {
+      @include respond((
+        margin-left: null null percentage(21/1180),
+      ));
+    }
+
+    & + & {
+      @include breakpoint(md down) {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+    &:hover {
+      .home-carousel__slide-content {
+        opacity: 1;
+      }
+    }
+  }
+
+
+  &__image {
+    @include aspect-ratio(380, 282);
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+
+  &__slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    background-color: rgba(0, 171, 255, 0.75);
+    background-blend-mode: multiply;
+    opacity: 0;
+    transition: all .3s;
+  }
+
+
+  &__eyebrow {
+    text-transform: uppercase;
+    @include font(roboto-condensed-bold);
+    @include respond((
+      margin-top: 27px,
+      margin-bottom: auto,
+      font-size: 14px null 20px,
+      line-height: 1 null 24px,
+    ));
+  }
+
+
+  &__title {
+    position: relative;
+    @include font(roboto-bold);
+    @include respond((
+      margin-bottom: auto,
+      top: -10px,
+      font-size: 20px null 28px,
+      line-height: 1,
+    ));
+  }
+
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    @include respond((
+      width: 223px,
+      height: 50px null 31px,
+      margin-top: 40px null -24px,
+      background-color: $azure null transparent,
+      text-transform: null null uppercase,
+      color: $white,
+      font-size: 12px null 20px,
+      float: null null right,
+    ));
+
+    svg {
+      @include respond((
+        display: none null inline-block,
+        width: 8px,
+        height: 12px,
+        fill: $white,
+        margin-left: 18px,
+      ));
+    }
+  }
+
+
+
+  // ENABLED CAROUSEL
+  .flickity-enabled {
+
+    .home-carousel__slide + .home-carousel__slide {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .flickity-page-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 0;
+      height: 24px,
+    }
+
+    .dot {
+      @include respond((
+        background-color: $azure null $white,
+      ));
+    }
+
+    .flickity-prev-next-button {
+      @include respond((
+        background-color: $azure,
+        display: null null none,
+      ));
+
+      svg {
+        transform: scale(.6);
+      }
+
+      & svg,
+      & .arrow {
+        fill: $white;
+      }
+    }
+  }
+
+
+
+}

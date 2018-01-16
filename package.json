@@ -18,5 +18,9 @@
     "gulp-twig": "^1.1.1",
     "klaw-sync": "^3.0.2",
     "twig": "^1.10.5"
+  },
+  "dependencies": {
+    "flickity": "^2.0.10",
+    "slick": "^1.12.2"
   }
 }

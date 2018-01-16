@@ -1,0 +1,107 @@
+.cta-grid {
+
+
+  &__content {
+    @include respond((
+      padding: (54px 30px) null (56px percentage(155px/$bp-xl) 100px),
+      background-color: null null $azure,
+    ));
+  }
+
+
+  &__heading {
+    @include font(roboto-condensed-bold);
+    @include respond((
+      display: table,
+      margin: auto,
+      padding: null null (0 8px),
+      font-size: 22px null 36px,
+      line-height: 30px null 58px,
+      background-color: null null $black,
+      color: null null $azure,
+    ));
+    text-align: center;
+  }
+
+  &__subheading {
+    @include font(roboto);
+    @include respond((
+      font-size: 14px null 24px,
+      line-height: 20px null 36px,
+      color: $azure null $black,
+      margin-top: 22px null 40px,
+      text-align: left null center,
+    ));
+  }
+
+
+  &__grid {
+    @include respond((
+      display: block null flex,
+      flex-direction: column,
+      align-items: center,
+      margin-top: 33px null 50px,
+    ));
+  }
+
+
+  &__item {
+    display: block;
+    @include respond((
+      text-align: center,
+      padding: 30px null 0,
+      border: (2px solid $azure) null none,
+    ));
+
+    @include breakpoint(md down) {
+      &:not(:first-child) {
+        margin-top: 20px,
+      }
+    }
+
+    @include breakpoint(lg) {
+      &:nth-child(1) {
+        width: 337px;
+        margin-left: 0;
+        margin-right: auto;
+      }
+      &:nth-child(2) {
+        width: 464px;
+      }
+      &:nth-child(3) {
+        width: 358px;
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  }
+
+
+  &__image {
+    margin: auto;
+    @include respond((
+      display: block null none,
+    ));
+  }
+
+
+  &__text {
+    @include font(roboto);
+    @include respond((
+      font-size: 14px null 86px,
+      line-height: 20px null .9,
+      color: $azure null $black,
+      margin-top: 43px null 0,
+      text-transform: null null uppercase,
+      text-align: center null left,
+    ));
+
+    span {
+      @include breakpoint(lg) {
+        @include font(roboto-condensed-bold);
+        background-image: linear-gradient(to top, white 0%, white 6px, transparent 6px);
+        background-position: 0 95px;
+      }
+    }
+  }
+}

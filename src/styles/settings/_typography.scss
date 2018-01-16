@@ -13,3 +13,23 @@
   font-family: 'Roboto Regular';
   src: url('/fonts/Roboto-Regular.ttf');
 }
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('/fonts/Roboto-Medium.ttf');
+}
+
+
+$fonts: (
+  roboto: ('Roboto Regular', sans-serif),
+  roboto-condensed: ('Roboto Condensed', sans-serif),
+  roboto-condensed-bold: ('Roboto Condensed Bold', sans-serif),
+  roboto-medium: ('Roboto Medium', sans-serif),
+);
+
+
+@mixin font( $name ) {
+  @if ( map-has-key($fonts, $name) ) {
+    font-family: map-get($fonts, $name);
+  }
+}

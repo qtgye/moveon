@@ -4,9 +4,9 @@
     <title>caret-down</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Nav/Header/1B/Black/Left" transform="translate(-646.000000, -89.000000)">
-        <g id="Group" transform="translate(430.000000, 75.000000)">
-            <g id="Material/Icons-white/expand-more-Copy" transform="translate(210.000000, 6.000000)">
+    <g transform="translate(-646.000000, -89.000000)">
+        <g transform="translate(430.000000, 75.000000)">
+            <g transform="translate(210.000000, 6.000000)">
                 <polygon points="16.6 8.59997559 12 13.1999756 7.4 8.59997559 6 9.99997559 12 15.9999756 18 9.99997559"></polygon>
             </g>
         </g>

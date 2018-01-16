@@ -1,0 +1,224 @@
+.home-illustration {
+  position: relative;
+
+  &__cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    width: percentage(1180px/1440px);
+    max-width: 1180px;
+    margin-top: 100px;
+    @include respond((
+      display: none null block,
+    ));
+  }
+
+
+  &__section {
+
+  }
+
+
+  &__top {
+    @include respond((
+      background-color: $off-white null $black,
+      padding-top: null null 60px,
+    ));
+
+    .home-illustration__content {
+      @include respond((
+        margin-left: null null percentage(130px/$bp-xl),
+        margin-right: null null auto,
+      ));
+    }
+  }
+
+
+  &__bottom {
+    @include respond((
+      background-color: null null transparentize($black, .15),
+    ));
+
+    .home-illustration__content {
+      @include respond((
+        margin-right: null null percentage(130px/$bp-xl),
+        margin-left: null null auto,
+        padding-top: null null 352px,
+      ));
+    }
+  }
+
+
+  &__heading {
+    text-align: center;
+    text-transform: uppercase;
+    @include respond((
+      display: none null table,
+      font-size: 36px,
+      line-height: 42px,
+      margin: auto,
+      background-color: null null $azure,
+      padding: null null (0px 8px),
+    ));
+
+    span {
+      @include font(roboto-condensed-bold);
+      font-weight: bolder;
+    }
+  }
+
+
+  &__content {
+    @include respond((
+      width: null null percentage(380px/$bp-xl),
+      padding: (40px percentage(30/320) 60px) null (80px 0 100px 0),
+    ));
+  }
+
+
+  &__image {
+    position: relative;
+    @include respond((
+      display: block null none,
+    ));
+
+    img {
+      width: 100%;
+    }
+
+    & + .home-illustration__content-heading {
+      @include respond((
+        margin-top: 25px,
+      ));
+    }
+
+  }
+
+
+  &__content-heading {
+    @include font(roboto-condensed-bold);
+    text-transform: uppercase;
+    @include respond((
+      color: $black null $white,
+      font-size: 22px null 48px,
+      line-height: 30px null .9,
+    ));
+  }
+
+
+  &__body {
+    @include font(roboto);
+    @include respond((
+      color: $azure null $white,
+      margin-top: 12px null 40px,
+      font-size: 14px,
+      line-height: 20px,
+    ));
+  }
+
+
+  &__cta {
+    display: flex;
+    white-space: nowrap;
+    @include font(roboto-medium);
+    @include respond((
+      justify-content: center null flex-start,
+      text-transform: null null uppercase,
+      color: $azure null $white,
+      width: 225px null auto,
+      height: 50px null 30px,
+      border: (2px solid $azure) null 0,
+      font-size: 12px null 20px,
+      line-height: 20px null 30px,
+    ));
+
+    &:first-of-type {
+      @include respond((
+        margin-top: 38px null 24px,
+      ));
+    }
+
+    &:nth-of-type(2) {
+      @include respond((
+        background-color: $azure null transparent,
+        color: $white,
+        margin-top: 10px null 24px,
+      ));
+    }
+
+    svg {
+      fill: $white;
+      margin-left: 15px;
+      @include respond((
+        display: none null inline-block,
+        width: 7.4px,
+        height: 12px,
+      ));
+    }
+  }
+
+
+  &__list {
+    @include respond((
+      display: flex null block,
+      flex-flow: (row wrap) null,
+      margin-top: null null 20px,
+    ));
+
+    &-item {
+      flex-grow: 0;
+      flex-shrink: 0;
+      @include respond((
+        width: 50% null auto,
+        margin-top: 50px null 0,
+        text-align: center null left,
+      ));
+
+      img {
+        margin: auto;
+        @include respond((
+          display: block null none,
+          height: 30px,
+        ));
+      }
+
+      &__text {
+        @include respond((
+          margin-top: 22px null 0,
+          color: $azure null $white,
+          font-size: 14px,
+          line-height: 20px,
+        ));
+      }
+    }
+  }
+
+}
+
+
+// LIST ORDERING
+.home-illustration__list-item {
+  &:nth-child(1) {
+    order: 1;
+  }
+  &:nth-child(3) {
+    order: 2;
+  }
+  &:nth-child(2) {
+    order: 3;
+  }
+  &:nth-child(4) {
+    order: 4;
+  }
+
+  @include breakpoint(lg) {
+    &:nth-child(2) {
+      order: 2;
+    }
+    &:nth-child(3) {
+      order: 3;
+    }
+  }
+}

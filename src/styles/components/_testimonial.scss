@@ -1,0 +1,71 @@
+.testimonial {
+  background-color: $ice-blue;
+
+  &__content {
+    @include respond((
+      display: block null flex,
+      justify-content: center,
+      align-items: center,
+      padding-top: 50px,
+      padding-bottom: 50px,
+      padding-left: 30px null percentage(130px/$bp-xl),
+      padding-right: 30px null percentage(230px/$bp-xl),
+    ));
+  }
+
+  &__image {
+    display: table;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 50%;
+    flex-shrink: 0;
+    @include respond((
+      width: 110px null 200px,
+      height: 110px null 200px,
+    ));
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+
+  &__text {
+    @include respond((
+      margin-top: 36px null auto,
+      margin-bottom: auto,
+      margin-left: null null 100px,
+    ));
+  }
+
+
+  &__quote {
+    @include font(roboto);
+    @include respond((
+      font-size: 24px,
+      line-height: 30px null 36px,
+    ));
+    @include breakpoint(lg) {
+      @include font(roboto-medium);
+      font-style: italic;
+    }
+  }
+
+  &__source {
+    @include respond((
+      font-size: 11px 18px,
+      line-height: 20px 36px,
+      color: #A7A7A7 null $black,
+      float: null null right,
+    ));
+    @include breakpoint(lg) {
+      @include font(roboto-bold);
+    }
+
+    strong {
+      font-weight: bolder;
+    }
+  }
+}

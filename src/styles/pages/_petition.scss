@@ -1,0 +1,14 @@
+.petition {
+
+  #content {
+    @include respond((
+      padding-top: 30px null 133px,
+    ));
+  }
+
+  &-info-column {
+    @include respond((
+      padding: (0 21px) null,
+    ));
+  }
+}

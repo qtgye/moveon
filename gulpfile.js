@@ -23,7 +23,7 @@ let tasks = [
  * Local/Dev-only tasks
  */
 let devOnlyTasks = [
-  'lint-styles',
+  // 'lint-styles',
   'lint-scripts',
 ];
 

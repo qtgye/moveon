@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="/styles/vendors.css" />
         <link rel="stylesheet" href="/styles/main.css" />
     </head>
-    <body>
+    <body class="{% block bodyclass %}{% endblock %}">
         <div style="display:none">{% include 'components/svg/symbols.svg' %}</div>
         <div class="wrapper">
           {% include 'components/header' %}

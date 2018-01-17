@@ -1,0 +1,168 @@
+.donate-confirm {
+
+
+  &__receipt {
+    margin-top: 24px;
+
+    button {
+      color: #005680;
+      @include font(roboto);
+      @include respond((
+        font-size: 16px,
+        line-height: 36px,
+      ));
+    }
+  }
+
+  &__view-receipt {
+    display: block;
+  }
+
+  &__hide-receipt {
+    display: none;
+    margin-top: 24px;
+  }
+
+}
+
+
+
+.donate-receipt {
+  display: none;
+  background-color: $ice-blue;
+  max-width: 480px;
+  padding: 24px 16px;
+
+
+  &.visible {
+    display: block;
+
+    & ~ .donate-confirm__view-receipt {
+      display: none;
+    }
+
+    & ~ .donate-confirm__hide-receipt {
+      display: block;
+    }
+  }
+
+
+  &__heading {
+    color: $black;
+    opacity: .54;
+    text-transform: uppercase;
+    @include font(roboto-bold);
+    @include respond((
+      font-size: 16px,
+      line-height: 24px,
+    ));
+  }
+
+
+  &__details {
+    margin-top: 24px;
+  }
+
+
+  &__row {
+    display: flex;
+    &:not(:first-child) {
+      margin-top: 16px,
+    }
+  }
+
+
+  &__field {
+    width: percentage(164/448);
+    margin-right: 20px;
+    color: $black;
+    opacity: .54;
+    @include font(roboto);
+    @include respond((
+      font-size: 16px,
+      line-height: 24px,
+    ));
+  }
+
+
+  &__value {
+    display: flex;
+    align-items: center;
+  }
+
+
+  &__label {
+    @include font(roboto);
+    display: inline-flex;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid #979797;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 3px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+}
+
+
+
+.donate-next {
+  margin-top: 48px;
+
+
+  &__heading {
+    @include font(roboto-condensed-bold);
+    @include respond((
+      font-size: 24px,
+      line-height: 36px,
+    ));
+  }
+
+
+  &__subheading {
+    @include font(roboto);
+    @include respond((
+      margin-top: 24px,
+      font-size: 16px,
+      line-height: 36px,
+    ));
+  }
+
+
+  &__form {
+    margin-top: 24px;
+  }
+
+
+  .donate-form__actions {
+    display: block;
+
+    button {
+      max-width: 134px;
+      width: 45%;
+      height: 36px;
+      text-transform: uppercase;
+      @include font(roboto-condensed-bold);
+      @include respond((
+        display: inline-block,
+        font-size: 18px,
+      ));
+
+      &[disabled] {
+        background-color: rgba(0, 0, 0, 0.12);
+        color: rgba(0,0,0,0.26);
+      }
+    }
+  }
+
+  .donate-form__action--solid:not([disabled]) {
+    background-color: $azure;
+    color: $white;
+  }
+
+  .donate-form__action--flat {
+    opacity: .26;
+  }
+}

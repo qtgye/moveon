@@ -51,14 +51,17 @@
       ));
 
       &::after {
-        content: '✓';
+        content: '';
         display: block;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(0);
-        font-size: 28px;
-        color: $white;
+        width: 18px;
+        height: 14px;
+        background-image: url('/images/icons/check.svg');
+        background-position: contain;
+        background-repeat: no-repeat;
         transition: all .3s;
       }
 

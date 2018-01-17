@@ -1,0 +1,161 @@
+.donate-form {
+  padding-top: 132px;
+  padding-bottom: 100px;
+
+  &__heading {
+    @include font(roboto-condensed-bold);
+    @include respond((
+      font-size: 48px,
+      line-height: .9,
+    ));
+  }
+
+
+  &__subheading {
+    margin-top: 24px;
+    @include font(roboto);
+    @include respond((
+      font-size: 24px,
+      line-height: 36px,
+    ));
+  }
+
+
+  &__steps {
+    display: flex;
+    margin-top: 50px;
+  }
+
+
+  &__step {
+    width: percentage(1/3);
+    position: relative;
+    padding-left: 60px;
+
+    &__numeral {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      background-color: $azure;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 100%;
+      overflow: hidden;
+      @include font(roboto);
+      @include respond((
+        font-size: 28px,
+      ));
+    }
+
+    &__heading {
+      position: relative;
+      @include font(roboto-medium);
+      @include respond((
+        font-size: 24px,
+        line-height: 36px,
+        margin-top: 10px,
+        margin-right: 26px,
+      ));
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        border-bottom: 1px solid rgba(34, 34, 34, 0.38);
+      }
+
+      span {
+        display: inline-block;
+        position: relative;
+        background-color: $white;
+        padding-right: 24px;
+        z-index: 5;
+      }
+    }
+
+    &__subheading {
+      margin-top: 18px;
+      @include font(roboto);
+      @include respond((
+        font-size: 16px,
+        line-height: 20px,
+      ));
+    }
+
+
+    &:last-child {
+
+      .donate-form__step__heading::after {
+        display: none;
+      }
+
+      .radio-input {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+
+  &__fields {
+    margin-top: 50px;
+    margin-right: 48px;
+  }
+
+
+  &__paycheck-option {
+    @include font(roboto);
+    @include respond((
+      font-size: 13px,
+      line-height: 20px,
+      margin-top: 10px,
+    ));
+
+    a {
+      color: $azure;
+    }
+  }
+
+
+  label[for="amount-other"] {
+    white-space: nowrap;
+  }
+
+
+  &__submit {
+    text-transform: uppercase;
+    background-color: $azure;
+    color: $white;
+    display: inline-flex;
+    width: 134px;
+    height: 36px;
+    transition: all .3s;
+    @include font(roboto-condensed-bold);
+    @include respond((
+      font-size: 18px,
+    ));
+
+    &[disabled] {
+      background-color: rgba(0, 0, 0, 0.12);
+      color: rgba(0,0,0,.26);
+      pointer-events: none;
+    }
+  }
+
+
+  &__agreement {
+    margin-top: 30px;
+    opacity: .54;
+    @include font(roboto);
+    @include respond((
+      font-size: 13px,
+      line-height: 20px,
+    ));
+  }
+}

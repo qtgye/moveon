@@ -8,7 +8,7 @@
     {# STEP 1 #}
     <div class="donate-form__step">
       <div class="donate-form__step__numeral">1</div>
-      <div class="donate-form__step__heading">Donation Amount</div>
+      <div class="donate-form__step__heading"><span>Donation Amount</span></div>
       <div class="donate-form__step__subheading">
         How much would you like to donate?
       </div>
@@ -49,7 +49,7 @@
     {# STEP 2 #}
     <div class="donate-form__step">
       <div class="donate-form__step__numeral">2</div>
-      <div class="donate-form__step__heading">Personal Info</div>
+      <div class="donate-form__step__heading"><span>Personal Info</span></div>
       <div class="donate-form__step__subheading">
         Tell us a bit about you.
       </div>
@@ -83,7 +83,7 @@
     {# STEP 3 #}
     <div class="donate-form__step">
       <div class="donate-form__step__numeral">3</div>
-      <div class="donate-form__step__heading">Billing Info</div>
+      <div class="donate-form__step__heading"><span>Billing Info</span></div>
       <div class="donate-form__step__subheading">
         How would you like to pay?
       </div>
@@ -97,14 +97,14 @@
             <input type="radio" name="payment" id="paypal" value="paypal">
             <label for="paypal">PayPal</label>
           </div>
-          <p>Or <a href="#">pay with a paycheck</a></p>
+          <p class="donate-form__paycheck-option">Or <a href="#">pay with a paycheck</a></p>
         </div>
         <div class="checkbox-input">
           <input type="checkbox" name="save" id="save">
           <label for="save">Please save my information for future donation transactions.</label>
         </div>
-        <button type="submit" class="donate__submit">Contribute</button>
-        <p class="donate__agreement">
+        <button type="submit" class="donate-form__submit" disabled>Contribute</button>
+        <p class="donate-form__agreement">
           By clicking contribute, I confirm that I have read all of the rules below and I certify that I comply with each of them.
         </p>
       </div>

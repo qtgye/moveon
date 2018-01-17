@@ -44,9 +44,10 @@ class Modal {
   }
 
   hide() {
+    let _this = this;
     this.$element.fadeOut(null, function () {
       $html.css('overflow', '');
-      this.$element.trigger('modalHide');
+      _this.$element.trigger('modalHide');
     });
   }
 

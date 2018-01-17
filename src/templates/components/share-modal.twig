@@ -1,0 +1,49 @@
+{% extends 'components/modal' %}
+
+{% block modal_id %}share-modal{% endblock %}
+{% block modal_class %}share-modal{% endblock %}
+
+{% block modal_content %}
+
+  <div class="share-modal__heading">ONE MORE STEP…</div>
+
+  <div class="share-modal__content">
+
+    <p>Thank you for signing, Clarise! Now help this petition grow by asking your friends, family, and colleagues to sign.</p>
+    <p><strong>Share</strong></p>
+
+    <div class="share-modal__cta-group">
+      <a href="#" class="share-modal__cta" disabled>
+        {% include 'components/svg' with {id: 'mail'} only %}
+        Email Petition
+      </a>
+      <a href="#" class="share-modal__cta">
+        {% include 'components/svg' with {id: 'facebook'} only %}
+        Share on Facebook
+      </a>
+    </div>
+
+    <p>Or <a href="#" class="share-modal__copy">copy</a> and paste the text below into a message:</p>
+
+    <div class="share-modal__text">
+      <p>Subject: FREE CYNTOIA BROWN</p>
+      <p>Hi,</p>
+      <p>I signed a petition to Governor Bill Haslam which says:</p>
+      <p>"Cyntoia could be your daughter.  This petition needs as many signatures as possible so that it can be presented for consideration for clemency by the Tennessee Governor Bill Haslam.  "</p>
+      <p>Will you sign this petition? Click here:</p>
+      <p>http://petitions.moveon.org/sign/free-cyntoia-brown?source=s.em.cp&r_by=13210257</p>
+      <p>Thanks!</p>
+    </div>
+
+
+    <div class="share-modal__links">
+      <a href="#" class="btn share-modal__link">
+        {% include 'components/svg' with {id: 'twitter'} only %} Twitter
+      </a>
+      <a href="#" class="btn share-modal__link">
+        {% include 'components/svg' with {id: 'link'} only %} Copy Link
+      </a>
+    </div>
+
+  </div>
+{% endblock %}

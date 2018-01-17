@@ -1,0 +1,153 @@
+.share-modal {
+
+  &__heading {
+    display: block;
+    text-transform: uppercase;
+    text-align: left;
+    @include font(roboto-condensed-bold);
+    @include respond((
+      font-size: 21px null 48px,
+      line-height: 22.6px null 27px,
+    ));
+  }
+
+
+  &__content {
+    max-width: 580px;
+    @include respond((
+      margin-top: 25px null 75px,
+    ));
+
+    p {
+      @include font(roboto);
+      @include respond((
+        font-size: 14px null 18px,
+        line-height: 21px null 27px,
+      ));
+
+      &:not(:first-child) {
+        @include respond((
+          margin-top: 25px null 42px,
+        ));
+      }
+    }
+
+    strong {
+      @include font(roboto-bold);
+    }
+
+  }
+
+
+  &__cta-group {
+    @include respond((
+      display: null nulll flex,
+      justify-content: space-between,
+      align-items: flex-start,
+      margin-top: 19px null 23px,
+    ));
+  }
+
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    background-color: $azure;
+    color: $white;
+    @include font(roboto);
+    @include respond((
+      justify-content: flex-start null center,
+      width: 210px null percentage(280/580),
+      height: 41px,
+      padding-left: 23px null 0,
+      font-size: 12px null 14px,
+      line-height: 20px,
+    ));
+
+    &:not(:first-child) {
+      margin-top: 10px null 0,
+    }
+
+    &[disabled] {
+      background-color: $light-blue;
+    }
+
+    svg {
+      fill: $white;
+      @include respond((
+        width: 14px null 30px,
+        height: 14px null 30px,
+        padding: null null 5px,
+        margin-right: 18px null 10px,
+      ));
+    }
+  }
+
+
+  &__copy {
+    color: $azure;
+  }
+
+
+  &__text {
+    overflow: auto;
+    @include respond((
+      background-color: $ice-blue null $white,
+      margin-top: 25px null 38px,
+      padding: 15px null (26px 32px),
+      height: 167px,
+      border: null null (1px solid $azure),
+    ));
+
+
+    p {
+      @include font(roboto);
+      @include respond((
+        font-size: 11px null 12px,
+        line-height: 15px null 18px,
+      ));
+
+      &:not(:first-child) {
+        @include respond((
+          margin-top: 1.2em,
+        ));
+      }
+    }
+  }
+
+
+  &__links {
+    @include respond((
+      margin-top: 25px null 40px,
+    ));
+  }
+
+
+  &__link {
+    color: $azure;
+    justify-content: flex-start;
+    @include font(roboto);
+    @include respond((
+      display: flex null inline-flex,
+      font-size: 12px null 14px,
+      line-height: 20px,
+    ));
+
+    &:not(:first-child) {
+      @include respond((
+        margin-top: 15px null 0,
+        margin-left: null null 98px,
+      ));
+    }
+
+    svg {
+      fill: $azure;
+      @include respond((
+        width: 30px,
+        height: 30px,
+        padding: 5px,
+        margin-right: 10px,
+      ));
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.donate-terms {
+
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1180px;
+    margin: auto;
+    padding: 100px 0 170px;
+    border-top: 1px solid rgba(34, 34, 34, 0.38);
+  }
+
+
+  &__column {
+    width: percentage(580/1180);
+
+    &:nth-child(2) {
+      width: percentage(454/1180);
+    }
+
+    p {
+      @include font(roboto);
+      @include respond((
+        font-size: 13px,
+        line-height: 20px,
+      ));
+
+      &:not(:first-child) {
+        margin-top: 1.2em;
+      }
+    }
+
+    strong {
+      @include font(roboto-bold);
+    }
+  }
+}

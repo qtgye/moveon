@@ -2,13 +2,17 @@
 
   #content {
     @include respond((
+      display: null null flex,
       padding-top: 30px null 133px,
+      padding-left: null null percentage(130px/$bp-xl),
+      padding-right: null null percentage(130px/$bp-xl),
     ));
   }
 
   &-info-column {
     @include respond((
-      padding: (0 21px) null,
+      width: null null percentage(780/1180),
+      padding: (0 21px) null 0,
     ));
   }
 }

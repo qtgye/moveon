@@ -29,7 +29,7 @@ module.exports = {
 
   watchFiles: projectRoot('src/styles/**/*.scss'),
 
-  deps: isDev ? ['lint-styles'] : [],
+  // deps: isDev ? ['lint-styles'] : [],
 
 };
 

@@ -1,7 +1,8 @@
 .petition-card {
   background-color: $ice-blue;
+  position: relative;
   @include respond((
-    padding: (21px 22px 28px) null,
+    padding: (21px 22px 28px) null (107px percentage(100/780) 66px),
   ));
 
   &__heading {
@@ -9,9 +10,9 @@
     span {
       @include font(roboto-condensed-bold);
       @include respond((
-        font-size: 21px,
-        line-height: .9,
-        letter-spacing: -.6px,
+        font-size: 21px null 48px,
+        line-height: .9 null 48px,
+        letter-spacing: -.6px null normal,
         background-color: $azure,
       ));
     }
@@ -19,16 +20,16 @@
 
   &__body {
     @include respond((
-      margin-top: 13px,
+      margin-top: 13px null 20px,
     ));
 
     p {
       @include font(roboto);
       &:not(:first-child) {
         @include respond((
-          margin-top: 20px,
-          font-size: 14px,
-          line-height: 21px,
+          margin-top: 20px null 32.5px,
+          font-size: 14px 18px,
+          line-height: 21px 27px,
         ));
       }
     }
@@ -46,8 +47,12 @@
     position: relative;
     @include aspect-ratio(235, 154);
     @include respond((
-      margin-top: 15px,
+      margin-top: 15px null 29px,
     ));
+
+    @include breakpoint(lg) {
+      @include aspect-ratio(580, 380);
+    }
 
     img {
       width: 100%;
@@ -68,8 +73,8 @@
       overflow: hidden;
       z-index: 5;
       @include respond((
-        width: 35px,
-        height: 35px,
+        width: 35px null 84px,
+        height: 35px null 84px,
       ));
 
       img {
@@ -128,24 +133,125 @@
   }
 
   &__range {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include respond((
+      margin-top: 25px null 30.5px,
+    ));
 
-
-    &__current {
-
-    }
-
+    &__current,
     &__max {
-
+      @include font(roboto-medium);
+      @include respond((
+        font-size: 11px null 13px,
+        line-height: 20px,
+        letter-spacing: .3px null .4px,
+      ));
     }
 
     &__bar {
+      display: block;
+      width: 100%;
+      position: relative;
+      @include respond((
+        margin-top: 4px null 7px,
+        height: 5px,
+      ));
 
       &__current {
-
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $azure;
       }
 
       &__max {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $light-blue;
+      }
+    }
+  }
 
+
+  &__cta {
+    display: table;
+    @include font(roboto-bold);
+    @include respond((
+      margin-top: 16px null 37px,
+      margin-left: null null auto,
+      margin-right: null null auto,
+      font-size: 14px null 20px,
+      line-height: 21px null 34px,
+    ));
+  }
+
+
+  &__share {
+    @include respond((
+      margin-top: 26px null 0,
+      position: null null absolute,
+      top: null null 39px,
+      right: null null 28px,
+    ));
+
+    &-heading {
+      @include font(roboto-bold);
+      @include respond((
+        display: block null none,
+        font-size: 14px,
+        line-height: 21px,
+      ));
+    }
+
+    &-icons {
+      display: flex;
+      align-items: center;
+      @include respond((
+        margin-top: 14px null 0,
+      ));
+    }
+
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+    }
+
+    svg {
+      display: block;
+      @include respond((
+        fill: $azure null $black,
+        width: 14px null 20px,
+        height: 14px null 20px,
+      ));
+    }
+
+    use {
+      width: 100%;
+    }
+
+    &-icons {
+      .petition-card__share-icon {
+
+        &:not(:first-child) {
+          @include respond((
+            margin-left: 32px null 15px,
+          ));
+        }
+
+        &--mail {
+          @include respond((
+            height: 10px null 14px,
+          ));
+        }
       }
     }
   }

@@ -36,13 +36,23 @@
       <div class="petition-card__range__current">16,452</div>
       <div class="petition-card__range__max">20, 000</div>
       <div class="petition-card__range__bar">
-        <div class="petition-card__range__bar__curent"></div>
         <div class="petition-card__range__bar__max"></div>
+        <div class="petition-card__range__bar__current" style="width: calc(100% * 16452 / 20000)"></div>
       </div>
     </div>
 
     <div class="petition-card__cta">
       MOST RECENT SIGNERS <strong>→</strong>
+    </div>
+
+    <div class="petition-card__share">
+      <strong class="petition-card__share-heading">Share</strong>
+      <div class="petition-card__share-icons">
+        <a href="#" class="petition-card__share-icon--mail">{% include 'components/svg' with {id: 'mail'} only %}</a>
+        <a href="#" class="petition-card__share-icon">{% include 'components/svg' with {id: 'facebook'} only %}</a>
+        <a href="#" class="petition-card__share-icon">{% include 'components/svg' with {id: 'instagram'} only %}</a>
+        <a href="#" class="petition-card__share-icon">{% include 'components/svg' with {id: 'link'} only %}</a>
+      </div>
     </div>
 
   </div>

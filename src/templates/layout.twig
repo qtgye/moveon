@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/styles/main.css" />
     </head>
     <body class="{% block bodyclass %}{% endblock %}">
-        <div style="display:none">{% include 'components/svg/symbols.svg' %}</div>
+        <div style="display:none">{% include 'components/symbol/svg/sprite.symbol.svg' %}</div>
         <div class="wrapper">
           {% include 'components/header' %}
           <div id="content" class="container">{% block content %}{% endblock %}</div>

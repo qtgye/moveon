@@ -68,7 +68,8 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &.is-selected {
       .home-carousel__slide-content {
         opacity: 1;
       }

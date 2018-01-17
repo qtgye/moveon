@@ -15,6 +15,9 @@ class Modal {
 
     this.bindClose();
 
+    // Attach as element data
+    this.$element.data('modal', this);
+
   }
 
 
@@ -36,12 +39,14 @@ class Modal {
 
   show() {
     $html.css('overflow', 'hidden');
+    this.$element.trigger('modalShow');
     this.$element.fadeIn();
   }
 
   hide() {
     this.$element.fadeOut(null, function () {
       $html.css('overflow', '');
+      this.$element.trigger('modalHide');
     });
   }
 

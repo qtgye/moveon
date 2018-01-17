@@ -56,11 +56,12 @@
   button {
     display: block;
     margin: auto;
+    @include font(roboto-condensed-bold);
     @include respond((
       background-color: $azure,
-      font-size: 12px,
-      width: 100%,
-      height: 50px,
+      font-size: 12px null 18px,
+      width: 100% null 145px,
+      height: 50px null 36px,
       margin-top: 30px,
       color: $white,
       text-transform: null null uppercase,

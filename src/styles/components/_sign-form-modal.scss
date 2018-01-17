@@ -1,0 +1,31 @@
+.sign-form-modal {
+
+
+  &__heading {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    @include font(roboto-condensed-bold);
+    @include respond((
+      font-size: 21px,
+      line-height: 22.6px,
+    ));
+  }
+
+
+  &__subheading {
+    @include font(roboto);
+    @include respond((
+      margin-top: 40px,
+      font-size: 14px,
+      line-height: 21px,
+    ));
+  }
+
+
+  .sign-form {
+    @include respond((
+      margin-top: 70px,
+    ));
+  }
+}

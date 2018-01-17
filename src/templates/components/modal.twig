@@ -1,0 +1,19 @@
+<div
+  class="modal {% block modal_class %}{% endblock %}"
+  id="{% block modal_id %}{% endblock %}"
+>
+  <div class="modal__backdrop">
+
+  </div>
+  <div class="modal__dialog">
+
+    <button class="modal__close">
+      {% include 'components/svg' with {id: 'times'} only %}
+    </button>
+
+    <div class="modal__content">
+      {% block modal_content %}
+      {% endblock %}
+    </div>
+  </div>
+</div>

@@ -177,6 +177,17 @@
 }
 
 
+// CREDIT CARD FIELDS
+.donate-form__cc__fields {
+  margin-top: 24px;
+
+  &:not(.visible) {
+    display: none;
+  }
+}
+
+
+
 
 // STEP STATES
 .donate-form__step {

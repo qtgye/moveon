@@ -1,0 +1,243 @@
+/**
+ * These are override styles only,
+ * base styles are derived from v2 in the VD
+ */
+
+.donate-v1 {
+
+    .donate-form {
+
+
+      &__heading {
+
+      }
+
+
+      &__subheading {
+
+      }
+
+
+      &__steps {
+        flex-direction: column;
+      }
+
+
+      &__step {
+        padding-bottom: 54px;
+        margin-bottom: 10px;
+        width: auto;
+
+        // Vertical line
+        &:not(:last-of-type)::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 25px;
+          top: 60px;
+          height: calc(100% - 60px);
+          border-right: 1px solid rgba(34, 34, 34, 0.38);
+        }
+
+        &__numeral {
+
+          &::after {
+
+          }
+
+          span {
+
+          }
+        }
+
+        &__heading {
+
+          &::after {
+            display: none;
+          }
+
+          span {
+
+          }
+        }
+
+        &__subheading {
+
+        }
+
+
+        &:last-child {
+
+          .donate-form__step__heading::after {
+
+          }
+
+          .radio-input {
+
+          }
+        }
+
+      }
+
+
+      &__fields {
+        margin-right: 0;
+      }
+
+
+      &__actions {
+        margin-top: 30px;
+
+        button {
+          width: 110px;
+          height: 36px;
+          transition: all .3s;
+          text-transform: uppercase;
+          @include font(roboto-condensed-bold);
+          @include respond((
+            font-size: 18px,
+          ));
+
+          &[disabled] {
+            background-color: rgba(0, 0, 0, 0.12);
+            color: transparentize($black, .74);
+          }
+        }
+      }
+
+
+      &__action {
+
+        &--solid {
+          background-color: $azure;
+          color: $white;
+        }
+
+        &--flat {
+          background-color: transparent;
+          color: transparentize($black, .74);
+        }
+      }
+
+
+      &__completed-summary {
+        display: none;
+        margin-top: 18px;
+        @include font(roboto);
+        @include respond((
+          font-size: 16px,
+        ));
+      }
+
+
+      &__paycheck-option {
+
+        a {
+
+        }
+      }
+
+
+      label[for="amount-other"] {
+
+      }
+
+
+      &__submit {
+
+        &[disabled] {
+
+        }
+      }
+
+
+      &__agreement {
+
+      }
+    }
+
+
+    // STEP 1 TRUMPS
+    .donate-form__step:first-child {
+
+      .radio-input {
+        margin-bottom: 15px;
+      }
+
+      .checkbox-input {
+        margin-top: 0;
+      }
+
+    }
+
+    // STEP 2 TRUMPS
+    .donate-form__step:nth-child(2) {
+
+      .donate-form__fields {
+
+        .input-block,
+        .input-helper {
+          max-width: 242px;
+        }
+      }
+
+    }
+
+    // STEP 3 TRUMPS
+    .donate-form__step:nth-child(3) {
+
+      .donate-form__fields {
+
+        .input-block,
+        .input-helper {
+          max-width: 242px;
+        }
+      }
+
+    }
+
+
+
+    // STEP STATES
+    .donate-form__step {
+
+      &:not(.active) {
+
+        .donate-form__step__content {
+          display: none;
+        }
+
+        .donate-form__step__numeral {
+          background-color: rgba(34, 34, 34, 0.38);
+        }
+      }
+
+
+      // COMPLETED STEP STATE
+      &.completed {
+
+        .donate-form__step__numeral {
+          background-color: $azure;
+
+          &::after {
+
+          }
+
+          span {
+
+          }
+        }
+
+        .donate-form__step__content {
+          display: none;
+        }
+
+        .donate-form__completed-summary {
+          display: block;
+        }
+
+      }
+
+    }
+
+}

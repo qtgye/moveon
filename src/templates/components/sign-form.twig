@@ -1,0 +1,63 @@
+<form action="POST" class="sign-form">
+
+  <div class="input-block">
+    <input type="text" id="name" name="name" required>
+    <label for="name">Name*</label>
+  </div>
+
+  <div class="input-block">
+    <input type="email" id="email" name="email" required>
+    <label for="email">Email*</label>
+  </div>
+
+  <div class="input-block">
+    <select name="country" id="country">
+      <option value="" selected></option>
+      {% include 'components/countries-options' %}
+    </select>
+    {% include 'components/svg' with {class: 'select-caret', id: 'caret-down'} only %}
+    <label for="country">Country</label>
+  </div>
+
+  <div class="input-block">
+    <input type="text" name="text" id="address" name="address">
+    <label for="address">Address</label>
+  </div>
+
+  <div class="input-block">
+    <input type="text" name="text" id="city" name="city">
+    <label for="city">City</label>
+  </div>
+
+  <div class="input-block">
+    <select name="state" id="state">
+      <option value="" selected></option>
+      {% include 'components/states-options' %}
+    </select>
+    {% include 'components/svg' with {class: 'select-caret', id: 'caret-down'} only %}
+    <label for="state">State</label>
+  </div>
+
+  <div class="input-block">
+    <input type="text" name="zip" id="zip" name="zip">
+    <label for="zip">ZIP</label>
+  </div>
+
+  <div class="input-block">
+    <textarea name="comment" id="comment" rows="10"></textarea>
+    <label for="comment">Comment (Optional)</label>
+  </div>
+
+  <div class="sign-form__agreement">
+    Note: By signing, you agree to receive email messages from MoveOn.org Civic Action and MoveOn.org Political Action. You may unsubscribe at any time.
+  </div>
+
+  <a href="#" class="sign-form__link">
+    See Privacy Policy >
+  </a>
+
+  <button type="submit">SUBMIT →</button>
+
+
+
+</form>

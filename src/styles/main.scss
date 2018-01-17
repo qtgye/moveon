@@ -12,7 +12,7 @@
 // CONFIGS
 @include define-breakpoints($breakpoints);
 
-// COMPONENETS
+// COMPONENTS
 @import 'components/container';
 @import 'components/buttons';
 @import 'components/lists';
@@ -21,6 +21,8 @@
 @import 'components/header';
 @import 'components/nav';
 @import 'components/footer';
+@import 'components/form';
+@import 'components/sign-form';
 
 // PER PAGE COMPONENTS
 @import "components/home-hero";

@@ -10,8 +10,16 @@
   }
 
   &-info-column {
+    flex-shrink: 0;
     @include respond((
       width: null null percentage(780/1180),
+    ));
+  }
+
+  &-sign-column {
+    @include respond((
+      display: none null block,
+      margin-left: null null percentage(121/1180)
     ));
   }
 }

@@ -7,16 +7,16 @@
   <div class="modal__frame">
     <div class="modal__dialog">
 
-      <button class="modal__close">
-        {% include 'components/svg' with {id: 'times'} only %}
-      </button>
-
       <div class="modal__content">
         {% block modal_content %}
         {% endblock %}
       </div>
 
     </div>
+
+    <button class="modal__close">
+      {% include 'components/svg' with {id: 'times'} only %}
+    </button>
   </div>
 
 </div>

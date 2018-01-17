@@ -1,3 +1,5 @@
+const $html = $('html');
+
 class Modal {
 
   constructor($element) {
@@ -33,11 +35,14 @@ class Modal {
 
 
   show() {
+    $html.css('overflow', 'hidden');
     this.$element.fadeIn();
   }
 
   hide() {
-    this.$element.fadeOut();
+    this.$element.fadeOut(null, function () {
+      $html.css('overflow', '');
+    });
   }
 
 }

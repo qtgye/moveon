@@ -13,32 +13,7 @@
         What Others Are Saying
       </h4>
       <div class="petition-details__comments__entries">
-        <div class="petition-details__comment">
-          <div class="petition-details__comment__info">
-            <div class="petition-details__comment__author">Jill Handerson</div>
-            <div class="petition-details__comment__date">Nov 29, 2017</div>
-          </div>
-          <div class="petition-details__comment__quote">
-            <p>"Remember, WE voted for this. We can undo the mess we made in 2018."</p>
-            <button class="petition-details__comment__flag">
-              {% include 'components/svg' with {class:'flag--outline', id: 'flag-outline'} only %}
-              {% include 'components/svg' with {class:'flag--solid', id: 'flag-solid'} only %}
-            </button>
-          </div>
-        </div>
-        <div class="petition-details__comment petition-details__comment--flagged">
-          <div class="petition-details__comment__info">
-            <div class="petition-details__comment__author">Jill Handerson</div>
-            <div class="petition-details__comment__date">Nov 29, 2017</div>
-          </div>
-          <div class="petition-details__comment__quote">
-            <p>"Remember, WE voted for this. We can undo the mess we made in 2018."</p>
-            <button class="petition-details__comment__flag">
-              {% include 'components/svg' with {class:'flag--outline', id: 'flag-outline'} only %}
-              {% include 'components/svg' with {class:'flag--solid', id: 'flag-solid'} only %}
-            </button>
-          </div>
-        </div>
+        {% include 'components/signers' %}
       </div>
       <button class="btn petition-details__comments__toggle">
         REASONS FOR SIGNING

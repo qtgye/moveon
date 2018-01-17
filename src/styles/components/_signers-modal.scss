@@ -1,0 +1,22 @@
+.signers-modal {
+
+
+  &__heading {
+    display: block;
+    text-transform: uppercase;
+    @include font(roboto-condensed-bold);
+    @include respond((
+      text-align: center null left,
+      font-size: 21px null 48px,
+      line-height: 22.6px null 27px,
+    ));
+  }
+
+
+  .signers {
+    max-width: 620px;
+    @include respond((
+      margin-top: 85px,
+    ));
+  }
+}

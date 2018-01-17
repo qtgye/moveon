@@ -41,9 +41,9 @@
       </div>
     </div>
 
-    <div class="petition-card__cta">
+    <button class="petition-card__cta" data-modal="signers-modal">
       MOST RECENT SIGNERS <strong>→</strong>
-    </div>
+    </button>
 
     <div class="petition-card__share">
       <strong class="petition-card__share-heading">Share</strong>
@@ -56,4 +56,6 @@
     </div>
 
   </div>
+
+  {% include 'components/signers-modal' %}
 </div>

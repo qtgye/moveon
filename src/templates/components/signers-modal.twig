@@ -1,0 +1,11 @@
+{% extends 'components/modal' %}
+
+{% block modal_id %}signers-modal{% endblock %}
+{% block modal_class %}signers-modal{% endblock %}
+
+{% block modal_content %}
+
+  <div class="signers-modal__heading">RECENT PETITION SIGNERS</div>
+
+  {% include 'components/signers' %}
+{% endblock %}

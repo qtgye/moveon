@@ -1,0 +1,102 @@
+.signers {
+
+  .signer {
+
+    &:not(:first-child) {
+      @include respond((
+        margin-top: 30px null 40px,
+      ));
+    }
+
+    // Collapsed state
+    & + & {
+      display: none;
+    }
+
+    &__info {
+      display: flex;
+      @include respond((
+        justify-content: space-between null center,
+      ));
+    }
+
+    &__author {
+      @include font(roboto);
+      @include respond((
+        font-size: 11px null 18px,
+        line-height: 21px nul 27px,
+        letter-spacing: -.1px,
+        margin-left: null null 0,
+        margin-right: null null auto,
+      ));
+    }
+
+    &__date {
+      @include font(roboto);
+      @include respond((
+        color: #696a6a,
+        font-size: 11px null 18px,
+        line-height: 27px null 27px,
+        margin-right: null null auto,
+      ));
+    }
+
+    &__quote {
+      display: flex;
+      font-style: italic;
+      @include font(roboto-medium);
+      @include respond((
+        margin-top: 10px null 5px,
+        font-size: 14px null 18px,
+        line-height: 21px null 27px,
+        margin-right: null null percentage(-90/600),
+      ));
+
+      p {
+        @include respond((
+          flex-grow: null null 1,
+        ));
+      }
+    }
+
+    &__flag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background-color: transparent;
+      @include respond((
+        width: 20px null 25px,
+        height: 20px null 25px,
+        margin-left: 7px,
+        margin-right: 0,
+      ));
+
+      svg {
+        fill: $azure;
+        @include respond((
+          width: 10px null 22px,
+          height: 12px null 25px,
+        ));
+      }
+
+      .flag--outline {
+
+      }
+
+      .flag--solid {
+        display: none;
+      }
+    }
+
+    // FLAGGED COMMENT VARIATION
+    &--flagged {
+      .flag--solid {
+        display: block;
+      }
+      .flag--outline {
+        display: none;
+      }
+    }
+  }
+}

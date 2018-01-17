@@ -164,6 +164,7 @@
   &__text {
     @include respond((
       width: null null percentage(580/1180),
+      flex-shrink: 0,
       padding: (14px 0) null 0,
     ));
 
@@ -255,12 +256,13 @@
   &__fineprint {
     @include font(roboto);
     @include respond((
-      width: null null percentage(579/1180),
+      width: null null percentage(580/1180),
       border: (1px solid #979797) null,
       font-size: 11px,
       line-height: 20px,
       color: $white,
-      padding: (11px 15px) null,
+      padding: (11px 15px) null (11px 0),
+      text-align: center,
     ));
 
     strong {

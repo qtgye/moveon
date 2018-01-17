@@ -39,6 +39,16 @@
       margin-top: 40px null 0,
     ));
 
+    // COLLAPSED ENTRIES STATE
+    &:not(.expanded) {
+      .signer + .signer {
+        display: none;
+      }
+      .petition-details__comments__toggle svg {
+        transform: none;
+      }
+    }
+
     &__heading {
       @include font(roboto-bold);
       @include respond((
@@ -53,20 +63,10 @@
       @include respond((
         margin-top: 23px null 45px,
       ));
-
-      // EXPANDED ENTRIES STATE
-      &.expanded {
-        .petition-details__comment + .petition-details__comment {
-          display: block;
-        }
-      }
     }
 
     .signers {
 
-      .signer + .signer {
-        display: none;
-      }
     }
 
     &__toggle {
@@ -83,6 +83,7 @@
       ));
 
       svg {
+        transform: rotate(180deg);
         @include respond((
           width: 14px null 20px,
           height: 14px null 18px,

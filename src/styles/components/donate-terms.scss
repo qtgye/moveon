@@ -2,20 +2,27 @@
 
 
   &__content {
-    display: flex;
     justify-content: space-between;
     max-width: 1180px;
     margin: auto;
-    padding: 100px 0 170px;
     border-top: 1px solid rgba(34, 34, 34, 0.38);
+    @include respond((
+      display: block null flex,
+      padding: (100px 30px 170px) null (100px 0 170px),
+    ));
   }
 
 
   &__column {
-    width: percentage(580/1180);
+    @include respond((
+      width: null null percentage(580/1180),
+    ));
 
     &:nth-child(2) {
-      width: percentage(454/1180);
+      @include respond((
+        width: null null percentage(454/1180),
+        margin-top: 1em null 0,
+      ));;
     }
 
     p {

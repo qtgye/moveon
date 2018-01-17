@@ -1,6 +1,10 @@
 .donate-form {
-  padding-top: 132px;
-  padding-bottom: 100px;
+  @include respond((
+    padding-top: 50px null 132px,
+    padding-bottom: 50px null 100px,
+    padding-left: 30px null 0,
+    padding-right: 30px null 0,
+  ));
 
   &__heading {
     @include font(roboto-condensed-bold);
@@ -24,13 +28,24 @@
   &__steps {
     display: flex;
     margin-top: 50px;
+    @include respond((
+      flex-wrap: wrap null nowrap,
+    ));
   }
 
 
   &__step {
-    width: percentage(1/3);
     position: relative;
-    padding-left: 60px;
+    @include respond((
+      width: 100% null percentage(1/3),
+      padding-left: null null 60px,
+    ));
+
+    &:not(:first-child) {
+      @include respond((
+        margin-top: 50px null 0,
+      ));
+    }
 
     &__numeral {
       width: 50px;
@@ -40,13 +55,13 @@
       align-items: center;
       color: $white;
       background-color: $azure;
-      position: absolute;
       top: 0;
       left: 0;
       border-radius: 100%;
       overflow: hidden;
       @include font(roboto);
       @include respond((
+        position: relative null absolute,
         font-size: 28px,
       ));
 
@@ -82,11 +97,13 @@
 
       &::after {
         content: '';
-        display: block;
         width: 100%;
         position: absolute;
         top: 50%;
         border-bottom: 1px solid rgba(34, 34, 34, 0.38);
+        @include respond((
+          display: none null block,
+        ));
       }
 
       span {
@@ -124,7 +141,18 @@
 
   &__fields {
     margin-top: 50px;
-    margin-right: 48px;
+    @include respond((
+      margin-right: null null 48px,
+    ));
+  }
+
+
+  &__actions {
+    display: none;
+  }
+
+  &__completed-summary {
+    display: none;
   }
 
 

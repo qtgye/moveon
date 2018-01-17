@@ -1,6 +1,9 @@
 .header {
   display: block;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: black;
   width: 100%;
   z-index: 10;
@@ -24,4 +27,10 @@
       width: 100%;
     }
   }
+}
+
+body {
+  @include respond((
+    padding-top: 57px null 130px,
+  ));
 }

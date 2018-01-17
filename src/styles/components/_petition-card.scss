@@ -2,6 +2,7 @@
   background-color: $ice-blue;
   position: relative;
   @include respond((
+    margin: (0 21px) null 0,
     padding: (21px 22px 28px) null (107px percentage(100/780) 66px),
   ));
 

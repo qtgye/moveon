@@ -71,14 +71,17 @@
       display: flex,
       align-items: center,
       height: 48px null 36px,
-      font-family: 'Roboto Regular' null null 'Roboto Condensed',
-      font-weight: normal null null bolder,
       font-size: 16px,
       line-height: 1.25,
       padding-left: 16px null 0,
       padding-right: 16px null 0,
       text-transform: null null uppercase,
     ));
+    @include font(roboto);
+
+    @include breakpoint($bp-lg) {
+      @include font(roboto-condensed-bold);
+    }
 
     &:link,
     &:visited {

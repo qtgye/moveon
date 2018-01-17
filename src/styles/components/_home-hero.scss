@@ -10,7 +10,7 @@
   &__figure {
     @include aspect-ratio(1, 1);
     @include respond((
-      width: null null 50%,
+      width: null null percentage(775px/$bp-xl),
     ));
 
     img {
@@ -33,7 +33,7 @@
       justify-content: center,
       align-items: flex-start,
       padding: (24px 16px) null (0 percentage(155px/1440px)),
-      width: null null 50%,
+      width: null null percentage(665px/$bp-xl),
     ));
   }
 

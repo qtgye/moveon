@@ -1,0 +1,284 @@
+.petition-details {
+
+
+  &__content {
+    @include respond((
+      padding: (32px percentage(43px/$bp-sm)) null (60px percentage(90/780) 46px),
+    ));
+  }
+
+
+
+  &__narrative {
+    @include respond((
+      display: block null none,
+    ));
+
+    p {
+      @include font(roboto);
+      @include respond((
+        font-size: 14px,
+        line-height: 21px,
+      ));
+
+      &:not(:first-child) {
+        @include respond((
+          margin-top: 25px,
+        ));
+      }
+    }
+
+    strong {
+      @include font(roboto-bold);
+    }
+  }
+
+
+  &__comments {
+    @include respond((
+      margin-top: 40px null 0,
+    ));
+
+    &__heading {
+      @include font(roboto-bold);
+      @include respond((
+        font-size: 14px null 18px,
+        line-height: 21px null 27px,
+        letter-spacing: -.1px,
+      ));
+    }
+
+
+    &__entries {
+      @include respond((
+        margin-top: 23px null 45px,
+      ));
+
+      // EXPANDED ENTRIES STATE
+      &.expanded {
+        .petition-details__comment + .petition-details__comment {
+          display: block;
+        }
+      }
+    }
+
+    &__toggle {
+      white-space: nowrap;
+      background-color: transparent;
+      display: table;
+      @include font(roboto-condensed-bold);
+      @include respond((
+        margin-top: 17px null 46px,
+        margin-left: null null auto,
+        margin-right: null null auto,
+        font-size: 14px null 20px,
+        line-height: 21px null 34px,
+      ));
+
+      svg {
+        @include respond((
+          width: 14px null 20px,
+          height: 14px null 18px,
+          margin-left: 10px,
+        ));
+      }
+    }
+
+  }
+
+
+  &__comment {
+
+    &:not(:first-child) {
+      @include respond((
+        margin-top: 17px null 40px,
+      ));
+    }
+
+    // Collapsed state
+    & + & {
+      display: none;
+    }
+
+    &__info {
+      display: flex;
+      @include respond((
+        justify-content: space-between null center,
+      ));
+    }
+
+    &__author {
+      @include font(roboto);
+      @include respond((
+        font-size: 11px null 18px,
+        line-height: 21px nul 27px,
+        letter-spacing: -.1px,
+        margin-left: null null 0,
+        margin-right: null null auto,
+      ));
+    }
+
+    &__date {
+      @include font(roboto);
+      @include respond((
+        color: #696a6a,
+        font-size: 11px null 18px,
+        line-height: 27px null 27px,
+        margin-right: null null auto,
+      ));
+    }
+
+    &__quote {
+      display: flex;
+      font-style: italic;
+      @include font(roboto-medium);
+      @include respond((
+        margin-top: 10px null 5px,
+        font-size: 14px null 18px,
+        line-height: 21px null 27px,
+        margin-right: null null percentage(-90/600),
+      ));
+
+      p {
+        @include respond((
+          flex-grow: null null 1,
+        ));
+      }
+    }
+
+    &__flag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background-color: transparent;
+      @include respond((
+        width: 20px null 25px,
+        height: 20px null 25px,
+        margin-left: 7px,
+        margin-right: 0,
+      ));
+
+      svg {
+        fill: $azure;
+        @include respond((
+          width: 10px null 22px,
+          height: 12px null 25px,
+        ));
+      }
+
+      .flag--outline {
+
+      }
+
+      .flag--solid {
+        display: none;
+      }
+    }
+
+    // FLAGGED COMMENT VARIATION
+    &--flagged {
+      .flag--solid {
+        display: block;
+      }
+      .flag--outline {
+        display: none;
+      }
+    }
+  }
+
+
+  &__author {
+    @include respond((
+      margin-top: 25px null 27px,
+      font-size: 14px null 18px,
+      line-height: 21px null 27px,
+      letter-spacing: -.1px,
+    ));
+
+    &__heading {
+      @include font(roboto-bold);
+    }
+
+    &__name {
+      @include font(roboto);
+      @include respond((
+        margin-top: 1.5em,
+      ));
+    }
+
+    &__cta {
+      display: table;
+      @include font(roboto-condensed-bold);
+      @include respond((
+        color: $black,
+        margin-top: 15px,
+        margin-left: null null auto,
+        margin-right: null null auto,
+        font-size: 14px null 20px,
+        line-height: 21px null 34px,
+      ));
+    }
+  }
+
+
+  &__share {
+    @include respond((
+      margin-top: 40px null 50px,
+    ));
+
+    &__heading {
+      @include font(roboto-condensed-bold);
+      @include respond((
+        font-size: 14px null 18px,
+        line-height: 21px null 27px,
+      ));
+    }
+
+    &__links {
+      @include respond((
+        margin-top: 20px null 26px,
+      ));
+    }
+
+    &__item {
+      align-items: center;
+      color: $azure;
+      @include respond((
+        display: flex null inline-flex,
+        padding: null null (13px 16px),
+        font-size: 12px 14px,
+        line-height: 20px,
+      ));
+
+      &:not(:first-child) {
+        @include respond((
+          margin-top: 21px null 0,
+          margin-left: null null 10px
+        ));
+      }
+
+      svg {
+        fill: $azure;
+        @include respond((
+          width: 24px null 20px,
+          height: 24px null 20px,
+          padding: 5px null 0,
+          margin-right: 20px,
+        ));
+      }
+    }
+  }
+
+
+  &__disclaimer {
+    @include font(roboto);
+    @include respond((
+      margin-top: 40px null 30px,
+      font-size: 11px null 13px,
+      line-height: 16.5px null 19.5px,
+      color: $slate-gray,
+    ));
+  }
+
+}

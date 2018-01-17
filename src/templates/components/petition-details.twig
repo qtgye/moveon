@@ -1,0 +1,82 @@
+<div class="petition-details">
+  <div class="petition-details__content">
+
+    <div class="petition-details__narrative">
+      <p><strong>Background</strong></p>
+      <p>The opioid epidemic is hurting real people: every 10 minitues, a mother, child, friend, neighbor, or fellow American dies from a drug overdose.</p>
+      <p>Today, Donald Trump is finally excepcted to declear the opioid crisis a national emergency—more than two months after he first committed to the declaration, and potentially more than 10,000 overdoses later. </p>
+      <p>But without significant new funds for a long-term, comprehensive strategy for both prevention and treatment, a national emergency alone is not likely to be successful.</p>
+    </div>
+
+    <div class="petition-details__comments">
+      <h4 class="petition-details__comments__heading">
+        What Others Are Saying
+      </h4>
+      <div class="petition-details__comments__entries">
+        <div class="petition-details__comment">
+          <div class="petition-details__comment__info">
+            <div class="petition-details__comment__author">Jill Handerson</div>
+            <div class="petition-details__comment__date">Nov 29, 2017</div>
+          </div>
+          <div class="petition-details__comment__quote">
+            <p>"Remember, WE voted for this. We can undo the mess we made in 2018."</p>
+            <button class="petition-details__comment__flag">
+              {% include 'components/svg' with {class:'flag--outline', id: 'flag-outline'} only %}
+              {% include 'components/svg' with {class:'flag--solid', id: 'flag-solid'} only %}
+            </button>
+          </div>
+        </div>
+        <div class="petition-details__comment petition-details__comment--flagged">
+          <div class="petition-details__comment__info">
+            <div class="petition-details__comment__author">Jill Handerson</div>
+            <div class="petition-details__comment__date">Nov 29, 2017</div>
+          </div>
+          <div class="petition-details__comment__quote">
+            <p>"Remember, WE voted for this. We can undo the mess we made in 2018."</p>
+            <button class="petition-details__comment__flag">
+              {% include 'components/svg' with {class:'flag--outline', id: 'flag-outline'} only %}
+              {% include 'components/svg' with {class:'flag--solid', id: 'flag-solid'} only %}
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="btn petition-details__comments__toggle">
+        REASONS FOR SIGNING
+        {% include 'components/svg' with {id: 'caret-down'} only %}
+      </button>
+    </div>
+
+    <div class="petition-details__author">
+      <h4 class="petition-details__author__heading">Author</h4>
+      <div class="petition-details__author__name">Matt Hildreth</div>
+      <a href="#" class="btn petition-details__author__cta">CONTACT →</a>
+    </div>
+
+    <div class="petition-details__share">
+      <h4 class="petition-details__share__heading">Share</h4>
+      <div class="petition-details__share__links">
+        <a href="#" class="petition-details__share__item">
+          {% include 'components/svg' with {id: 'mail'} only %}
+          Email
+        </a>
+        <a href="#" class="petition-details__share__item">
+          {% include 'components/svg' with {id: 'facebook'} only %}
+          Facebook
+        </a>
+        <a href="#" class="petition-details__share__item">
+          {% include 'components/svg' with {id: 'twitter'} only %}
+          Twitter
+        </a>
+        <a href="#" class="petition-details__share__item">
+          {% include 'components/svg' with {id: 'link'} only %}
+          Copy Link
+        </a>
+      </div>
+    </div>
+
+    <div class="petition-details__disclaimer">
+      MoveOn Civic Action does not necessarily endorse the contents of petitions posted on this site. MoveOn Petitions is an open tool that anyone can use to post a petition advocating any point of view, so long as the petition does not violate our terms of service.
+    </div>
+
+  </div>
+</div>

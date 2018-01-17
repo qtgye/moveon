@@ -40,13 +40,13 @@
 
   &__heading {
     span {
-      font-family: 'Roboto Condensed';
-      font-weight: bolder;
       background-color: $black;
       color: $azure;
+      position: relative;
+      @include font(roboto-condensed-bold);
       @include respond((
-        font-size: 32px,
-        line-height: 28.8px,
+        font-size: 32px null 48px,
+        line-height: 1,
         letter-spacing: 0,
       ));
     }
@@ -54,13 +54,17 @@
 
 
   &__body {
-    font-family: 'Roboto Condensed';
     font-weight: bolder;
+    @include font(roboto);
     @include respond((
       margin-top: 27px null 44px,
       font-size: 16px,
       line-height: 24px,
     ));
+
+    strong {
+      @include font(roboto-bold);
+    }
   }
 
 
@@ -79,8 +83,8 @@
       position: relative;
       @include respond((
         margin-left: 10px,
-        width: 24px,
-        height: 24px,
+        width: 8px,
+        height: 12px,
       ));
     }
 

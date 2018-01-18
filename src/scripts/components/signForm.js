@@ -2,8 +2,12 @@ class SignForm {
 
   constructor($element) {
     this.$element = $($element);
+    this.$signButton = $('.sign-form__modal-toggle');
+    this.$signForms = $('.sign-form');
+    this.$signFormModal = $('.sign-form-modal');
     this.$shareModal = $('.share-modal');
     this.bindSubmit();
+    this.bindSignFormButton();
   }
 
   bindSubmit() {
@@ -18,6 +22,28 @@ class SignForm {
     let _shareModal = this.$shareModal.data('modal');
     if ( _shareModal ) {
       _shareModal.show();
+    }
+  }
+
+  bindSignFormButton() {
+    let _this = this;
+    this.$signButton.on('click', function () {
+      let $visibleForm = _this.$signForms.filter(':visible');
+
+      if ( $visibleForm.length ) {
+        let $inputToFocus = $visibleForm.find('input').first();
+        $inputToFocus.focus();
+      } else {
+        _this.showSignFormModal();
+      }
+
+    });
+  }
+
+  showSignFormModal() {
+    let _signFormModal = this.$signFormModal.data('modal');
+    if ( _signFormModal ) {
+      _signFormModal.show();
     }
   }
 

@@ -2,14 +2,12 @@
   display: block;
   @include respond((
     padding: (30px 8px) null 0,
-    background-color: $off-white,
   ));
 
 
   &__content {
     position: relative;
     @include respond((
-      box-shadow: (0 0 10px transparentize($black, .5)) null none,
       background-color: $white,
       padding: (28px 20px) null (56px 0 155px),
     ));
@@ -54,17 +52,17 @@
   }
 
   button {
-    display: block;
+    display: table;
     margin: auto;
+    max-width: 145px;
     @include font(roboto-condensed-bold);
     @include respond((
       background-color: $azure,
-      font-size: 12px null 18px,
-      width: 100% null 145px,
+      font-size: 18px,
       height: 50px null 36px,
       margin-top: 30px,
       color: $white,
-      text-transform: null null uppercase,
+      text-transform: uppercase,
     ));
   }
 }

@@ -14,7 +14,8 @@ class DonateConfirm {
     let _this = this;
     this.$form.on('change', function () {
       let formData = new FormData(_this.$form[0]);
-      _this.$submit.attr('disabled', formData.entries().length ? true : false);
+      let willDisable = Array.from(formData.values()).filter( value => value ).length ? false : true;
+      _this.$submit.attr('disabled', willDisable );
     });
   }
 

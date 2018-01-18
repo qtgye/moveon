@@ -225,6 +225,9 @@
 
   &:not(.active) {
     pointer-events: none;
+    .donate-form__step__numeral {
+      background-color: $light-gray;
+    }
   }
 
 

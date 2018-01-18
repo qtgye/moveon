@@ -7,6 +7,7 @@ import SignForm from './components/signForm';
 import PetitionComments from './components/petitionComments';
 import DonateReceipt from './components/donateReceipt';
 import DonateShortForm from './components/donateShortForm';
+import DonateFullForm from './components/donateFullForm';
 
 $(document).ready(function () {
   Nav.init();
@@ -17,4 +18,5 @@ $(document).ready(function () {
   PetitionComments.init();
   DonateReceipt.init();
   DonateShortForm.init();
+  DonateFullForm.init();
 });

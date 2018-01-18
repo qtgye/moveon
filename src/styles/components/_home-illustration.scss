@@ -38,7 +38,7 @@
 
   &__bottom {
     @include respond((
-      background-color: null null transparentize($black, .15),
+      background-color: transparentize($black, .15),
     ));
 
     .home-illustration__content {
@@ -84,7 +84,7 @@
     @include respond((
       color: $white,
       font-size: 36px null 48px,
-      line-height: .9,
+      line-height: 1 null .9,
     ));
   }
 
@@ -95,7 +95,7 @@
       color: $white,
       margin-top: 20px null 40px,
       font-size: 14px,
-      line-height: 20px,
+      line-height: 24px null 20px,
     ));
   }
 
@@ -137,66 +137,4 @@
     }
   }
 
-
-  &__list {
-    @include respond((
-      display: flex null block,
-      flex-flow: (row wrap) null,
-      margin-top: null null 20px,
-    ));
-
-    &-item {
-      flex-grow: 0;
-      flex-shrink: 0;
-      @include respond((
-        width: 50% null auto,
-        margin-top: 50px null 0,
-        text-align: center null left,
-      ));
-
-      img {
-        margin: auto;
-        @include respond((
-          display: block null none,
-          height: 30px,
-        ));
-      }
-
-      &__text {
-        @include respond((
-          margin-top: 22px null 0,
-          color: $azure null $white,
-          font-size: 14px,
-          line-height: 20px,
-        ));
-      }
-    }
-  }
-
-}
-
-
-// LIST ORDERING
-.home-illustration__list-item {
-  &:nth-child(1) {
-    order: 1;
-  }
-  &:nth-child(3) {
-    order: 2;
-  }
-  &:nth-child(2) {
-    order: 3;
-  }
-  &:nth-child(4) {
-    order: 4;
-  }
-
-  @include breakpoint(lg) {
-    &:nth-child(2) {
-      order: 2;
-    }
-    &:nth-child(3) {
-      order: 3;
-    }
-  }
 }

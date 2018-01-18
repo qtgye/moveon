@@ -74,7 +74,7 @@
       line-height: 1.25,
       padding-left: 16px null 0,
       padding-right: 16px null 0,
-      padding-bottom: 8px null 19px,
+      padding-bottom: 8px null 0,
       text-transform: null null uppercase,
     ));
     @include font(roboto);
@@ -125,6 +125,12 @@
           padding-left: null null 24px,
         ));
       }
+    }
+
+    & > li {
+      @include respond((
+        padding-bottom: null null 19px,
+      ));
     }
 
     &__caret {

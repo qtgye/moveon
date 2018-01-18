@@ -1,6 +1,6 @@
 import Nav from './components/nav';
-import Form from './components/Form';
-import Modal from './components/Modal';
+import Form from './components/form';
+import Modal from './components/modal';
 
 import HomeCarousel from './components/homeCarousel';
 import SignForm from './components/signForm';

@@ -148,6 +148,7 @@
       @include respond((
         display: inline-block,
         font-size: 18px,
+        margin-top: 20px,
       ));
 
       &[disabled] {
@@ -164,5 +165,9 @@
 
   .donate-form__action--flat {
     opacity: .26;
+  }
+
+  .donate-form__agreement {
+    max-width: 475px;
   }
 }

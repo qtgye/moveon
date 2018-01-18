@@ -2,8 +2,8 @@
   @include respond((
     padding-top: 50px null 132px,
     padding-bottom: 50px null 100px,
-    padding-left: 30px null 0,
-    padding-right: 30px null 0,
+    padding-left: percentage(30px/320px) null 0,
+    padding-right: percentage(30px/320px) null 0,
   ));
 
   &__heading {

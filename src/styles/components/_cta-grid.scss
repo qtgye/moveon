@@ -3,8 +3,8 @@
 
   &__content {
     @include respond((
-      padding: (54px 30px) null (56px percentage(155px/$bp-xl) 100px),
-      background-color: null null $azure,
+      padding: (40px percentage(15/320)) null (56px percentage(155px/$bp-xl) 100px),
+      background-color: $azure,
     ));
   }
 
@@ -15,10 +15,10 @@
       display: table,
       margin: auto,
       padding: null null (0 8px),
-      font-size: 22px null 36px,
-      line-height: 30px null 58px,
-      background-color: null null $black,
-      color: null null $azure,
+      font-size: 36px,
+      line-height: 38px null 58px,
+      background-color: $black,
+      color: $azure,
     ));
     text-align: center;
   }
@@ -28,16 +28,16 @@
     @include respond((
       font-size: 14px null 24px,
       line-height: 20px null 36px,
-      color: $azure null $black,
+      color: $black,
       margin-top: 22px null 40px,
-      text-align: left null center,
+      text-align: center,
     ));
   }
 
 
   &__grid {
     @include respond((
-      display: block null flex,
+      display: flex,
       flex-direction: column,
       align-items: center,
       margin-top: 33px null 50px,
@@ -47,12 +47,6 @@
 
   &__item {
     display: block;
-    @include respond((
-      text-align: center,
-      padding: 30px null 0,
-      border: (2px solid $azure) null none,
-    ));
-
     @include breakpoint(md down) {
       &:not(:first-child) {
         margin-top: 20px,
@@ -77,38 +71,30 @@
   }
 
 
-  &__image {
-    margin: auto;
-    @include respond((
-      display: block null none,
-    ));
-  }
-
-
   &__text {
     overflow: hidden;
-    @include font(roboto);
     @include respond((
-      font-size: 14px null 86px,
-      line-height: 20px null .9,
-      color: $azure null $black,
-      margin-top: 43px null 0,
-      text-transform: null null uppercase,
-      text-align: center null left,
+      font-size: 60px null 86px,
+      line-height: 1,
+      color: $black,
+      margin-top: 20px null 0,
+      text-transform: uppercase,
+      text-align: left,
+      letter-spacing: -1px null normal,
     ));
 
     span {
-      @include breakpoint(lg) {
-        @include font(roboto-condensed-bold);
-        transition: all .3s;
-        background-image: linear-gradient(to top, white, white);
-        background-repeat: no-repeat;
-        background-size: 100% 6px;
-        background-position: 0 87%;
+      @include font(roboto-condensed-bold);
+      transition: all .3s;
+      background-image: linear-gradient(to top, white, white);
+      background-repeat: no-repeat;
+      background-size: 100% 6px;
+      @include respond((
+        background-position: (0 93%) null (0 87%),
+      ));
 
-        &:hover {
-          background-size: 100% 90%;
-        }
+      &:hover {
+        background-size: 100% 90%;
       }
     }
   }

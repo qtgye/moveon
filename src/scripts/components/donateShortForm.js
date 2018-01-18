@@ -1,9 +1,8 @@
-class DonateConfirm {
+class DonateShortForm {
 
   constructor( $element ) {
 
-    this.$element = $($element);
-    this.$form = this.$element.find('form');
+    this.$form = $($element);
     this.$submit = this.$form.find('[type="submit"]');
     this.bindform();
 
@@ -26,10 +25,10 @@ export default {
 
   init() {
 
-    let $confirm = $('.donate-confirm');
+    let $shortform = $('.donate-shortform');
 
-    $confirm.each(function (index, el) {
-      let _form = new DonateConfirm(el);
+    $shortform.each(function (index, el) {
+      let _form = new DonateShortForm(el);
     });
 
   }

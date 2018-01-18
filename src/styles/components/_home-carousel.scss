@@ -43,6 +43,10 @@
     @include respond((
       margin-top: 50px,
       padding-bottom: 50px,
+      margin-left: null null percentage(-130/1180),
+      margin-right: null null percentage(-130/1180),
+      padding-left: null null percentage(130/1180),
+      padding-right: null null percentage(130/1180),
     ));
   }
 
@@ -189,9 +193,21 @@
 
     .flickity-prev-next-button {
       @include respond((
-        background-color: $azure,
-        display: null null none,
+        background-color: transparent,
+        transform: null null translateY(-44px),
       ));
+
+      &.previous {
+        @include respond((
+          left: null null calc(100% * 130 / 1440 - 60px),
+        ));
+      }
+
+      &.next {
+        @include respond((
+          right: null null calc(100% * 130 / 1440 - 60px),
+        ));
+      }
 
       svg {
         transform: scale(.6);

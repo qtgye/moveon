@@ -20,8 +20,8 @@
     border-radius: 50%;
     flex-shrink: 0;
     @include respond((
-      width: 110px null 200px,
-      height: 110px null 200px,
+      width: 200px,
+      height: 200px,
     ));
 
     img {
@@ -42,23 +42,20 @@
 
 
   &__quote {
-    @include font(roboto);
+    @include font(roboto-medium);
     @include respond((
+      font-style: italic,
       font-size: 24px,
       line-height: 30px null 36px,
     ));
-    @include breakpoint(lg) {
-      @include font(roboto-medium);
-      font-style: italic;
-    }
   }
 
   &__source {
     @include respond((
-      font-size: 11px 18px,
-      line-height: 20px 36px,
-      color: #A7A7A7 null $black,
-      float: null null right,
+      font-size: 14px,
+      line-height: 36px,
+      color: $black,
+      float: right,
     ));
     @include breakpoint(lg) {
       @include font(roboto-bold);
@@ -67,5 +64,10 @@
     strong {
       font-weight: bolder;
     }
+  }
+
+  .clearfix {
+    display: block;
+    clear: both;
   }
 }

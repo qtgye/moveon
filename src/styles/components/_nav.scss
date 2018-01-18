@@ -160,10 +160,6 @@
       }
     }
 
-    a {
-
-    }
-
   }
 
   &__secondary {
@@ -256,8 +252,9 @@
     }
 
     a {
+      padding-bottom: 0;
       @include respond((
-        padding-left: 72px null 0
+        padding-left: 72px null 0,
       ));
     }
   }

@@ -1,7 +1,7 @@
 .home-carousel {
   @include respond((
-    background-color: $off-white null rgba(0, 0, 0, 0.75),
-    padding: 48px null (100px percentage(130px/$bp-xl)),
+    background-color:  rgba(0, 0, 0, 0.75),
+    padding: (40px percentage(15/320)) null (100px percentage(130px/$bp-xl)),
   ));
 
   &__content {
@@ -16,10 +16,10 @@
   &__heading {
     @include font(roboto-condensed-bold);
     @include respond((
-      color: $black null $white,
+      color: $white,
       width: null null 300px,
-      font-size: 22px null 48px,
-      line-height: 1 null .9,
+      font-size: 36px null 48px,
+      line-height: 42px null .9,
     ));
   }
 
@@ -28,7 +28,7 @@
     @include respond((
       width: null null 320px,
       margin-top: 22px null 40px,
-      color: $azure null $white,
+      color: $white,
       font-size: 14px null 16px,
       line-height: 20px null 24px,
     ));
@@ -41,7 +41,7 @@
     position: relative;
     overflow: hidden;
     @include respond((
-      margin-top: 50px,
+      margin-top: 30px null 50px,
       padding-bottom: 50px,
       margin-left: null null percentage(-130/1180),
       margin-right: null null percentage(-130/1180),
@@ -134,7 +134,7 @@
     @include font(roboto-bold);
     @include respond((
       margin-bottom: auto,
-      top: -10px,
+      top: -30px null -10px,
       font-size: 20px null 28px,
       line-height: 1,
     ));
@@ -145,20 +145,21 @@
     display: flex;
     align-items: center;
     white-space: nowrap;
+    @include font(roboto-condensed-bold);
     @include respond((
-      width: 223px,
-      height: 50px null 31px,
-      margin-top: 40px null -24px,
-      background-color: $azure null transparent,
-      text-transform: null null uppercase,
+      max-width: auto null 223px,
+      height: 31px,
+      margin-top: 20px null -24px,
+      background-color: transparent,
+      text-transform: uppercase,
       color: $white,
-      font-size: 12px null 20px,
+      font-size: 20px,
       float: null null right,
     ));
 
     svg {
       @include respond((
-        display: none null inline-block,
+        display: inline-block,
         width: 8px,
         height: 12px,
         fill: $white,
@@ -187,25 +188,25 @@
 
     .dot {
       @include respond((
-        background-color: $azure null $white,
+        background-color: $white,
       ));
     }
 
     .flickity-prev-next-button {
       @include respond((
         background-color: transparent,
-        transform: null null translateY(-44px),
+        transform: translateY(-44px),
       ));
 
       &.previous {
         @include respond((
-          left: null null calc(100% * 130 / 1440 - 60px),
+          left: 0 null null calc(100% * 130 / 1440 - 60px),
         ));
       }
 
       &.next {
         @include respond((
-          right: null null calc(100% * 130 / 1440 - 60px),
+          right: 0 null calc(100% * 130 / 1440 - 60px),
         ));
       }
 

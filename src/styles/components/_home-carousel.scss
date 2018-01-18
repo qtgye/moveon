@@ -194,13 +194,14 @@
 
     .flickity-prev-next-button {
       @include respond((
+        display: none null block,
         background-color: transparent,
         transform: translateY(-44px),
       ));
 
       &.previous {
         @include respond((
-          left: 0 null null calc(100% * 130 / 1440 - 60px),
+          left: 0 null calc(100% * 130 / 1440 - 60px),
         ));
       }
 

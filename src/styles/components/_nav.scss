@@ -9,7 +9,6 @@
     display: block null flex,
     justify-content: flex-end,
     align-items: flex-end,
-    padding-bottom: null null 19px,
   ));
 
   &__toggle {
@@ -75,11 +74,12 @@
       line-height: 1.25,
       padding-left: 16px null 0,
       padding-right: 16px null 0,
+      padding-bottom: 8px null 19px,
       text-transform: null null uppercase,
     ));
     @include font(roboto);
 
-    @include breakpoint($bp-lg) {
+    @include breakpoint(lg) {
       @include font(roboto-condensed-bold);
     }
 
@@ -111,7 +111,6 @@
   &__primary {
     @include respond((
       padding-top: 8px null 0,
-      padding-bottom: 8px null 0,
       margin-left: null null percentage(430px/$bp-xl),
       margin-right: null null auto,
     ));
@@ -123,7 +122,7 @@
 
       &:not(:first-child) {
         @include respond((
-          margin-left: null null 24px,
+          padding-left: null null 24px,
         ));
       }
     }
@@ -151,22 +150,27 @@
       }
     }
 
-    &__dropdown {
+  }
 
-      a {
+  &__dropdown {
 
-      }
-
-      ul {
-        display: none;
+    @include breakpoint(lg) {
+      &:hover ul.nav__primary__subnav {
+        display: flex;
       }
     }
+
+    a {
+
+    }
+
   }
 
   &__secondary {
     @include respond((
       margin-right: null null percentage(130px/$bp-xl),
       margin-left: null null auto,
+      padding-bottom: null null 19px,
     ));
 
     &__top {
@@ -232,7 +236,7 @@
 
   .nav__primary__subnav {
     @include respond((
-      display: null null flex,
+      display: null null none,
       align-items: center,
       height: null null 91px,
       position: relative null absolute,
@@ -264,28 +268,28 @@
     &:not(.nav--visible) {
       display: none;
     }
-  }
 
-  .nav__dropdown--expanded {
+    .nav__dropdown--expanded {
 
-    & > a:link,
-    & > a:active,
-    & > a:visited {
-      color: $azure;
-    }
+      & > a:link,
+      & > a:active,
+      & > a:visited {
+        color: $azure;
+      }
 
-    .nav__primary__caret {
-      transform: rotate(180deg);
+      .nav__primary__caret {
+        transform: rotate(180deg);
 
-      svg {
-        fill: $azure;
+        svg {
+          fill: $azure;
+        }
       }
     }
-  }
 
-  .nav__dropdown:not(.nav__dropdown--expanded) {
-    ul {
-      display: none;
+    .nav__dropdown:not(.nav__dropdown--expanded) {
+      ul {
+        display: none;
+      }
     }
   }
 }

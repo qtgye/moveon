@@ -80,6 +80,10 @@
   &__image {
     @include aspect-ratio(380, 282);
 
+    @include breakpoint(lg) {
+      @include aspect-ratio(380, 228);
+    }
+
     img {
       position: absolute;
       top: 0;

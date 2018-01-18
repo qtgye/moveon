@@ -3,7 +3,7 @@
 
   &__content {
     @include respond((
-      padding: (32px percentage(43px/$bp-sm)) null (60px percentage(90/780) 46px),
+      padding: (32px percentage(43/320)) null (60px percentage(90/780) 46px),
     ));
   }
 

@@ -86,6 +86,7 @@
 
 
   &__text {
+    overflow: hidden;
     @include font(roboto);
     @include respond((
       font-size: 14px null 86px,
@@ -99,8 +100,15 @@
     span {
       @include breakpoint(lg) {
         @include font(roboto-condensed-bold);
-        background-image: linear-gradient(to top, white 0%, white 6px, transparent 6px);
-        background-position: 0 95px;
+        transition: all .3s;
+        background-image: linear-gradient(to top, white, white);
+        background-repeat: no-repeat;
+        background-size: 100% 6px;
+        background-position: 0 87%;
+
+        &:hover {
+          background-size: 100% 90%;
+        }
       }
     }
   }

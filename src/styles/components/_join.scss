@@ -54,7 +54,7 @@
   button {
     display: table;
     margin: auto;
-    max-width: 145px;
+    width: 145px;
     @include font(roboto-condensed-bold);
     @include respond((
       background-color: $azure,

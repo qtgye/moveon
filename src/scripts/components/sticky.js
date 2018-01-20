@@ -12,7 +12,10 @@ class Sticky {
     this.$parent = this.$element.parent();
     this.$dummy = $('<div>');
 
-    this.$dummy.appendTo('body');
+    this.$dummy.insertBefore(this.$element);
+
+    this.computeMetrics();
+    this.checkPosition();
     this.listenToScroll();
     this.listenToResize();
 
@@ -40,22 +43,28 @@ class Sticky {
     });
   }
 
+  computeMetrics() {
+    let stickyOffset = this.$element.offset();
+    let dummyOffset = this.$dummy.offset();
+    let parentOffset = this.$parent.offset();
+    let parentHeight = this.$parent.height();
+
+    this.stickyWidth = this.$element.outerWidth();
+    this.stickyHeight = this.$element.outerHeight();
+    this.stickLeftOffset = stickyOffset.left;
+    this.stickTopOffset = dummyOffset.top - TOP_OFFSET;
+    this.anchorBottomOffset = parentOffset.top + parentHeight - BOTTOM_OFFSET - TOP_OFFSET - this.stickyHeight;
+  }
+
   checkPosition() {
-    let parentClientBox = this.$parent[0].getBoundingClientRect();
+    let scrolltop = window.pageYOffset;
 
-    if ( parentClientBox.top < TOP_OFFSET ) {
+    if ( scrolltop > this.stickTopOffset ) {
 
-      // If sticked, check if will anchor
-      if ( this.isSticked ) {
-
-      }
-      // If anchored, check if will stick
-      else if ( this.isAnchored ) {
-
-      }
-      // If neither, let it stick
-      else {
-
+      if ( scrolltop < this.anchorBottomOffset ) {
+        this.stick();
+      } else {
+        this.anchor();
       }
 
     } else {
@@ -67,16 +76,55 @@ class Sticky {
   stick() {
     this.anchored = false;
     this.sticked = true;
+
+    this.$dummy
+    .add(this.$element)
+    .css({
+      width: this.stickyWidth,
+      height: this.stickyHeight
+    });
+
+    this.$element.css({
+      position: 'fixed',
+      left: this.stickLeftOffset,
+      top: TOP_OFFSET,
+      bottom: '',
+    });
   }
 
   anchor() {
     this.sticked = false;
     this.anchored = true;
+
+    this.$dummy
+    .add(this.$element)
+    .css({
+      width: this.stickyWidth,
+      height: this.stickyHeight
+    });
+
+    this.$element.css({
+      position: 'absolute',
+      left: 0,
+      top: '',
+      bottom: BOTTOM_OFFSET,
+    });
+
   }
 
   reset() {
-    this.$element.css({position: '', top: '', left: ''});
-    this.$dummy.css({width: '', height: ''});
+    this.sticked = false;
+    this.anchored = false;
+
+    this.$dummy
+    .add(this.$element)
+    .css({
+      width: '',
+      height: '',
+      top: '',
+      left: '',
+      position: '',
+    });
   }
 
 }

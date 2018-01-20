@@ -1,6 +1,7 @@
 import Nav from './components/nav';
 import Form from './components/form';
 import Modal from './components/modal';
+import Sticky from './components/sticky';
 
 import HomeCarousel from './components/homeCarousel';
 import SignForm from './components/signForm';
@@ -15,6 +16,8 @@ $(document).ready(function () {
   HomeCarousel.init();
   Form.init();
   Modal.init();
+  Sticky.init();
+
   SignForm.init();
   PetitionComments.init();
   DonateReceipt.init();

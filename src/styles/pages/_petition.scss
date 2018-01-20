@@ -17,13 +17,14 @@
   }
 
   &-sign-column {
+    position: relative;
     @include respond((
       display: none null block,
-      margin-left: null null percentage(121/1180)
+      margin-left: null null percentage(121/1180),
     ));
 
     .sign-form {
-      margin-top: 79px;
+      padding-top: 79px;
     }
   }
 }

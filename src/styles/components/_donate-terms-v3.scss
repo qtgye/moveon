@@ -1,0 +1,29 @@
+.donate-terms {
+
+  &__content {
+    display: block;
+    border-top: 0;
+    padding-top: 48px;
+    padding-left: percentage(48/1180);
+    padding-right: percentage(48/1180);
+    padding-bottom: 48px;
+
+    p {
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+
+      @include respond((
+        font-size: 16px,
+        line-height: 24px,
+      ));
+    }
+
+    h4 {
+      @include font(roboto-bold);
+      &:not(:first-child) {
+        margin-top: 48px;
+      }
+    }
+  }
+}

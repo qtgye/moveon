@@ -1,0 +1,134 @@
+<form action="" class="donate-form donate-form-boxed" method="POST ">
+
+  <h2 class="donate-form__subheading">Will you support MoveOn’s work to make America more progressive?</h2>
+
+  <div class="donate-form__fields">
+    <div class="donate-form__column donate-form__column--left">
+      {# amount info #}
+      <div class="donate-form__amount-info">
+        <div class="donate-form__step__heading"><span>Donation Amount</span></div>
+        <div class="donate-form__step__content">
+          <div class="price-select-group">
+            <div class="radio-input">
+              <input type="radio" name="amount" id="amount-$20" value="$20" required>
+              <label for="amount-$20">$20</label>
+            </div>
+            <div class="radio-input">
+              <input type="radio" name="amount" id="amount-$40" value="$40" required>
+              <label for="amount-$40">$40</label>
+            </div>
+            <div class="radio-input">
+              <input type="radio" name="amount" id="amount-$75" value="$75" required>
+              <label for="amount-$75">$75</label>
+            </div>
+            <div class="radio-input">
+              <input type="radio" name="amount" id="amount-$200" value="$200" required>
+              <label for="amount-$200">$200</label>
+            </div>
+            <div class="radio-input">
+              <input type="radio" name="amount" id="amount-$400" value="$400" required>
+              <label for="amount-$400">$400</label>
+            </div>
+            <div class="radio-input">
+              <input type="radio" name="amount" id="amount-$750" value="$750" required>
+              <label for="amount-$750">$750</label>
+            </div>
+            <div class="radio-input">
+              <input type="radio" name="amount" id="amount-$1500" value="$1500" required>
+              <label for="amount-$1500">$1,500</label>
+            </div>
+            <div class="radio-input radio-input-other">
+              {# <input type="radio" name="amount" id="amount-other" value="other"> #}
+              <label for="amount-other">$</label>
+              <input type="number" name="other-amount">
+            </div>
+            <div class="checkbox-input">
+              <input type="checkbox" name="recurring" id="recurring">
+              <label for="recurring">make mine a monthly donation</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      {# amount info end #}
+      {# cc info #}
+      <div class="donate-form__card-info">
+        <div class="donate-form__step__heading"><span>Credit Card</span></div>
+        <div class="donate-form__step__content">
+          <div class="input-block">
+            <input type="text" name="ccNumber" id="cc-number">
+            <label for="cc-number">Credit Card Number</label>
+          </div>
+          <div class="input-block">
+            <input type="date" name="ccExpiration" id="cc-expiration">
+            <label for="cc-expiration">Expiration Date</label>
+          </div>
+          <div class="input-helper">MM / YYYY</div>
+          <div class="checkbox-input">
+              <input type="checkbox" name="save" id="save">
+              <label for="save">Please save my information for future donation transactions.</label>
+            </div>
+        </div>
+      </div>
+      {# cc info end #}
+    </div>
+    <div class="donate-form__column donate-form__column--right">
+      {# Billing info #}
+      <div class="donate-form__billing-info">
+        <div class="donate-form__step__heading"><span>Billing Card</span></div>
+        <div class="donate-form__step__content">
+          <div class="input-block">
+            <input type="text" name="name" id="name" required>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="input-helper">As it appears on your credit card</div>
+          <div class="input-block">
+            <input type="email" name="email" id="email" required>
+            <label for="email">Email</label>
+          </div>
+          <div class="input-block">
+            <input type="text" name="ccBilling" id="cc-billing">
+            <label for="cc-billing">Billing Address</label>
+          </div>
+          <div class="input-block">
+            <input type="text" name="ccCity" id="cc-city">
+            <label for="cc-city">City</label>
+          </div>
+          <div class="input-block">
+            <select name="ccState" id="cc-state">
+              <option value="" selected></option>
+              {% include 'components/states-code-options' %}
+            </select>
+            {% include 'components/svg' with {class: 'select-caret', id: 'caret-down'} only %}
+            <label for="cc-state">State</label>
+          </div>
+          <div class="input-block">
+            <input type="text" name="ccZip" id="cc-zip">
+            <label for="cc-zip">Billing ZIP</label>
+          </div>
+          <div class="checkbox-input">
+            <input type="checkbox" name="unemployed" id="unemployed">
+            <label for="unemployed">I am retired or unemployed</label>
+          </div>
+          <div class="input-block">
+            <input type="text" name="employer" id="employer">
+            <label for="employer">Employer</label>
+          </div>
+          <div class="input-block">
+            <input type="text" name="occupation" id="occupation">
+            <label for="occupation">Occupation</label>
+          </div>
+          <div class="input-helper">Occupation and employer required by federal law.</div>
+        </div>
+      </div>
+      {# Billing info end #}
+    </div>
+  </div>
+  <div class="donate-form__footer">
+    <p class="donate-form__agreement">
+      By clicking contribute, I confirm that I have read all of the rules below and I certify that I comply with each of them.
+    </p>
+    <button type="submit" class="donate-form__submit" disabled>Contribute</button>
+  </div>
+
+
+</form>

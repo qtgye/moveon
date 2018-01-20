@@ -1,0 +1,163 @@
+.donate-v3 {
+  .donate-form {
+    padding-bottom: 0;
+    @include respond((
+      padding-top: 50px null 109px,
+    ));
+
+    &__subheading {
+      margin-top: 0;
+    }
+
+    &__fields {
+      background-color: $ice-blue;
+      border-bottom: 1px solid $dark-gray-38;
+      margin-top: 35px;
+      @include respond((
+        display: block null flex,
+        margin-left: percentage(-28/247) null 0,
+        margin-right: percentage(-28/247) null 0,
+      ));
+    }
+
+    &__column {
+      @include respond((
+        width: null null 50%,
+        flex-shrink: 0,
+        flex-grow: 0,
+      ));
+
+      &--right {
+        display: flex;
+      }
+    }
+
+    &__amount-info {
+      @include respond((
+        padding: (48px percentage(28/320)) null 48px,
+        border-bottom: null null (1px solid $dark-gray-38),
+      ));
+    }
+
+    &__card-info {
+      @include respond((
+        padding: (48px percentage(28/320)) null 48px,
+      ));
+    }
+
+    &__billing-info {
+      width: 100%;
+      @include respond((
+        padding: (48px percentage(28/320)) null (48px 90px 48px),
+        border-left: null (1px solid $dark-gray-38),
+      ));
+    }
+
+    &__step {
+
+      &__heading {
+        &::after {
+          display: none;
+        }
+        span {
+          background-color: transparent;
+        }
+      }
+
+      &__content {
+        @include respond((
+          margin-top: 20px,
+        ));
+      }
+    }
+
+    label {
+      color: transparentize($black, 1-.54);
+    }
+
+    .checkbox-input {
+      margin-top: 14px;
+      margin-right: 0;
+
+      label {
+        color: $black;
+      }
+
+      input {
+        background-color: transparent;
+      }
+    }
+
+    .price-select-group {
+      max-width: 285px;
+      flex-wrap: wrap;
+      border-bottom: 0;
+
+      .radio-input {
+        margin-right: 0;
+
+        &:nth-child(2) {
+          @include respond((
+            margin-left: 30px null 48px,
+          ));
+        }
+        &:nth-child(3) {
+          @include respond((
+            margin-left: 30px null 57px,
+          ));
+        }
+        &:nth-child(5) {
+          @include respond((
+            margin-left: 22px null 38px,
+          ));
+        }
+        &:nth-child(6) {
+          @include respond((
+            margin-left: 21px null 48px,
+          ));
+        }
+
+        input[type="radio"] {
+          box-shadow: inset 0 0 0 20px $ice-blue;
+
+          &:checked {
+            box-shadow: inset 0 0 0 3px $ice-blue;
+          }
+        }
+
+        &-other {
+          display: inline-flex;
+          height: 50px;
+          margin-top: -14px;
+          margin-bottom: 0;
+          @include respond((
+            width: 157px null 182px,
+            margin-left: 10px null 24px,
+          ));
+
+          label {
+            z-index: 1;
+          }
+
+          input {
+            width: 100%;
+            margin-left: -20px;
+            padding: (0 25px);
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    &__footer {
+      background-color: $ice-blue;
+      margin-top: 0;
+      padding: 36px 0 56px 72px;
+      @include respond((
+        margin-left: percentage(-28/247) null 0,
+        margin-right: percentage(-28/247) null 0,
+        padding: (48px percentage(28/320)) null 48px,
+      ));
+    }
+  }
+}

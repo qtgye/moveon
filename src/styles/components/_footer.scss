@@ -40,18 +40,6 @@
       margin-right: null null 55px,
     ));
 
-    &::after {
-      content: '';
-      width: 100vw;
-      position: absolute;
-      left: -16px;
-      bottom: 0;
-      border-bottom: 1px solid #CACACA;
-      @include respond((
-        display: block null none,
-      ));
-    }
-
 
     &__column {
       @include respond((

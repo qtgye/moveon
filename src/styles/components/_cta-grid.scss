@@ -88,17 +88,6 @@
 
     span {
       @include font(roboto-condensed-bold);
-      transition: all .3s;
-      background-image: linear-gradient(to top, white, white);
-      background-repeat: no-repeat;
-      background-size: 100% 6px;
-      @include respond((
-        background-position: (0 93%) null (0 87%),
-      ));
-
-      &:hover {
-        background-size: 100% 90%;
-      }
     }
   }
 }

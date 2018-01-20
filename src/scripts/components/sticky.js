@@ -14,24 +14,28 @@ class Sticky {
 
     this.$dummy.insertBefore(this.$element);
 
-    this.computeMetrics();
-    this.checkPosition();
+    this.checkSize();
     this.listenToScroll();
     this.listenToResize();
 
   }
 
+  enable() {
+    this.enabled = true;
+    this.computeMetrics();
+    this.checkPosition();
+  }
+
+  disable() {
+    this.reset();
+    this.enabled = false;
+  }
 
   listenToResize() {
     let _this = this;
 
     $window.on('resize', function () {
-      if ( $window.width() <= ENABLED_BREAKPOINT ) {
-        _this.unstick();
-        _this.unanchor();
-      } else {
-        _this.checkPosition();
-      }
+      _this.checkSize();
     });
   }
 
@@ -56,7 +60,19 @@ class Sticky {
     this.anchorBottomOffset = parentOffset.top + parentHeight - BOTTOM_OFFSET - TOP_OFFSET - this.stickyHeight;
   }
 
+  checkSize() {
+    if ( $window.outerWidth() >= ENABLED_BREAKPOINT ) {
+      this.enable();
+
+    } else {
+      this.disable();
+    }
+  }
+
   checkPosition() {
+
+    if ( !this.enabled ) { return };
+
     let scrolltop = window.pageYOffset;
 
     if ( scrolltop > this.stickTopOffset ) {
@@ -138,7 +154,11 @@ export default {
     let $stickies = $('.sticky');
 
     $stickies.each(function (index, sticky) {
-      let _sticky = new Sticky(sticky);
+
+      // Bind only if visible
+      if ( $(sticky).is(':visible') ) {
+        let _sticky = new Sticky(sticky);
+      }
     });
 
   }

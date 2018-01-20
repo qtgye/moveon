@@ -53,6 +53,9 @@ class Sticky {
     let parentOffset = this.$parent.offset();
     let parentHeight = this.$parent.height();
 
+    // Reset first so we can compute exact offsets.
+    this.reset();
+
     this.stickyWidth = this.$element.outerWidth();
     this.stickyHeight = this.$element.outerHeight();
     this.stickLeftOffset = stickyOffset.left;
@@ -63,7 +66,6 @@ class Sticky {
   checkSize() {
     if ( $window.outerWidth() >= ENABLED_BREAKPOINT ) {
       this.enable();
-
     } else {
       this.disable();
     }

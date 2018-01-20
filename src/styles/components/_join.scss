@@ -1,5 +1,6 @@
 .join {
   display: block;
+  position: relative;
   @include respond((
     padding: (30px 8px) null 0,
   ));
@@ -8,7 +9,7 @@
   &__content {
     position: relative;
     @include respond((
-      background-color: $white,
+      background-color: $white null transparent,
       padding: (28px 20px) null (56px 0 155px),
     ));
   }

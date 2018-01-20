@@ -3,13 +3,15 @@
 {% block bodyclass %}petition{% endblock %}
 
 {% block content %}
-  <div class="petition-info-column">
-    {% include 'components/petition-card' %}
-    {% include 'components/petition-details' %}
-  </div>
-  <div class="petition-sign-column">
-    <div class="sticky">
-      {% include 'components/sign-form' %}
+  <div class="container">
+    <div class="petition-info-column">
+      {% include 'components/petition-card' %}
+      {% include 'components/petition-details' %}
+    </div>
+    <div class="petition-sign-column">
+      <div class="sticky">
+        {% include 'components/sign-form' %}
+      </div>
     </div>
   </div>
 

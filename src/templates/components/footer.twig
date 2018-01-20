@@ -1,76 +1,78 @@
 <div id="footer" class="footer">
-  <div class="footer__logo">
-    <img src="/images/logo.svg" alt="">
-  </div>
-  <div class="footer__top">
-
-    <div class="footer__nav">
-      <div class="footer__nav__column">
-        <div class="footer__nav__column-heading">Company</div>
-        <div class="footer__nav__column-links">
-          <a href="#">Careers</a>
-          <a href="#">Partner with Us</a>
-          <a href="#">News</a>
-        </div>
-      </div>
-      <div class="footer__nav__column">
-        <div class="footer__nav__column-heading">Contact</div>
-        <div class="footer__nav__column-links">
-          <a href="#">General Inquiries</a>
-          <a href="#">Petition Inquiries</a>
-          <a href="#">Press Inquiries</a>
-        </div>
-      </div>
-      <div class="footer__nav__column">
-        <div class="footer__nav__column-heading">Support</div>
-        <div class="footer__nav__column-links">
-          <a href="#">FAQs</a>
-          <a href="#">Store Support</a>
-          <a href="#">Privacy Policy & ToS</a>
-        </div>
-      </div>
-      <div class="footer__nav__cta">
-        <div class="footer__nav__cta__copy">
-          GET INVOLVED <br>
-          Passionate about an issue?
-        </div>
-        <a href="#">
-          {% include 'components/svg' with {id: 'document-add'} only %}
-          Start A Petition
-          {% include 'components/svg' with {id: 'caret-right'} only %}
-        </a>
-      </div>
+  <div class="container">
+    <div class="footer__logo">
+      <img src="/images/logo.svg" alt="">
     </div>
+    <div class="footer__top">
 
-    <div class="footer__text">
-      <div class="footer__text__item">
-        A joint website of MoveOn.org Civic Action and MoveOn.org Political Action. MoveOn.org Political Action and MoveOn.org Civic Action are separate organizations.
+      <div class="footer__nav">
+        <div class="footer__nav__column">
+          <div class="footer__nav__column-heading">Company</div>
+          <div class="footer__nav__column-links">
+            <a href="#">Careers</a>
+            <a href="#">Partner with Us</a>
+            <a href="#">News</a>
+          </div>
+        </div>
+        <div class="footer__nav__column">
+          <div class="footer__nav__column-heading">Contact</div>
+          <div class="footer__nav__column-links">
+            <a href="#">General Inquiries</a>
+            <a href="#">Petition Inquiries</a>
+            <a href="#">Press Inquiries</a>
+          </div>
+        </div>
+        <div class="footer__nav__column">
+          <div class="footer__nav__column-heading">Support</div>
+          <div class="footer__nav__column-links">
+            <a href="#">FAQs</a>
+            <a href="#">Store Support</a>
+            <a href="#">Privacy Policy & ToS</a>
+          </div>
+        </div>
+        <div class="footer__nav__cta">
+          <div class="footer__nav__cta__copy">
+            GET INVOLVED <br>
+            Passionate about an issue?
+          </div>
+          <a href="#">
+            {% include 'components/svg' with {id: 'document-add'} only %}
+            Start A Petition
+            {% include 'components/svg' with {id: 'caret-right'} only %}
+          </a>
+        </div>
       </div>
-      <div class="footer__text__item">
-        MoveOn.org Civic Action is a 501(c)(4) organization which primarily focuses on nonpartisan education and advocacy on important national issues.
-        <a href="#" class="footer__text__cta">
-          Donate to MoveOn Civic Action
-          {% include 'components/svg' with {id: 'caret-right'} only %}
-        </a>
-      </div>
-      <div class="footer__text__item">
-        MoveOn.org Political Action is a federal political committee which primarily helps members elect candidates who reflect our values through a variety of activities aimed at influencing the outcome of the next election.
-        <a href="#" class="footer__text__cta">
-          Donate to MoveOn Civic Action
-          {% include 'components/svg' with {id: 'caret-right'} only %}
-        </a>
-      </div>
-    </div>
 
-  </div>
-  <div class="footer__bottom">
-    <div class="footer__social">
-      <a href="#">{% include 'components/svg' with {id: 'facebook'} only %}</a>
-      <a href="#">{% include 'components/svg' with {id: 'twitter'} only %}</a>
-      <a href="#">{% include 'components/svg' with {id: 'instagram'} only %}</a>
+      <div class="footer__text">
+        <div class="footer__text__item">
+          A joint website of MoveOn.org Civic Action and MoveOn.org Political Action. MoveOn.org Political Action and MoveOn.org Civic Action are separate organizations.
+        </div>
+        <div class="footer__text__item">
+          MoveOn.org Civic Action is a 501(c)(4) organization which primarily focuses on nonpartisan education and advocacy on important national issues.
+          <a href="#" class="footer__text__cta">
+            Donate to MoveOn Civic Action
+            {% include 'components/svg' with {id: 'caret-right'} only %}
+          </a>
+        </div>
+        <div class="footer__text__item">
+          MoveOn.org Political Action is a federal political committee which primarily helps members elect candidates who reflect our values through a variety of activities aimed at influencing the outcome of the next election.
+          <a href="#" class="footer__text__cta">
+            Donate to MoveOn Civic Action
+            {% include 'components/svg' with {id: 'caret-right'} only %}
+          </a>
+        </div>
+      </div>
+
     </div>
-    <div class="footer__fineprint">
-      Paid for in part by <strong>MoveOn Political Action</strong>. Not authorized by any candidate or candidate's committee.
+    <div class="footer__bottom">
+      <div class="footer__social">
+        <a href="#">{% include 'components/svg' with {id: 'facebook'} only %}</a>
+        <a href="#">{% include 'components/svg' with {id: 'twitter'} only %}</a>
+        <a href="#">{% include 'components/svg' with {id: 'instagram'} only %}</a>
+      </div>
+      <div class="footer__fineprint">
+        Paid for in part by <strong>MoveOn Political Action</strong>. Not authorized by any candidate or candidate's committee.
+      </div>
     </div>
   </div>
 </div>

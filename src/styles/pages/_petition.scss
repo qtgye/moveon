@@ -1,6 +1,6 @@
 .petition {
 
-  #content {
+  #content .container {
     @include respond((
       display: null null flex,
       padding-top: 30px null 133px,

@@ -1,10 +1,9 @@
 .cta-grid {
-
+  background-color: $azure;
 
   &__content {
     @include respond((
       padding: (40px percentage(15/320)) null (56px percentage(155px/$bp-xl) 100px),
-      background-color: $azure,
     ));
   }
 

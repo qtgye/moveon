@@ -27,7 +27,6 @@
       padding-bottom: null null 39px,
       padding-left: null null percentage(130px/$bp-xl),
       padding-right: null null percentage(130px/$bp-xl),
-      border-bottom: null null (1px solid $white),
     ));
   }
 
@@ -220,8 +219,7 @@
     display: flex;
     @include respond((
       justify-content: null null space-between,
-      padding: null null (40px percentage(130px/$bp-xl)),
-      padding-top: null 30px,
+      padding: null null (0 percentage(130px/$bp-xl) 40px),
     ));
   }
 

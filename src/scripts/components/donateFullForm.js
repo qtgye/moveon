@@ -5,6 +5,10 @@ class DonateFullForm {
     this.$form = $($element);
     this.$submit = this.$form.find('[type="submit"]');
     this.$steps = this.$form.find('.donate-form__step');
+    this.$paymentFields = this.$form.find('[name="payment"]');
+    this.$creditCardRadio = this.$form.find('#credit-card');
+    this.$creditCardFields = this.$form.find('.donate-form__cc__fields');
+
     this.bindform();
 
   }
@@ -12,10 +16,17 @@ class DonateFullForm {
 
   bindform() {
     let _this = this;
+
     this.$form.on('change', function () {
       let completedSteps = _this.getCompletedStepsCount();
       _this.$submit.attr('disabled', completedSteps !== 3);
     });
+
+    // Credit card fields
+    this.$paymentFields.on('change', function () {
+      _this.$creditCardFields.toggleClass('visible', _this.$creditCardRadio.is(':checked'));
+    });
+
   }
 
 

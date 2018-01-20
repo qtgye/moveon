@@ -188,15 +188,13 @@ $bouncy-easing: cubic-bezier(.43,2.9,.64,.99);
 
 
   &__submit {
-    text-transform: uppercase;
-    background-color: $azure;
     color: $white;
     display: inline-flex;
     width: 134px;
     height: 36px;
     transition: all .3s;
     margin-top: 28px;
-    @include font(roboto-condensed-bold);
+    @include btn--azure;
     @include respond((
       font-size: 18px,
     ));

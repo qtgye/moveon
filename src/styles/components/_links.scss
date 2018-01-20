@@ -1,3 +1,18 @@
-a {
+a:link,
+a:visited,
+a:active {
   text-decoration: none;
+  transition: all .3s;
+
+  &:hover {
+    color: $azure;
+
+    svg {
+      fill: $azure;
+    }
+  }
+
+  svg {
+    transition: all .3s;
+  }
 }

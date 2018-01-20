@@ -68,11 +68,13 @@
   }
 
 
-  &__cta {
-    font-family: 'Roboto Condensed';
+  &__cta:link,
+  &__cta:visited,
+  &__cta:active {
     font-weight: bolder;
     white-space: nowrap;
     color: $black;
+    @include btn--transparent-dark;
     @include respond((
       font-size: 18px,
       line-height: 35px,
@@ -84,17 +86,6 @@
       @include respond((
         margin-left: 10px,
         width: 8px,
-        height: 12px,
-      ));
-    }
-
-    use {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      @include respond((
-        width: 7.5px,
         height: 12px,
       ));
     }

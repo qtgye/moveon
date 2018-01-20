@@ -1,0 +1,13 @@
+.flickity {
+
+}
+
+.flickity-prev-next-button {
+  & path.arrow {
+    transition: all .3s;
+  }
+
+  &:not([disabled]):hover path.arrow {
+    fill: $azure !important;
+  }
+}

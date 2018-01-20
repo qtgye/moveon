@@ -1,3 +1,56 @@
+// HELPER MIXINS
+// ------------------------------------------------
+
+@mixin btn--transparent() {
+  background-color: transparent;
+  color: $black;
+
+  svg {
+    fill: $black;
+  }
+
+  &:hover {
+    color: $azure;
+
+    svg {
+      fill: $azure;
+    }
+  }
+}
+
+@mixin btn--transparent-dark() {
+  background-color: transparent;
+  color: $black;
+
+  svg {
+    fill: $black;
+  }
+
+  &:hover {
+    color: $white;
+
+    svg {
+      fill: $white;
+    }
+  }
+}
+
+@mixin btn--azure() {
+  background-color: $azure;
+  color: $white;
+
+  &:hover {
+    color: $white;
+    background-color: $cerulean;
+  }
+}
+
+
+
+// CLASS IMPLEMENTATIONS
+// ------------------------------------------------
+
+
 button,
 .btn {
   -webkit-appearance: none;
@@ -6,10 +59,15 @@ button,
   align-items: center;
   border: 0;
   cursor: pointer;
-  background-color: transparent;
+  transition: all .3s;
+  text-transform: uppercase;
+  @include font(roboto-condensed-bold);
+  @include btn--transparent;
 
   svg {
     max-width: 100%;
     max-height: 100%;
+    transition: all .3s;
   }
+
 }

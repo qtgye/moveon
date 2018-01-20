@@ -15,9 +15,18 @@ class PriceSelectGroup {
     let _this = this;
 
     this.$presetAmountRadios.add(this.$customAmountInput).on('change', function () {
+
+      // If custom amount is provided, make it required
       if ( _this.$customAmountInput.val() ) {
-        _this.$presetAmountRadios.prop('checked', false);
+        _this.$presetAmountRadios.prop('checked', false).attr('required', false);
         _this.$customAmountRadio.prop('checked', true);
+        _this.$customAmountInput.attr('required', true);
+
+      // Else, make the preset amount required
+      } else {
+        _this.$presetAmountRadios.attr('required', true);
+        _this.$customAmountRadio.prop('checked', false);
+        _this.$customAmountInput.attr('required', false);
       }
     });
   }

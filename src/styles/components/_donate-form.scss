@@ -1,3 +1,5 @@
+$bouncy-easing: cubic-bezier(.43,2.9,.64,.99);
+
 .donate-form {
   @include respond((
     padding-top: 50px null 132px,
@@ -59,29 +61,39 @@
       left: 0;
       border-radius: 100%;
       overflow: hidden;
+      transition: all .3s;
       @include font(roboto);
       @include respond((
         position: relative null absolute,
         font-size: 28px,
       ));
 
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0);
+      span {
+        transition: all .2s $bouncy-easing;
+      }
+    }
+
+    &__numeral-icon {
+      display: block;
+      position: absolute;
+      transform: translate(-50%, -50%) scale(0);
+      top: 50%;
+      left: 50%;
+      background-position: contain;
+      background-repeat: no-repeat;
+      transition: all .2s $bouncy-easing;
+      fill: white;
+
+      &--edit {
+        width: 18px;
+        height: 18px;
+        background-image: url('/images/icons/edit.svg');
+      }
+
+      &--completed {
         width: 18px;
         height: 14px;
         background-image: url('/images/icons/check.svg');
-        background-position: contain;
-        background-repeat: no-repeat;
-        transition: all .3s;
-      }
-
-      span {
-        transition: all .3s;
       }
     }
 
@@ -183,6 +195,7 @@
     width: 134px;
     height: 36px;
     transition: all .3s;
+    margin-top: 28px;
     @include font(roboto-condensed-bold);
     @include respond((
       font-size: 18px,
@@ -231,11 +244,31 @@
   }
 
 
+  // CURRENT STATE, NOT YET COMPLETED
+  &.current:not(.completed) {
+
+    .donate-form__step__numeral {
+      background-color: $cerulean;
+      &-icon--edit {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      span {
+        transform: scale(0);
+      }
+    }
+
+    .donate-form__step__heading {
+      @include font(roboto-bold);
+    }
+  }
+
+
   // COMPLETED STEP STATE
   &.completed {
 
     .donate-form__step__numeral {
-      &::after {
+      &-icon--completed {
         transform: translate(-50%, -50%) scale(1);
       }
 

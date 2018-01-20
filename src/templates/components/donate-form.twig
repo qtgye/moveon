@@ -1,4 +1,4 @@
-<form action="" class="donate-form donate-form-full">
+<form action="" class="donate-form donate-form-full" method="POST ">
 
   <h1 class="donate-form__heading">DONATE</h1>
   <h2 class="donate-form__subheading">Be a force for change.</h2>
@@ -7,7 +7,11 @@
 
     {# STEP 1 #}
     <div class="donate-form__step active">
-      <div class="donate-form__step__numeral"><span>1</span></div>
+      <div class="donate-form__step__numeral">
+        <i class="donate-form__step__numeral-icon donate-form__step__numeral-icon--edit"></i>
+        <i class="donate-form__step__numeral-icon donate-form__step__numeral-icon--completed"></i>
+        <span>1</span>
+      </div>
       <div class="donate-form__step__heading"><span>Donation Amount</span></div>
       <div class="donate-form__step__content">
         <div class="donate-form__step__subheading">
@@ -15,23 +19,23 @@
         </div>
         <div class="donate-form__fields price-select-group">
           <div class="radio-input">
-            <input type="radio" name="amount" id="amount-$25" value="$25">
+            <input type="radio" name="amount" id="amount-$25" value="$25" required>
             <label for="amount-$25">$25</label>
           </div>
           <div class="radio-input">
-            <input type="radio" name="amount" id="amount-$50" value="$50">
+            <input type="radio" name="amount" id="amount-$50" value="$50" required>
             <label for="amount-$50">$50</label>
           </div>
           <div class="radio-input">
-            <input type="radio" name="amount" id="amount-$100" value="$100">
+            <input type="radio" name="amount" id="amount-$100" value="$100" required>
             <label for="amount-$100">$100</label>
           </div>
           <div class="radio-input">
-            <input type="radio" name="amount" id="amount-$200" value="$200">
+            <input type="radio" name="amount" id="amount-$200" value="$200" required>
             <label for="amount-$200">$200</label>
           </div>
           <div class="radio-input">
-            <input type="radio" name="amount" id="amount-$400" value="$400">
+            <input type="radio" name="amount" id="amount-$400" value="$400" required>
             <label for="amount-$400">$400</label>
           </div>
           <div class="radio-input">
@@ -55,7 +59,11 @@
 
     {# STEP 2 #}
     <div class="donate-form__step">
-      <div class="donate-form__step__numeral"><span>2</span></div>
+      <div class="donate-form__step__numeral">
+        <i class="donate-form__step__numeral-icon donate-form__step__numeral-icon--edit"></i>
+        <i class="donate-form__step__numeral-icon donate-form__step__numeral-icon--completed"></i>
+        <span>2</span>
+      </div>
       <div class="donate-form__step__heading"><span>Personal Info</span></div>
       <div class="donate-form__step__content">
         <div class="donate-form__step__subheading">
@@ -63,12 +71,12 @@
         </div>
         <div class="donate-form__fields">
           <div class="input-block">
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" required>
             <label for="name">Name</label>
           </div>
           <div class="input-helper">As it appears on your credit card</div>
           <div class="input-block">
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
             <label for="email">Email</label>
           </div>
           <div class="checkbox-input">
@@ -91,7 +99,11 @@
 
     {# STEP 3 #}
     <div class="donate-form__step">
-      <div class="donate-form__step__numeral"><span>3</span></div>
+      <div class="donate-form__step__numeral">
+        <i class="donate-form__step__numeral-icon donate-form__step__numeral-icon--edit"></i>
+        <i class="donate-form__step__numeral-icon donate-form__step__numeral-icon--completed"></i>
+        <span>3</span>
+      </div>
       <div class="donate-form__step__heading"><span>Billing Info</span></div>
       <div class="donate-form__step__content">
         <div class="donate-form__step__subheading">
@@ -100,11 +112,11 @@
         <div class="donate-form__fields">
           <div>
             <div class="radio-input">
-              <input type="radio" name="payment" id="credit-card" value="credit-card">
+              <input type="radio" name="payment" id="credit-card" value="credit-card" required>
               <label for="credit-card">Credit Card</label>
             </div>
             <div class="radio-input">
-              <input type="radio" name="payment" id="paypal" value="paypal">
+              <input type="radio" name="payment" id="paypal" value="paypal" required>
               <label for="paypal">PayPal</label>
             </div>
             <p class="donate-form__paycheck-option">Or <a href="#">pay with a paycheck</a></p>
@@ -112,23 +124,23 @@
           {# CC FIELDS START #}
           <div class="donate-form__cc__fields">
             <div class="input-block">
-              <input type="text" name="cc-number" id="cc-number">
+              <input type="text" name="ccNumber" id="cc-number">
               <label for="cc-number">Credit Card Number</label>
             </div>
             <div class="input-block">
-              <input type="text" name="cc-expiration" id="cc-expiration">
+              <input type="date" name="ccExpiration" id="cc-expiration">
               <label for="cc-expiration">Expiration Date</label>
             </div>
             <div class="input-block">
-              <input type="text" name="cc-billing" id="cc-billing">
+              <input type="text" name="ccBilling" id="cc-billing">
               <label for="cc-billing">Billing Address</label>
             </div>
             <div class="input-block">
-              <input type="text" name="cc-city" id="cc-city">
+              <input type="text" name="ccCity" id="cc-city">
               <label for="cc-city">City</label>
             </div>
             <div class="input-block">
-              <select name="cc-state" id="cc-state">
+              <select name="ccState" id="cc-state">
                 <option value="" selected></option>
                 {% include 'components/states-code-options' %}
               </select>
@@ -136,15 +148,15 @@
               <label for="cc-state">State</label>
             </div>
             <div class="input-block">
-              <input type="text" name="cc-zip" id="cc-zip">
+              <input type="text" name="ccZip" id="cc-zip">
               <label for="cc-zip">ZIP</label>
+            </div>
+            <div class="checkbox-input">
+              <input type="checkbox" name="save" id="save">
+              <label for="save">Please save my information for future donation transactions.</label>
             </div>
           </div>
           {# CC FIELDS END #}
-          <div class="checkbox-input">
-            <input type="checkbox" name="save" id="save">
-            <label for="save">Please save my information for future donation transactions.</label>
-          </div>
           <button type="submit" class="donate-form__submit" disabled>Contribute</button>
           <p class="donate-form__agreement">
             By clicking contribute, I confirm that I have read all of the rules below and I certify that I comply with each of them.

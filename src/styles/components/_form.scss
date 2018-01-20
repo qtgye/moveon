@@ -40,11 +40,14 @@ form {
       font-family: inherit;
       line-height: inherit;
       transition: all .3s;
+      position: relative;
+      background-color: transparent;
+      z-index: 1;
       @include respond((
         width: 100%,
         height: 50px null 30px,
         border: 0,
-        border-bottom: (2px solid rgba(0, 0, 0, 0.42)) null,
+        border-bottom: (2px solid transparentize($black, 1-0.42)) null,
       ));
 
       &:focus {
@@ -201,7 +204,6 @@ form {
   .checkbox-input {
     display: flex;
     align-items: top;
-    margin-bottom: 28px;
     margin-right: 20px;
     margin-top: 28px;
 
@@ -271,6 +273,28 @@ form {
   }
 
 
+  // DISABLED FIELDS
+  & input,
+  & select {
+    &[disabled] {
+      border-color: transparentize($black, 1-0.1);
+      cursor: not-allowed;
+    }
+  }
+
+
+}
+
+
+// DATE TYPE INPUT
+[type=date] {
+  transition: all .3s;
+  color: transparent;
+
+  &:focus,
+  .input-block.active & {
+    color: $black;
+  }
 }
 
 

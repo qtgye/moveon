@@ -22,5 +22,6 @@ $(document).ready(function () {
   PetitionComments.init();
   DonateReceipt.init();
   DonateShortForm.init();
+  DonateFullForm.init();
   PriceSelectGroup.init();
 });

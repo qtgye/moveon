@@ -43,6 +43,12 @@
     color: $white;
     background-color: $cerulean;
   }
+
+  // DISABLED
+  &[disabled] {
+    background-color: rgba(0, 0, 0, 0.12);
+    color: transparentize($black, 1-.26);
+  }
 }
 
 

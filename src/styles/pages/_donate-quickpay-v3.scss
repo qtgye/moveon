@@ -1,0 +1,29 @@
+.donate-quickpay-v3 {
+
+    .donate-form__fields {
+      display: block;
+      border-bottom: 0;
+
+      .donate-shortform {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .donate-form__amount-info {
+        border-bottom: 0;
+      }
+
+      .price-select {
+        max-width: none;
+
+        .radio-input-other.radio-input-other {
+          margin-left: 0;
+          margin-top: 24px;
+        }
+      }
+
+      .btn.donate-form__submit {
+        @include btn--azure;
+      }
+    }
+}

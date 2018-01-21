@@ -4,6 +4,7 @@ import Modal from './components/modal';
 import Sticky from './components/sticky';
 
 import HomeCarousel from './components/homeCarousel';
+import HomeHero from './components/homeHero';
 import SignForm from './components/signForm';
 import PetitionComments from './components/petitionComments';
 import DonateReceipt from './components/donateReceipt';
@@ -15,6 +16,7 @@ import PriceSelectGroup from './components/priceSelectGroup';
 $(document).ready(function () {
   Nav.init();
   HomeCarousel.init();
+  HomeHero.init();
   Form.init();
   Modal.init();
   Sticky.init();

@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "flickity": "^2.0.10",
-    "slick": "^1.12.2"
+    "flickity-sync": "^2.0.0"
   }
 }

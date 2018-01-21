@@ -49,6 +49,7 @@
 
   &__item {
     display: block;
+    width: 100%;
     @include breakpoint(md down) {
       &:not(:first-child) {
         margin-top: 20px,
@@ -57,7 +58,7 @@
 
     @include breakpoint(lg) {
       &:nth-child(1) {
-        width: 337px;
+        width: 355px;
         margin-left: 0;
         margin-right: auto;
       }
@@ -65,7 +66,7 @@
         width: 464px;
       }
       &:nth-child(3) {
-        width: 358px;
+        width: 378px;
         margin-right: 0;
         margin-left: auto;
       }

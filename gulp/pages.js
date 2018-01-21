@@ -12,6 +12,11 @@ let klawSyncConfig = {nodir: true};
 let templateRoot = projectRoot('src/templates');
 let twigTemplates = {};
 
+Twig.extendFilter('wrap-words', string => {
+  // console.log('wrap words',string.match(/[\S]+/ig).map( word => `<span>${word}</span>`).join(''));
+  return string.match(/[\S]+/ig).map( word => `<span>${word}</span>`).join('');
+});
+
 module.exports = {
 
   fn: async function () {

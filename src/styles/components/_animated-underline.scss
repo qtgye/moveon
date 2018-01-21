@@ -2,18 +2,20 @@
 
   &:hover {
     span {
-      background-size: 100% 90%;
+      background-size: 100% 100%;
     }
   }
 
   span {
+    display: inline-block;
     position: relative;
     transition: all .3s;
     background-image: linear-gradient(to top, white, white);
     background-repeat: no-repeat;
     background-size: 100% 6px;
+    padding: (0 10px) null null;
     @include respond((
-      background-position: (0 93%) null (0 87%),
+      background-position: (0 100%) null null,
     ));
 
     &::after {

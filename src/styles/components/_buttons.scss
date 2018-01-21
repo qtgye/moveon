@@ -1,19 +1,30 @@
 // HELPER MIXINS
 // ------------------------------------------------
 
-@mixin btn--transparent() {
-  background-color: transparent;
-  color: $black;
-
-  svg {
-    fill: $black;
+@mixin include-links() {
+  &,
+  &:link,
+  &:visited,
+  &:active {
+    @content;
   }
+}
 
-  &:hover {
-    color: $azure;
+@mixin btn--transparent() {
+  @include include-links {
+    background-color: transparent;
+    color: $black;
 
     svg {
-      fill: $azure;
+      fill: $black;
+    }
+
+    &:hover {
+      color: $azure;
+
+      svg {
+        fill: $azure;
+      }
     }
   }
 }
@@ -75,5 +86,4 @@ button,
     max-height: 100%;
     transition: all .3s;
   }
-
 }

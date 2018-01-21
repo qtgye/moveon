@@ -104,11 +104,9 @@
   &__cta {
     display: flex;
     white-space: nowrap;
-    @include font(roboto-condensed-bold);
+    @include btn--transparent-light;
     @include respond((
       justify-content: flex-start,
-      text-transform: uppercase,
-      color: $white,
       width: auto,
       height: 30px,
       font-size: 20px,

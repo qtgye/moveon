@@ -126,9 +126,10 @@ class DonateFullForm {
   checkStep1Completion() {
     let $step1 = this.$steps.eq(0);
     let isComplete = false;
+    let { amount, 'other-amount': otherAmount } = this.formData;
 
     // Either preset amount or custom amount should be supplied
-    isComplete = (this.formData.amount || this.formData['other-amount']) ? true : false;
+    isComplete = (amount || otherAmount) ? true : false;
     $step1.toggleClass('completed', isComplete);
 
     return isComplete;
@@ -166,14 +167,9 @@ class DonateFullForm {
       ccZip,
     } = this.formData;
 
-    console.log('paymentMode',paymentMode);
-    console.log('paymentMode !== credit-card',paymentMode !== 'credit-card');
-
     isComplete = payment ? true : false;
     // If payment is credit card, cc fields are required
     isComplete = paymentMode !== 'credit-card' ? isComplete : isComplete && ccNumber && ccExpiration && ccBilling && ccCity && ccState && ccZip ? true : false;
-
-    console.log('ccNumber && ccExpiration && ccBilling && ccCity && ccState && ccZip ? true : false',ccNumber && ccExpiration && ccBilling && ccCity && ccState && ccZip ? true : false);
 
     $step3.toggleClass('completed', isComplete);
 
@@ -183,14 +179,6 @@ class DonateFullForm {
 
   isValidEmail( email ) {
     return EMAIL_REGEX.test(email);
-  }
-
-
-  isActiveFormField( element ) {
-    if ( /radio|checkbox/i.test(element.type) ) {
-      return element.checked;
-    }
-    return element.value ? true : false;
   }
 
 }

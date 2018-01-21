@@ -9,6 +9,7 @@ import PetitionComments from './components/petitionComments';
 import DonateReceipt from './components/donateReceipt';
 import DonateShortForm from './components/donateShortForm';
 import DonateFullForm from './components/donateFullForm';
+import DonateBoxedForm from './components/donateBoxedForm';
 import PriceSelectGroup from './components/priceSelectGroup';
 
 $(document).ready(function () {
@@ -23,5 +24,6 @@ $(document).ready(function () {
   DonateReceipt.init();
   DonateShortForm.init();
   DonateFullForm.init();
+  DonateBoxedForm.init();
   PriceSelectGroup.init();
 });

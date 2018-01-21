@@ -2,12 +2,8 @@ class SignForm {
 
   constructor($element) {
     this.$element = $($element);
-    this.$signButton = $('.sign-form__modal-toggle');
-    this.$signForms = $('.sign-form');
-    this.$signFormModal = $('.sign-form-modal');
     this.$shareModal = $('.share-modal');
     this.bindSubmit();
-    this.bindSignFormButton();
   }
 
   bindSubmit() {
@@ -25,10 +21,33 @@ class SignForm {
     }
   }
 
+}
+
+
+
+export default {
+
+  init() {
+    let $forms = $('.sign-form');
+
+    $forms.each(function (index, form) {
+      let _form = new SignForm(form);
+    });
+
+    this.$forms = $forms;
+    this.$signFormButton = $('.sign-form__modal-toggle');
+    this.$signFormModal = $('.sign-form-modal');
+    this.bindSignFormButton();
+  },
+
+
   bindSignFormButton() {
     let _this = this;
-    this.$signButton.on('click', function () {
-      let $visibleForm = _this.$signForms.filter(':visible');
+
+    this.$signFormButton.on('click', function (e) {
+      e.preventDefault();
+
+      let $visibleForm = _this.$forms.filter(':visible');
 
       if ( $visibleForm.length ) {
         let $inputToFocus = $visibleForm.find('input').first();
@@ -36,9 +55,9 @@ class SignForm {
       } else {
         _this.showSignFormModal();
       }
-
     });
-  }
+  },
+
 
   showSignFormModal() {
     let _signFormModal = this.$signFormModal.data('modal');
@@ -48,20 +67,4 @@ class SignForm {
   }
 
 
-}
-
-
-
-export default {
-
-  init() {
-
-    let $forms = $('.sign-form');
-
-    $forms.each(function (index, form) {
-      let _form = new SignForm(form);
-    });
-
-  }
-
-}
+};

@@ -43,10 +43,7 @@
     bottom: 0;
     left: 0;
     z-index: 500;
-    background-color: $azure;
-    color: $white;
-    text-transform: uppercase;
-    @include font(roboto-condensed-bold);
+    @include btn--azure;
     @include respond((
       font-size: 21px,
     ));

@@ -56,13 +56,8 @@
     @include respond((
       display: block null inline-block,
       width: 100% null percentage(380px/1180px),
+      margin: null null (0 percentage(10/1180)),
     ));
-
-    &:not(:first-child) {
-      @include respond((
-        margin-left: null null percentage(21/1180),
-      ));
-    }
 
     & + & {
       @include breakpoint(md down) {
@@ -154,14 +149,11 @@
     align-items: center;
     white-space: nowrap;
     position: relative;
-    @include font(roboto-condensed-bold);
+    @include btn--transparent-light;
     @include respond((
       max-width: auto null 223px,
       height: 31px,
       margin-top: 20px null -24px,
-      background-color: transparent,
-      text-transform: uppercase,
-      color: $white,
       font-size: 20px,
       float: null null right,
     ));
@@ -171,7 +163,6 @@
         display: inline-block,
         width: 8px,
         height: 12px,
-        fill: $white,
         margin-left: 18px,
       ));
     }

@@ -8,8 +8,8 @@ class HomeCarousel {
 
   init() {
     this.$carousel.flickity({
-      contain: true,
       cellAlign: 'left',
+      wrapAround: true,
     });
   }
 }

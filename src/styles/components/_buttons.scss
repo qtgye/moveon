@@ -46,6 +46,25 @@
   }
 }
 
+@mixin btn--transparent-light() {
+  @include include-links {
+    background-color: transparent;
+    color: $white;
+
+    svg {
+      fill: $white;
+    }
+
+    &:hover {
+      color: $azure;
+
+      svg {
+        fill: $azure;
+      }
+    }
+  }
+}
+
 @mixin btn--azure() {
   background-color: $azure;
   color: $white;

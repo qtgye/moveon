@@ -61,9 +61,10 @@
     justify-content: center;
     align-items: center;
     background-color: $azure;
+    transition: background-color .3s;
     position: relative;
-    overflow: hidden;
     @include respond((
+      overflow: hidden null visible,
       width: null null percentage(665px/$bp-xl),
       padding: (24px 16px) null (0 percentage(230px/1440px) 0 percentage(55px/1440px)),
     ));
@@ -144,10 +145,9 @@
       opacity: 0;
     }
 
-    &:nth-child(2) {
+    &:nth-child(even) {
       .home-hero__heading span {
-        background-color: $red;
-        color: $white;
+        color: $red;
       }
     }
   }
@@ -211,4 +211,13 @@
       ));
     }
   }
+
+
+
+  // EVEN-CHILD STATE
+  .home-hero__content.even {
+    background-color: $red;
+  }
+
+
 }

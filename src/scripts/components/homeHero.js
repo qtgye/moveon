@@ -10,9 +10,14 @@ class HomeHero {
 
 
   bindCarousels() {
+    let _this = this;
     this.$contentCarousel.flickity({
       adaptiveHeight: true,
       wrapAround: true,
+    })
+    .on('select.flickity', function () {
+      let _flickityData = _this.$contentCarousel.data('flickity');
+      _this.$contentCarousel.parent().toggleClass('even', (_flickityData.selectedIndex + 1) % 2 == 0);
     });
     this.$imageCarousel.flickity({
       sync: this.$contentCarousel[0],

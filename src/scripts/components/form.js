@@ -14,7 +14,8 @@ class Form {
       let $block = $(this);
       let $input = $block.find('input, select, textarea');
 
-      $input.bind('change', function () {
+      // Safari doesn't emit events on autocomplete, so we must listen to blur and keyup as well
+      $input.bind('change keyup blur', function () {
         let value = $input.val();
         $block.toggleClass('active', value ? true : false);
       }).trigger('change');

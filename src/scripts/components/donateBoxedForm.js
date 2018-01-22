@@ -1,3 +1,5 @@
+import { entries as getFormEntries } from '../utilities/formData';
+
 // In contrast to the full form, this has:
 //    - no steps
 //    - no paypal option
@@ -33,7 +35,14 @@ class DonateBoxedForm {
     this.$form.on('change', function () {
 
       let currentFormData = new FormData(_this.$form[0]);
-      let entries = Array.from(currentFormData.entries());
+      let entries = [];
+
+      // Safari doesnt support FormData.prototype.entries
+      if ( currentFormData.entries ) {
+        entries = Array.from(currentFormData.entries());
+      } else {
+        entries = getFormEntries(_this.$form[0]);
+      }
 
       // Reset existing formData
       _this.formData = {};

@@ -283,6 +283,13 @@ form {
   }
 
 
+  // Use inline-table for submit buttons due to safari issues
+  [type="submit"] {
+    display: inline-table;
+    text-align: center;
+  }
+
+
 }
 
 

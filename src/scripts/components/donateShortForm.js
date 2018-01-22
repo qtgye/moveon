@@ -1,3 +1,5 @@
+import { values as getFormValues } from '../utilities/formData';
+
 class DonateShortForm {
 
   constructor( $element ) {
@@ -13,7 +15,16 @@ class DonateShortForm {
     let _this = this;
     this.$form.on('change', function () {
       let formData = new FormData(_this.$form[0]);
-      let willDisable = Array.from(formData.values()).filter( value => value ).length ? false : true;
+      let values = [];
+
+      // Safari doesnt support FormData.prototype.values
+      if ( currentFormData.values ) {
+        values = Array.from(currentFormData.values());
+      } else {
+        values = getFormEntries(_this.$form[0]);
+      }
+
+      let willDisable = values.filter( value => value ).length ? false : true;
       _this.$submit.attr('disabled', willDisable );
     });
   }

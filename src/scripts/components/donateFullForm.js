@@ -1,3 +1,5 @@
+import { entries as getFormEntries } from '../utilities/formData';
+
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
 
 class DonateFullForm {
@@ -31,7 +33,14 @@ class DonateFullForm {
     this.$form.on('change', function () {
 
       let currentFormData = new FormData(_this.$form[0]);
-      let entries = Array.from(currentFormData.entries());
+      let entries = [];
+
+      // Safari doesnt support FormData.prototype.entries
+      if ( currentFormData.entries ) {
+        entries = Array.from(currentFormData.entries());
+      } else {
+        entries = getFormEntries(_this.$form[0]);
+      }
 
       // Reset existing formData
       _this.formData = {};

@@ -49,7 +49,9 @@
   }
 
 
-  &__cta {
+  &__cta:link,
+  &__cta:visited,
+  &__cta:active {
     display: flex;
     align-items: center;
     background-color: $azure;
@@ -70,6 +72,15 @@
 
     &[disabled] {
       background-color: $light-blue;
+    }
+
+    &:hover {
+      background-color: $cerulean;
+      color: $white;
+
+      svg {
+        fill: $white;
+      }
     }
 
     svg {
@@ -112,6 +123,10 @@
           margin-top: 1.2em,
         ));
       }
+
+      a:hover {
+        color: $cerulean;
+      }
     }
   }
 
@@ -123,9 +138,13 @@
   }
 
 
-  &__link {
+  &__link:link,
+  &__link:visited,
+  &__link:active {
     color: $azure;
     justify-content: flex-start;
+    text-transform: none;
+    color: $azure;
     @include font(roboto);
     @include respond((
       display: flex null inline-flex,
@@ -138,6 +157,14 @@
         margin-top: 15px null 0,
         margin-left: null null 98px,
       ));
+    }
+
+    &:hover {
+      color: $cerulean;
+
+      svg {
+        fill: $cerulean;
+      }
     }
 
     svg {

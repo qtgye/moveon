@@ -1,29 +1,23 @@
 .join {
   display: block;
   position: relative;
-  @include respond((
-    padding: (30px 8px) null 0,
-  ));
 
 
   &__content {
     position: relative;
     @include respond((
-      background-color: $white null transparent,
-      padding: (28px 20px) null (56px 0 155px),
+      padding: (24px 32px) null (56px 0 155px),
     ));
   }
 
   &__bg {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    @include respond((
-      display: none null block,
-    ));
   }
 
   &__heading {
@@ -34,9 +28,9 @@
     @include respond((
       font-size: 22px null 36px,
       line-height: 30px null 42px,
-      text-transform: null null uppercase,
-      background-color: null null $azure,
-      padding: null null (0 10px),
+      text-transform: uppercase,
+      background-color: $azure,
+      padding: (0 10px) null,
     ));
   }
 
@@ -48,18 +42,38 @@
       background-color: $white,
       margin-top: 50px null 147px,
       margin-left: null null percentage(180px/$bp-xl),
-      padding: null null (45px 50px 109px),
+      padding: 24px null (45px 50px 109px),
     ));
+
+    .input-block {
+      &:not(:first-child) {
+        @include respond((
+          margin-top: 16px null 30px,
+        ));
+      }
+      input {
+        @include respond((
+          height: 30px null 50px,
+        ));
+      }
+
+      input:focus ~ label,
+      &.active label {
+        @include respond((
+          transform: (scale(0.8) translateY(-20px)) null scale(0.8) translateY(-40px)
+        ));
+      }
+    }
   }
 
   button {
     display: table;
     margin: auto;
     width: 145px;
+    height: 36px;
     @include btn--azure;
     @include respond((
       font-size: 18px,
-      height: 50px null 36px,
       margin-top: 30px,
       color: $white,
       text-transform: uppercase,

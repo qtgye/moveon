@@ -25,5 +25,13 @@
         margin-top: 48px;
       }
     }
+
+    a:link,
+    a:active,
+    a:visited {
+      &:hover {
+        color: $cerulean;
+      }
+    }
   }
 }

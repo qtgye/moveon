@@ -19,15 +19,15 @@ class DonateShortForm {
       let formData = {};
 
       // Safari doesnt support FormData.prototype.values
-      if ( currentFormData.values ) {
-        entries = Array.from(currentFormData.values());
+      if ( currentFormData.entries ) {
+        entries = Array.from(currentFormData.entries());
       } else {
         entries = getFormEntries(_this.$form[0]);
       }
 
       entries.map( entry => formData[entry[0]] = entry[1]);
 
-      let willDisable = formData.amount && formData['other-amount'] ? false : true;
+      let willDisable = formData.amount ||  formData['other-amount'] ? false : true;
       _this.$submit.attr('disabled', willDisable );
     });
   }

@@ -26,6 +26,7 @@
     max-width: 560px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: normal;
     @include font(roboto);
     @include respond((
       font-size: 14px null 24px,

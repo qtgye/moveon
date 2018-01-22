@@ -161,5 +161,9 @@
         padding: (48px percentage(28/320)) null 48px,
       ));
     }
+
+    &__agreement {
+      margin-top: 0;
+    }
   }
 }

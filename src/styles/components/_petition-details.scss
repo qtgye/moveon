@@ -3,7 +3,7 @@
 
   &__content {
     @include respond((
-      padding: (32px percentage(43/320)) null (60px percentage(90/780) 46px),
+      padding: (32px percentage(43/320)) null (60px 0 46px),
     ));
   }
 
@@ -47,6 +47,13 @@
       .petition-details__comments__toggle svg {
         transform: none;
       }
+      .petition-details__comments__toggle {
+        color: $black;
+
+        svg {
+          fill: $black;
+        }
+      }
     }
 
     &__heading {
@@ -60,9 +67,7 @@
 
 
     &__entries {
-      @include respond((
-        margin-top: 23px null 45px,
-      ));
+      margin-top: 16px;
     }
 
     .signers {
@@ -73,17 +78,19 @@
       white-space: nowrap;
       background-color: transparent;
       display: table;
+      color: $azure;
       @include font(roboto-condensed-bold);
       @include respond((
         margin-top: 17px null 46px,
-        margin-left: null null auto,
         margin-right: null null auto,
+        margin-left: null null auto,
         font-size: 14px null 20px,
         line-height: 21px null 34px,
       ));
 
       svg {
         transform: rotate(180deg);
+        fill: $azure;
         @include respond((
           width: 14px null 20px,
           height: 14px null 18px,
@@ -120,7 +127,6 @@
       @include respond((
         color: $black,
         margin-top: 15px,
-        margin-left: null null auto,
         margin-right: null null auto,
         font-size: 14px null 20px,
         line-height: 21px null 34px,
@@ -148,12 +154,14 @@
       ));
     }
 
-    &__item {
+    &__item:link,
+    &__item:active,
+    &__item:visited {
       align-items: center;
       color: $azure;
+      transition: all .3s;
       @include respond((
         display: flex null inline-flex,
-        padding: null null (13px 16px),
         font-size: 12px 14px,
         line-height: 20px,
       ));
@@ -161,8 +169,16 @@
       &:not(:first-child) {
         @include respond((
           margin-top: 21px null 0,
-          margin-left: null null 10px
+          margin-left: null null 48px
         ));
+      }
+
+      &:hover {
+        color: $cerulean;
+
+        svg {
+          fill: $cerulean;
+        }
       }
 
       svg {

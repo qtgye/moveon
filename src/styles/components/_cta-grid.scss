@@ -3,7 +3,7 @@
 
   &__content {
     @include respond((
-      padding: (40px percentage(15/320)) null (56px percentage(155px/$bp-xl) 100px),
+      padding: (24px percentage(15/320)) null (56px percentage(155px/$bp-xl) 100px),
     ));
   }
 
@@ -32,7 +32,7 @@
       line-height: 20px null 36px,
       color: $black,
       margin-top: 22px null 40px,
-      text-align: center,
+      text-align: left null center,
     ));
   }
 
@@ -42,7 +42,7 @@
       display: flex,
       flex-direction: column,
       align-items: center,
-      margin-top: 33px null 50px,
+      margin-top: null null 50px,
     ));
   }
 
@@ -50,11 +50,6 @@
   &__item {
     display: block;
     width: 100%;
-    @include breakpoint(md down) {
-      &:not(:first-child) {
-        margin-top: 20px,
-      }
-    }
 
     @include breakpoint(lg) {
       &:nth-child(1) {
@@ -77,8 +72,8 @@
   &__text {
     overflow: hidden;
     @include respond((
-      font-size: 60px null 86px,
-      line-height: 1,
+      font-size: 46px null 86px,
+      line-height: 46px null 1,
       color: $black,
       margin-top: 20px null 0,
       text-transform: uppercase,
@@ -88,6 +83,9 @@
 
     span {
       @include font(roboto-condensed-bold);
+      @include respond((
+        background-size: (100% 5px) null (100% 6px),
+      ));
     }
   }
 }

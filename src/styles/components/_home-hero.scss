@@ -62,6 +62,7 @@
     align-items: center;
     background-color: $azure;
     position: relative;
+    overflow: hidden;
     @include respond((
       width: null null percentage(665px/$bp-xl),
       padding: (24px 16px) null (0 percentage(230px/1440px) 0 percentage(55px/1440px)),

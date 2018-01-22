@@ -4,13 +4,22 @@
   &__receipt {
     margin-top: 24px;
 
-    button {
-      color: #005680;
+    .btn {
+      color: $azure;
+      text-transform: none;
       @include font(roboto);
       @include respond((
         font-size: 16px,
         line-height: 36px,
       ));
+
+      &:hover {
+        color: $cerulean;
+      }
+
+      &:active {
+        color: $deep-sea-blue;
+      }
     }
   }
 

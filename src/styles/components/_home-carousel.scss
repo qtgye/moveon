@@ -1,7 +1,7 @@
 .home-carousel {
   @include respond((
     background-color:  rgba(0, 0, 0, 0.75),
-    padding: (40px percentage(15/320)) null (100px percentage(130px/$bp-xl)),
+    padding: (24px percentage(15/320)) null (100px percentage(130px/$bp-xl)),
   ));
 
   &__content {
@@ -42,7 +42,7 @@
     overflow: hidden;
     @include respond((
       margin-top: 30px null 50px,
-      padding-bottom: 50px,
+      padding-bottom: 32px,
       margin-left: null null percentage(-130/1180),
       margin-right: null null percentage(-130/1180),
       padding-left: null null percentage(130/1180),
@@ -161,9 +161,10 @@
     svg {
       @include respond((
         display: inline-block,
-        width: 8px,
-        height: 12px,
+        width: 24px,
+        height: 24px,
         margin-left: 18px,
+        padding: 5px,
       ));
     }
   }

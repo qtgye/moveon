@@ -35,15 +35,17 @@
     position: relative;
     @include respond((
       display: block null flex,
+      width: null null percentage(545/1180),
       flex-wrap: wrap,
+      justify-content: space-between,
       padding-bottom: 14px null 0,
-      margin-right: null null 55px,
+      margin-right: null null percentage(55/1180),
     ));
 
 
     &__column {
       @include respond((
-        width: null null percentage(145/580),
+        width: null null percentage(150/545),
       ));
 
       &:first-child {
@@ -55,9 +57,9 @@
       }
 
       &:not(:first-child) {
-        @include respond((
-          margin-left: null null 55px,
-        ));
+        // @include respond((
+        //   margin-left: null null percentage(55/545),
+        // ));
         @include breakpoint(md down) {
           margin-top: 30px;
         }

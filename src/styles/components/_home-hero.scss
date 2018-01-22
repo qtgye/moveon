@@ -169,7 +169,6 @@
 
 
   &__body {
-    font-weight: bolder;
     @include font(roboto);
     @include respond((
       margin-top: 27px null 44px,

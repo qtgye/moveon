@@ -71,6 +71,9 @@
     }
 
     &__play {
+      background-image: url('../images/icons/play.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
       position: absolute;
       top: 50%;
       left: 50%;

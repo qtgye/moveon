@@ -36,7 +36,33 @@
       <div class="donate-next__heading">Take the Next Step</div>
       <div class="donate-next__subheading">Help keep us going with a recurring monthly contribution.</div>
       <form class="donate-next__form donate-form__fields donate-shortform" method="POST">
-        {% include 'components/price-select' %}
+        <div class="price-select">
+          <div class="price-select__price">
+            <input type="radio" name="amount" id="amount-$25" value="$25" required>
+            <label for="amount-$25">$25</label>
+          </div>
+          <div class="price-select__price">
+            <input type="radio" name="amount" id="amount-$50" value="$50" required>
+            <label for="amount-$50">$50</label>
+          </div>
+          <div class="price-select__price">
+            <input type="radio" name="amount" id="amount-$100" value="$100" required>
+            <label for="amount-$100">$100</label>
+          </div>
+          <div class="price-select__price">
+            <input type="radio" name="amount" id="amount-$200" value="$200" required>
+            <label for="amount-$200">$200</label>
+          </div>
+          <div class="price-select__price">
+            <input type="radio" name="amount" id="amount-$400" value="$400" required>
+            <label for="amount-$400">$400</label>
+          </div>
+          <div class="price-select__custom">
+            <label for="amount-other">$</label>
+            <input type="text" name="other-amount" id="amount-other">
+          </div>
+        </div>
+
         <div class="donate-form__actions">
           <button type="submit" class="btn donate-form__action--solid" disabled>Contribute</button>
         </div>

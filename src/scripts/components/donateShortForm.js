@@ -1,4 +1,4 @@
-import { values as getFormValues } from '../utilities/formData';
+import { entries as getFormEntries } from '../utilities/formData';
 
 class DonateShortForm {
 
@@ -14,17 +14,22 @@ class DonateShortForm {
   bindform() {
     let _this = this;
     this.$form.on('change', function () {
-      let formData = new FormData(_this.$form[0]);
-      let values = [];
+      let currentFormData = new FormData(_this.$form[0]);
+      let entries = [];
+      let formData = {};
 
       // Safari doesnt support FormData.prototype.values
       if ( currentFormData.values ) {
-        values = Array.from(currentFormData.values());
+        entries = Array.from(currentFormData.values());
       } else {
-        values = getFormEntries(_this.$form[0]);
+        entries = getFormEntries(_this.$form[0]);
       }
 
-      let willDisable = values.filter( value => value ).length ? false : true;
+      entries.map( entry => formData[entry[0]] = entry[1]);
+
+      console.log('formData',formData);
+
+      let willDisable = formData.amount && formData['other-amount'] ? false : true;
       _this.$submit.attr('disabled', willDisable );
     });
   }

@@ -168,8 +168,7 @@
   }
 
   .donate-form__action--solid:not([disabled]) {
-    background-color: $azure;
-    color: $white;
+    @include btn--azure;
   }
 
   .donate-form__action--flat {

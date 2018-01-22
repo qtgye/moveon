@@ -178,6 +178,10 @@ $bouncy-easing: cubic-bezier(.43,2.9,.64,.99);
 
     a {
       color: $azure;
+
+      &:hover {
+        color: $cerulean;
+      }
     }
   }
 

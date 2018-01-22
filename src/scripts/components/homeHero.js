@@ -12,10 +12,12 @@ class HomeHero {
   bindCarousels() {
     this.$contentCarousel.flickity({
       adaptiveHeight: true,
+      wrapAround: true,
     });
     this.$imageCarousel.flickity({
       sync: this.$contentCarousel[0],
       prevNextButtons: false,
+      wrapAround: true,
     });
   }
 

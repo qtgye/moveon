@@ -102,9 +102,10 @@
 
       &__copy {
         color: $white;
-        padding: 18px 0;
         @include respond((
           display: block null none,
+          padding-top: nul null 18px,
+          padding-bottom: 18px,
         ));
       }
 
@@ -249,8 +250,8 @@
       font-size: 11px,
       line-height: 20px,
       color: $white,
-      padding: (11px 15px) null (11px 0),
-      text-align: center,
+      padding: (8px 20px) null (11px 0),
+      text-align: left null center,
     ));
 
     strong {

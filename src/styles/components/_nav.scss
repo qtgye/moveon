@@ -159,6 +159,9 @@
   }
 
   &__dropdown {
+    .nav__primary__caret {
+      padding: 5px;
+    }
 
     @include breakpoint(lg) {
       &:hover {

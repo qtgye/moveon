@@ -27,8 +27,6 @@ class DonateShortForm {
 
       entries.map( entry => formData[entry[0]] = entry[1]);
 
-      console.log('formData',formData);
-
       let willDisable = formData.amount && formData['other-amount'] ? false : true;
       _this.$submit.attr('disabled', willDisable );
     });

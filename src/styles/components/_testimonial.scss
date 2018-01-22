@@ -62,7 +62,7 @@
     }
 
     strong {
-      font-weight: bolder;
+      @include font(roboto-bold);
     }
   }
 

@@ -22,7 +22,7 @@ class DonateFullForm {
     this.bindform();
     this.bindEmploymentFields();
     this.bindPaymentFields();
-    this.bindSteps();
+    // this.bindSteps();
 
   }
 

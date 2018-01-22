@@ -242,24 +242,24 @@ $bouncy-easing: cubic-bezier(.43,2.9,.64,.99);
   }
 
 
-  // CURRENT STATE, NOT YET COMPLETED
-  &.current:not(.completed) {
+  // // CURRENT STATE, NOT YET COMPLETED
+  // &.current:not(.completed) {
 
-    .donate-form__step__numeral {
-      background-color: $cerulean;
-      &-icon--edit {
-        transform: translate(-50%, -50%) scale(1);
-      }
+  //   .donate-form__step__numeral {
+  //     background-color: $cerulean;
+  //     &-icon--edit {
+  //       transform: translate(-50%, -50%) scale(1);
+  //     }
 
-      span {
-        transform: scale(0);
-      }
-    }
+  //     span {
+  //       transform: scale(0);
+  //     }
+  //   }
 
-    .donate-form__step__heading {
-      @include font(roboto-bold);
-    }
-  }
+  //   .donate-form__step__heading {
+  //     @include font(roboto-bold);
+  //   }
+  // }
 
 
   // COMPLETED STEP STATE
@@ -272,6 +272,26 @@ $bouncy-easing: cubic-bezier(.43,2.9,.64,.99);
 
       span {
         transform: scale(0);
+      }
+    }
+
+    &:hover {
+      .donate-form__step__numeral {
+        background-color: $cerulean;
+        &-icon--edit {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        &-icon--completed {
+          transform: translate(-50%, -50%) scale(0);
+        }
+
+        span {
+          transform: scale(0);
+        }
+      }
+
+      .donate-form__step__heading {
+        @include font(roboto-bold);
       }
     }
 

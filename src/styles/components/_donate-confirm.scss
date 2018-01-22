@@ -24,7 +24,7 @@
   }
 
   &__view-receipt {
-    display: block;
+    display: table;
   }
 
   &__hide-receipt {
@@ -51,7 +51,7 @@
     }
 
     & ~ .donate-confirm__hide-receipt {
-      display: block;
+      display: table;
     }
   }
 

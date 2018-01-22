@@ -52,14 +52,11 @@
 
   &__source {
     @include respond((
-      font-size: 14px,
+      font-size: 16px,
       line-height: 36px,
       color: $black,
       float: right,
     ));
-    @include breakpoint(lg) {
-      @include font(roboto-bold);
-    }
 
     strong {
       @include font(roboto-bold);

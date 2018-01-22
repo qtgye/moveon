@@ -14,7 +14,7 @@ class PriceSelectGroup {
   bindFields() {
     let _this = this;
 
-    this.$presetAmountRadios.add(this.$customAmountInput).on('change', function () {
+    this.$presetAmountRadios.add(this.$customAmountInput).bind('change keyup', function () {
 
       // If custom amount is provided, make it required
       if ( _this.$customAmountInput.val() ) {
@@ -28,6 +28,13 @@ class PriceSelectGroup {
         _this.$customAmountRadio.prop('checked', false);
         _this.$customAmountInput.attr('required', false);
       }
+    });
+
+    // Deactivate preset amount on focus to custom amount
+    this.$customAmountInput.on('focus', function () {
+      _this.$presetAmountRadios.prop('checked', false).attr('required', false);
+      _this.$customAmountRadio.prop('checked', true);
+      _this.$customAmountInput.attr('required', true);
     });
   }
 

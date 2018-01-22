@@ -10,5 +10,5 @@ export function entries( form ) {
 // Polyfills FormData.prototype.values function
 export function values( form ) {
   let _entries = entries(form);
-  return _entries.map( entry => entry.value );
+  return _entries.map( entry => entry[1] );
 }

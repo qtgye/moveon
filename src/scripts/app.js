@@ -11,6 +11,7 @@ import PetitionCard from './components/petitionCard';
 import DonateReceipt from './components/donateReceipt';
 import DonateShortForm from './components/donateShortForm';
 import DonateFullForm from './components/donateFullForm';
+import DonateQuickPay from './components/donateQuickPay';
 import DonateBoxedForm from './components/donateBoxedForm';
 import PriceSelectGroup from './components/priceSelectGroup';
 
@@ -29,5 +30,6 @@ $(document).ready(function () {
   DonateShortForm.init();
   DonateFullForm.init();
   DonateBoxedForm.init();
+  DonateQuickPay.init();
   PriceSelectGroup.init();
 });

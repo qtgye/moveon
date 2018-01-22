@@ -24,7 +24,10 @@
     <div class="petition-details__author">
       <h4 class="petition-details__author__heading">Author</h4>
       <div class="petition-details__author__name">Matt Hildreth</div>
-      <a href="#" class="btn petition-details__author__cta">CONTACT →</a>
+      <a href="#" class="btn petition-details__author__cta">
+        CONTACT
+        {% include 'components/svg' with {id: 'caret-right'} only %}
+      </a>
     </div>
 
     <div class="petition-details__share">

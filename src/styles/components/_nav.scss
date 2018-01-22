@@ -69,7 +69,7 @@
     @include respond((
       display: flex,
       align-items: center,
-      height: 48px null 36px,
+      height: 48px null 24px 36px,
       font-size: 16px,
       line-height: 1.25,
       padding-left: 16px null 0,
@@ -111,7 +111,7 @@
   &__primary {
     @include respond((
       padding-top: 8px null 0,
-      margin-left: null null percentage(430px/$bp-xl),
+      margin-left: null null percentage(250px/$bp-lg) percentage(430px/$bp-xl),
       margin-right: null null auto,
     ));
 
@@ -129,7 +129,7 @@
 
     & > li {
       @include respond((
-        padding-bottom: null null 19px,
+        padding-bottom: null null 24px 19px,
       ));
     }
 
@@ -161,8 +161,14 @@
   &__dropdown {
 
     @include breakpoint(lg) {
-      &:hover ul.nav__primary__subnav {
-        display: flex;
+      &:hover {
+        .nav__primary__caret {
+          transform: rotate(180deg);
+        }
+
+        ul.nav__primary__subnav {
+          display: flex;
+        }
       }
     }
 
@@ -170,9 +176,9 @@
 
   &__secondary {
     @include respond((
-      margin-right: null null percentage(130px/$bp-xl),
-      margin-left: null null auto,
-      padding-bottom: null null 19px,
+      margin-right: null null percentage(40px/$bp-lg) percentage(130px/$bp-xl),
+      margin-left: null null null auto,
+      padding-bottom: null null 24px 19px,
     ));
 
     &__top {
@@ -245,7 +251,7 @@
       top: null null 100%,
       left: null null 0,
       width: null null 100%,
-      padding-left: null null percentage(430px/$bp-xl),
+      padding-left: null null percentage(250px/$bp-lg) percentage(430px/$bp-xl),
       background-color: null null $dark-gray,
     ));
 

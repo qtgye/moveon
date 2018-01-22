@@ -8,11 +8,14 @@
   width: 100%;
   z-index: 10;
   @include respond((
-    height: 57px null 130px,
+    height: 57px null 120px,
   ));
 
   .container {
     position: relative;
+    @include respond((
+      height: null null 100%,
+    ));
   }
 
   .logo {
@@ -21,8 +24,8 @@
     @include respond((
       width: 85px null 180px,
       height: 45px null 86px,
-      top: 27px null 66px,
-      left: 50% null percentage(130px/$bp-xl),
+      top: 27px null 56px 66px,
+      left: 50% null percentage(39px/$bp-lg) percentage(130px/$bp-xl),
       transform: translateX(-50%) null none,
       z-index: null null 1000,
     ));
@@ -35,6 +38,6 @@
 
 body {
   @include respond((
-    padding-top: 57px null 130px,
+    padding-top: 57px null 120px,
   ));
 }

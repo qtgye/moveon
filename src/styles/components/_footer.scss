@@ -210,7 +210,7 @@
     display: flex;
     @include respond((
       justify-content: null null space-between,
-      padding: null null (0 percentage(130px/$bp-xl) 40px),
+      padding: null null (0 percentage(39px/$bp-lg) 40px) (0 percentage(130px/$bp-xl) 40px),
     ));
   }
 

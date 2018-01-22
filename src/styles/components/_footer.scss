@@ -158,6 +158,17 @@
       padding: (14px 0) null 0,
     ));
 
+    a:link,
+    a:active,
+    a:visited {
+      color: inherit;
+      transition: color .3s;
+
+      &:hover {
+        color: $azure;
+      }
+    }
+
     &__item {
       @include font(roboto-regular);
       @include respond((
@@ -253,6 +264,17 @@
       padding: (8px 20px) null (11px 0),
       text-align: left null center,
     ));
+
+    a:link,
+    a:active,
+    a:visited {
+      color: inherit;
+      transition: color .3s;
+
+      &:hover {
+        color: $azure;
+      }
+    }
 
     strong {
       font-weight: bolder;

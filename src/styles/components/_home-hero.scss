@@ -197,7 +197,6 @@
     color: $black;
     @include btn--transparent-dark;
     @include respond((
-      font-size: 18px,
       line-height: 35px,
       margin-top: 10px null 24px,
     ));

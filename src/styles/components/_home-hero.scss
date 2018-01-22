@@ -143,6 +143,13 @@
       position: absolute;
       opacity: 0;
     }
+
+    &:nth-child(2) {
+      .home-hero__heading span {
+        background-color: $red;
+        color: $white;
+      }
+    }
   }
 
 

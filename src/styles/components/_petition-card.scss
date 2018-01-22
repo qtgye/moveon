@@ -3,12 +3,14 @@
   position: relative;
   @include respond((
     margin: (0 21px) null 0,
-    padding: (21px 22px 28px) null (107px percentage(100/780) 66px),
+    padding: (21px 22px 28px) null (107px percentage(80/780) 66px),
   ));
 
   &__heading {
 
     span {
+      display: inline-block;
+      padding: 2px 5px;
       @include font(roboto-condensed-bold);
       @include respond((
         font-size: 21px null 48px,
@@ -21,16 +23,19 @@
 
   &__body {
     @include respond((
-      margin-top: 13px null 20px,
+      margin-top: 13px null 24px,
     ));
 
     p {
+      @include respond((
+        font-size: 16px null 18px,
+        line-height: 24px null 24px,
+      ));
       @include font(roboto);
+
       &:not(:first-child) {
         @include respond((
           margin-top: 20px null 32.5px,
-          font-size: 14px 18px,
-          line-height: 21px 27px,
         ));
       }
     }
@@ -98,6 +103,24 @@
     }
   }
 
+  &__description {
+    @include respond((
+      margin-top: 20px null 32.5px
+    ));
+
+    &.trimmed {
+      @include respond((
+        display: block null none,
+      ));
+    }
+
+    &.full {
+      @include respond((
+        display: none null block,
+      ));
+    }
+  }
+
   &__meta {
     position: absolute;
     bottom: 0;
@@ -114,13 +137,13 @@
 
   &__more-cta {
     height: 36px;
-    display: inline-flex;
     align-items: center;
     white-space: nowrap;
     color: inherit;
     text-transform: uppercase;
     @include font(roboto-condensed-bold);
     @include respond((
+      display: inline-flex null none,
       font-size: 14px,
       line-height: 1.5,
     ));
@@ -181,15 +204,22 @@
 
 
   &__cta {
-    display: table;
-    @include font(roboto-bold);
+    display: flex;
+    @include btn--transparent;
     @include respond((
       margin-top: 16px null 37px,
-      margin-left: null null auto,
-      margin-right: null null auto,
-      font-size: 14px null 20px,
-      line-height: 21px null 34px,
+      margin-left: auto,
+      margin-right: auto,
+      font-size: 14px null 18px,
+      line-height: 21px null 24px,
     ));
+
+    svg {
+      width: 24px;
+      height: 24px;
+      padding: 6px 8px;
+      margin-left: 8px;
+    }
   }
 
 
@@ -213,6 +243,7 @@
     &-icons {
       display: flex;
       align-items: center;
+      height: 24px;
       @include respond((
         margin-top: 14px null 0,
       ));
@@ -222,16 +253,15 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      width: 24px;
-      height: 24px;
     }
 
     svg {
       display: block;
+      width: 24px;
+      height: 24px;
       @include respond((
-        fill: $azure null $black,
-        width: 14px null 20px,
-        height: 14px null 20px,
+        fill: $black,
+        padding: 5px null,
       ));
     }
 
@@ -244,15 +274,25 @@
 
         &:not(:first-child) {
           @include respond((
-            margin-left: 32px null 15px,
+            margin-left: 24px null 15px,
           ));
         }
+      }
+    }
+  }
 
-        &--mail {
-          @include respond((
-            height: 10px null 14px,
-          ));
-        }
+
+  // EXPANDED DESCRIPTION STATE
+  &.description-expanded {
+    .petition-card__description {
+      &.trimmed {
+        display: none;
+      }
+      &.full {
+        display: block;
+      }
+      & + .petition-card__more-cta {
+        display: none;
       }
     }
   }

@@ -2,7 +2,7 @@
   <div class="petition-card__content">
 
     <div class="petition-card__heading">
-      <span>WE NEED A REAL SOLUTION FOR THE HEROIN, FENTANYL, OXYCONTIN, AND OPIOID EPIDEMIC NOW</span>
+      {{'WE NEED A REAL SOLUTION FOR THE HEROIN, FENTANYL, OXYCONTIN, AND OPIOID EPIDEMIC NOW' | wrap-words}}
     </div>
 
     <div class="petition-card__body">
@@ -21,9 +21,15 @@
 
       <p><strong>Petition</strong></p>
 
-      <p>The opioid crisis must be declared a national health emergency and significant new funds for a long-term, comprehensive strategy for both prevention and treatment must be granted immediately.</p>
-
-      <p>Communities need to be able to mobilize resources to fight this epidemic long-term.</p>
+      {# Trimmed down description #}
+      <div class="petition-card__description trimmed">
+        <p>{{'The opioid crisis must be declared a national health emergency and significant new funds for a long-term, comprehensive strategy for both prevention and treatment must be granted immediately.' | ellipsis}}</p>
+      </div>
+      {# Full description #}
+      <div class="petition-card__description full">
+        <p>The opioid crisis must be declared a national health emergency and significant new funds for a long-term, comprehensive strategy for both prevention and treatment must be granted immediately.</p>
+        <p>Communities need to be able to mobilize resources to fight this epidemic long-term.</p>
+      </div>
 
       <button href="#" class="btn petition-card__more-cta">
         See More
@@ -41,8 +47,9 @@
       </div>
     </div>
 
-    <button class="petition-card__cta" data-modal="signers-modal">
-      MOST RECENT SIGNERS <strong>→</strong>
+    <button class="btn petition-card__cta" data-modal="signers-modal">
+      MOST RECENT SIGNERS
+      {% include 'components/svg' with {id: 'caret-right'} only %}
     </button>
 
     <div class="petition-card__share">

@@ -7,6 +7,7 @@ import HomeCarousel from './components/homeCarousel';
 import HomeHero from './components/homeHero';
 import SignForm from './components/signForm';
 import PetitionComments from './components/petitionComments';
+import PetitionCard from './components/petitionCard';
 import DonateReceipt from './components/donateReceipt';
 import DonateShortForm from './components/donateShortForm';
 import DonateFullForm from './components/donateFullForm';
@@ -23,6 +24,7 @@ $(document).ready(function () {
 
   SignForm.init();
   PetitionComments.init();
+  PetitionCard.init();
   DonateReceipt.init();
   DonateShortForm.init();
   DonateFullForm.init();

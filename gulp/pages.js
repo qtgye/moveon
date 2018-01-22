@@ -13,8 +13,15 @@ let templateRoot = projectRoot('src/templates');
 let twigTemplates = {};
 
 Twig.extendFilter('wrap-words', string => {
-  // console.log('wrap words',string.match(/[\S]+/ig).map( word => `<span>${word}</span>`).join(''));
   return string.match(/[\S]+/ig).map( word => `<span>${word}</span>`).join('');
+});
+
+// Max of 15 words
+Twig.extendFilter('ellipsis', string => {
+  const MAX_WORDS = 15;
+  let words = string.split(/\s+/g);
+  let trimmedWords = words.length > MAX_WORDS ? words.slice(0, 15+1).concat(['...']) : words;
+  return trimmedWords.join(' ');
 });
 
 module.exports = {

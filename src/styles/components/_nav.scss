@@ -165,8 +165,18 @@
 
     @include breakpoint(lg) {
       &:hover {
+        & > a:link,
+        & > a:visited,
+        & > a:active, {
+          color: $azure;
+        }
+
         .nav__primary__caret {
           transform: rotate(180deg);
+
+          svg {
+            fill: $azure;
+          }
         }
 
         ul.nav__primary__subnav {

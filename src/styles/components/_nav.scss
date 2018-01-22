@@ -248,6 +248,7 @@
       svg {
         width: 24px;
         height: 24px;
+        margin-right: 2px;
         @include respond((
           display: none null inline-flex,
         ));

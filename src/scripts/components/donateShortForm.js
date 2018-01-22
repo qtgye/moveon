@@ -13,7 +13,7 @@ class DonateShortForm {
 
   bindform() {
     let _this = this;
-    this.$form.on('change', function () {
+    this.$form.on('change keyup', function () {
       let currentFormData = new FormData(_this.$form[0]);
       let entries = [];
       let formData = {};

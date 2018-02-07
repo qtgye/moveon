@@ -11,7 +11,7 @@ class Navigation {
     let _this = this;
     this.$navToggle.click(function (e) {
       e.preventDefault();
-      _this.$nav.addClass('nav--visible');
+      _this.$nav.toggleClass('nav--visible');
     });
     this.$navClose.click(function (e) {
       e.preventDefault();

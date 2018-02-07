@@ -3,7 +3,7 @@
   #content .container {
     @include respond((
       display: null null flex,
-      padding-top: 30px null 133px,
+      padding-top: 30px null 50px,
       padding-left: null null percentage(130px/$bp-xl),
       padding-right: null null percentage(130px/$bp-xl),
     ));
@@ -24,7 +24,15 @@
     ));
 
     .sign-form {
-      padding-top: 79px;
+      @include respond((
+        padding-top: 79px null 30px,
+      ));
+
+      textarea {
+        @include respond((
+          height: null null 100px,
+        ));
+      }
     }
   }
 }

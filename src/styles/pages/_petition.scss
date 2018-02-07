@@ -3,7 +3,7 @@
   #content .container {
     @include respond((
       display: null null flex,
-      padding-top: 30px null 50px,
+      padding-top: 30px null,
       padding-left: null null percentage(130px/$bp-xl),
       padding-right: null null percentage(130px/$bp-xl),
     ));
@@ -30,7 +30,7 @@
 
       textarea {
         @include respond((
-          height: null null 100px,
+          height: null null 80px,
         ));
       }
     }

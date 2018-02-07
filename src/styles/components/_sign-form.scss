@@ -1,5 +1,12 @@
 .sign-form {
 
+  h4 {
+    @include respond((
+      display: none null block,
+      margin-bottom: 20px,
+    ));
+  }
+
   &__agreement {
     color: #3c434c;
     @include font(roboto);

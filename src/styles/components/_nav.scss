@@ -69,7 +69,7 @@
     @include respond((
       display: flex,
       align-items: center,
-      height: 48px null 24px 36px,
+      height: 48px null 24px,
       font-size: 16px,
       line-height: 1.25,
       padding-left: 16px null 0,
@@ -111,7 +111,7 @@
   &__primary {
     @include respond((
       padding-top: 8px null 0,
-      margin-left: null null percentage(250px/$bp-lg) percentage(430px/$bp-xl),
+      margin-left: null null percentage(40px/$bp-lg) percentage(130px/$bp-xl),
       margin-right: null null auto,
     ));
 
@@ -122,14 +122,14 @@
 
       &:not(:first-child) {
         @include respond((
-          padding-left: null null 24px,
+          padding-left: null null 10px 24px,
         ));
       }
     }
 
     & > li {
       @include respond((
-        padding-bottom: null null 24px 19px,
+        padding-bottom: null null 24px,
       ));
     }
 
@@ -191,7 +191,7 @@
     @include respond((
       margin-right: null null percentage(40px/$bp-lg) percentage(130px/$bp-xl),
       margin-left: null null null auto,
-      padding-bottom: null null 24px 19px,
+      padding-bottom: null null 24px,
     ));
 
     &__top {
@@ -202,7 +202,7 @@
         border-bottom: (1px solid $gray) null 0,
         padding-top: 8px null 0,
         padding-bottom: 8px null 0,
-        margin-bottom: null null 20px,
+        margin-bottom: null null 24px,
       ));
 
       li:not(:first-child) {
@@ -265,14 +265,15 @@
       top: null null 100%,
       left: null null 0,
       width: null null 100%,
-      padding-left: null null percentage(250px/$bp-lg) percentage(430px/$bp-xl),
+      padding-left: null null percentage(40px/$bp-lg) percentage(130px/$bp-xl),
       background-color: null null $dark-gray,
     ));
 
     li {
       &:not(:first-child) {
         @include respond((
-          margin-left: null null 70px
+          margin-left: null null 24px,
+          padding-left: null null 0,
         ));
       }
     }
@@ -280,7 +281,7 @@
     a {
       padding-bottom: 0;
       @include respond((
-        padding-left: 72px null 0,
+        padding-left: 72px null 0 0,
       ));
     }
   }

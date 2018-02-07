@@ -23,10 +23,10 @@
     position: absolute;
     @include respond((
       width: 85px null 180px,
-      height: 45px null 86px,
-      top: 27px null 56px 66px,
-      left: 50% null percentage(39px/$bp-lg) percentage(130px/$bp-xl),
-      transform: translateX(-50%) null none,
+      height: 45px null 80px,
+      top: 27px null 56px,
+      left: 50%,
+      transform: translateX(-50%),
       z-index: null null 1000,
     ));
 

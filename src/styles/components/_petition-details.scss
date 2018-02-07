@@ -10,15 +10,13 @@
 
 
   &__narrative {
-    @include respond((
-      display: block null none,
-    ));
+    display: block;
 
     p {
       @include font(roboto);
       @include respond((
-        font-size: 14px,
-        line-height: 21px,
+        font-size: 14px null 18px,
+        line-height: 21px null 24px,
       ));
 
       &:not(:first-child) {
@@ -36,7 +34,7 @@
 
   &__comments {
     @include respond((
-      margin-top: 40px null 0,
+      margin-top: 40px,
     ));
 
     // COLLAPSED ENTRIES STATE

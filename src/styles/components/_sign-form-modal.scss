@@ -13,14 +13,14 @@
   }
 
 
-  &__subheading {
-    @include font(roboto);
-    @include respond((
-      margin-top: 40px,
-      font-size: 14px,
-      line-height: 21px,
-    ));
-  }
+  // &__subheading {
+  //   @include font(roboto);
+  //   @include respond((
+  //     margin-top: 40px,
+  //     font-size: 14px,
+  //     line-height: 21px,
+  //   ));
+  // }
 
 
   .sign-form {

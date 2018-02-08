@@ -105,11 +105,11 @@
   &__text {
     overflow: auto;
     @include respond((
-      background-color: $ice-blue null $white,
+      background-color: $white,
       margin-top: 25px null 38px,
       padding: 15px null (26px 32px),
       height: 167px,
-      border: null null (1px solid $azure),
+      border: (1px solid $azure) null,
     ));
 
 

@@ -21,7 +21,6 @@ class HomeHero {
     });
     this.$imageCarousel.flickity({
       sync: this.$contentCarousel[0],
-      prevNextButtons: false,
       wrapAround: true,
     });
   }

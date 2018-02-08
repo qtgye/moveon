@@ -31,6 +31,37 @@
       ));
     }
 
+    .flickity-prev-next-button {
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+        @include respond((
+          display: block null none,
+        ));
+
+        &.previous {
+          left: 10px;
+        }
+
+        &.next {
+          right: 10px;
+        }
+
+        &:not([disabled]):hover {
+          .arrow {
+            fill: $black !important;
+          }
+        }
+
+        svg {
+          transition: none;
+        }
+
+        .arrow {
+          fill: $white;
+        }
+      }
+
     .dot {
       background-color: $white;
     }

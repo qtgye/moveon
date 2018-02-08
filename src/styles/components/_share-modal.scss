@@ -59,7 +59,7 @@
     @include font(roboto);
     @include respond((
       justify-content: flex-start null center,
-      width: 210px null percentage(280/580),
+      width: 100% null percentage(280/580),
       height: 41px,
       padding-left: 23px null 0,
       font-size: 12px null 14px,
@@ -67,7 +67,9 @@
     ));
 
     &:not(:first-child) {
-      margin-top: 10px null 0,
+      @include respond((
+        margin-top: 10px null 0,
+      ));
     }
 
     &[disabled] {

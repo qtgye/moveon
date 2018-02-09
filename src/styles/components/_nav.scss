@@ -295,8 +295,14 @@
 
   // STATES
   @include breakpoint(md down) {
+
     &:not(.nav--visible) {
       display: none;
+    }
+
+    &.nav--visible ~ .nav__toggle {
+      opacity: 0;
+      pointer-events: none;
     }
 
     .nav__dropdown--expanded {
@@ -322,10 +328,4 @@
       }
     }
   }
-}
-
-
-// LARGE LAYOUT
-@include breakpoint(lg) {
-
 }

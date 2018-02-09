@@ -1,0 +1,13 @@
+@import "main";
+
+body.styleguide {
+  padding-top: 0;
+
+  .wrapper {
+    padding-top: 117px;
+  }
+}
+
+@import "styleguide/header";
+@import "styleguide/block";
+@import "styleguide/color";

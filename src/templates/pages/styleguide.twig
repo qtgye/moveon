@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}Move On Styleguide{% endblock %}</title>
+        <link rel="stylesheet" href="/styles/vendors.css" />
+        <link rel="stylesheet" href="/styles/main.css" />
+        <link rel="stylesheet" href="/styles/styleguide.css" />
+    </head>
+    <body class="{% block bodyclass %}styleguide {% endblock %}">
+        <div style="display:none">{% include 'components/symbol/svg/sprite.symbol.svg' %}</div>
+        <div class="wrapper">
+
+          {% include 'styleguide/header' %}
+
+          <div class="stylguide-content">
+
+            {# COLOR PALETTE #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Color Palette{% endblock %}
+                {% block content %}
+                    <table class="styleguide-color">
+                        {% set colors = [
+                            [ '#000', '$black' ]
+                        ] %}
+                        <thead>
+                            <tr><td>Color</td><td>SASS Variable</td></tr>
+                        </thead>
+                        <tbody>
+                            {% for item in colors %}
+                                <td><div class="styleguide-color__item" style="background-color: {{ item[0] }};"></div></td>
+                                <td><div class="styleguide-color__variable">{{ item[1] }}</div></td>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% endblock %}
+            {% endembed %}
+
+          </div>
+
+        </div>
+        <script src="/scripts/vendors.js"></script>
+        <script src="/scripts/app.js"></script>
+    </body>
+</html>

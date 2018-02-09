@@ -11,6 +11,7 @@
 let tasks = [
   'vendors',
   'styles',
+  'styleguide-styles',
   'scripts',
   'pages',
   'images',

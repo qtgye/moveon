@@ -1,15 +1,15 @@
 .styleguide-block {
-  margin-top: 30px;
+  margin-top: 50px;
 
 
   &__heading {
     padding: 10px 20px;
-    background-color: $ice-blue;
+    border-bottom: 2px dashed $ice-blue;
     color: $azure;
   }
 
 
   &__content {
-    padding: 5px 20px;
+    padding: 20px 20px;
   }
 }

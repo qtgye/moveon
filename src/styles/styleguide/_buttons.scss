@@ -5,6 +5,14 @@
     @include btn--azure;
     padding: 5px 10px;
     min-width: 100px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      color: inherit;
+      fill: currentcolor;
+      margin-left: 10px;
+    }
   }
 
   .styleguide__button {

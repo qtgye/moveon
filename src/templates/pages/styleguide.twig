@@ -55,10 +55,32 @@
                 {% endblock %}
             {% endembed %}
 
+            {# BREAKPOINTS #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Beakpoints{% endblock %}
+                {% block content %}
+                    <table class="styleguide-breakpoints">
+                        <thead>
+                            <tr>
+                                <td>Width</td><td>SASS Variable</td><td>Size</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Small</strong></td> <td><em>$bp-sm</em></td> <td>0px</td></tr>
+                            <tr><td><strong>Medium</strong></td> <td><em>$bp-md</em></td> <td>768px</td></tr>
+                            <tr><td><strong>Large</strong></td> <td><em>$bp-lg</em></td> <td>1008px</td></tr>
+                            <tr><td><strong>Extra Large</strong></td> <td><em>$bp-xl</em></td> <td>1440px</td></tr>
+                        </tbody>
+                    </table>
+                {% endblock %}
+            {% endembed %}
+
           </div>
 
         </div>
+
         <script src="/scripts/vendors.js"></script>
         <script src="/scripts/app.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

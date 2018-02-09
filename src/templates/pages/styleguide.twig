@@ -22,16 +22,34 @@
                 {% block content %}
                     <table class="styleguide-color">
                         {% set colors = [
-                            [ '#000', '$black' ]
+                            ['#ffffff', '$white'],
+                            ['#f3f3f3', '$off-white'],
+                            ['#cacaca', '$gray'],
+                            ['#a7a7a7', '$light-gray'],
+                            ['#696a6a', '$slate-gray'],
+                            ['rgba(34, 34, 34, 0.38)', '$dark-gray-38'],
+                            ['#222222', '$dark-gray'],
+                            ['#000000', '$black'],
+                            ['#005680', '$deep-sea-blue'],
+                            ['#0080bf', '$cerulean'],
+                            ['#00abff', '$azure'],
+                            ['#99ddff', '$light-blue'],
+                            ['#e5f5ff', '$ice-blue'],
+                            ['#ea1c24', '$red']
                         ] %}
-                        <thead>
-                            <tr><td>Color</td><td>SASS Variable</td></tr>
-                        </thead>
                         <tbody>
-                            {% for item in colors %}
-                                <td><div class="styleguide-color__item" style="background-color: {{ item[0] }};"></div></td>
-                                <td><div class="styleguide-color__variable">{{ item[1] }}</div></td>
-                            {% endfor %}
+                            <tr>
+                                <td>Color</td>
+                                {% for item in colors %}
+                                    <td><div class="styleguide-color__item" style="background-color: {{ item[0] }};"></div></td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                <td>SASS Variable</td>
+                                {% for item in colors %}
+                                    <td><div class="styleguide-color__variable">{{ item[1] }}</div></td>
+                                {% endfor %}
+                            </tr>
                         </tbody>
                     </table>
                 {% endblock %}

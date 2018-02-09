@@ -16,6 +16,7 @@
 
           <div class="stylguide-content">
 
+
             {# COLOR PALETTE #}
             {% embed 'styleguide/block' %}
                 {% block heading %}Color Palette{% endblock %}
@@ -55,6 +56,7 @@
                 {% endblock %}
             {% endembed %}
 
+
             {# BREAKPOINTS #}
             {% embed 'styleguide/block' %}
                 {% block heading %}Beakpoints{% endblock %}
@@ -72,6 +74,31 @@
                             <tr><td><strong>Extra Large</strong></td> <td><em>$bp-xl</em></td> <td>1440px</td></tr>
                         </tbody>
                     </table>
+                {% endblock %}
+            {% endembed %}
+
+
+            {# TYPOGRAPHY #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Typography: Headings{% endblock %}
+                {% block content %}
+                    <div class="styleguide-headings">
+                        <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <h5>Heading 5</h5>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+
+            {# TYPOGRAPHY #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Typography: Body{% endblock %}
+                {% block content %}
+                    <div class="styleguide-headings">
+                        <p>Lorem ipsum dolor sit <em>amet</em>, <a href="#">consectetur</a> <strong>adipisicing elit</strong>. Repellendus tenetur pariatur, nam natus est rerum sint minus maiores voluptas, facilis optio fugit delectus eligendi officiis dolorum ratione, quo numquam deserunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil placeat repudiandae minima non tempore odio cumque sit magnam temporibus nam quasi dolores deserunt est, aliquid nesciunt, eius, beatae debitis dolore!</p>
+                    </div>
                 {% endblock %}
             {% endembed %}
 

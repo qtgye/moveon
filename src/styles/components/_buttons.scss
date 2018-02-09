@@ -102,6 +102,7 @@ button,
   cursor: pointer;
   transition: all .3s;
   text-transform: uppercase;
+  height: 36px;;
   @include font(roboto-condensed-bold);
   @include btn--transparent;
 

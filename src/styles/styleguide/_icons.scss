@@ -1,0 +1,34 @@
+.styleguide-icons {
+
+
+  .styleguide-icon {
+
+
+    &__icon {
+      width: 150px;
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 30px;
+    }
+
+
+    &__icon__graphic {
+      display: block;
+
+      svg {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+
+    &__icon__name {
+      font-size: .85em;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+}

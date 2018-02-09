@@ -1,0 +1,29 @@
+.styleguide-buttons {
+
+  button {
+    font-size: 18px;
+    @include btn--azure;
+    padding: 5px 10px;
+    min-width: 100px;
+  }
+
+  .styleguide__button {
+
+    &--azure {
+      @include btn--azure;
+    }
+
+    &--transparent {
+      @include btn--transparent;
+    }
+
+    &--transparent-dark {
+      @include btn--transparent-dark;
+    }
+
+    &--transparent-light {
+      @include btn--transparent-light;
+    }
+  }
+
+}

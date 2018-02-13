@@ -213,15 +213,25 @@
         transform: translateY(-44px),
       ));
 
-      &.previous {
+      &:hover {
+        top: 50%;
+      }
+
+      &.previous,
+      &.previous:hover {
         @include respond((
           left: 0 null calc(100% * 130 / 1440 - 60px),
+          right: auto,
+          top: 50%,
         ));
       }
 
-      &.next {
+      &.next,
+      &.next:hover {
         @include respond((
           right: 0 null calc(100% * 130 / 1440 - 60px),
+          left: auto,
+          top: 50%,
         ));
       }
 

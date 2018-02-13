@@ -315,6 +315,7 @@ form {
 
 
 // REMOVE BOX SHADOW ON INVALID FIELDS
+input:focus,
 input:invalid:focus,
 input:focus:invalid:focus {
   box-shadow: none !important;

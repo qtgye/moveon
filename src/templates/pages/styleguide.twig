@@ -152,6 +152,21 @@
                 {% endblock %}
             {% endembed %}
 
+            {# ROUND IMAGE #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Round Image{% endblock %}
+                {% block content %}
+                    <div class="styleguide-description">
+                        This only applies the roundedness of the image. The width and height should be defined within its parent component.
+                    </div>
+                    <div class="styleguide-round-image">
+                        <div class="round-image">
+                            <img src="/images/testimonial-image.jpg" alt="">
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+
             {# BUTTONS #}
             {% embed 'styleguide/block' %}
                 {% block heading %}Buttons{% endblock %}

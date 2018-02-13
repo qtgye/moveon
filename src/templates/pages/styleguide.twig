@@ -280,6 +280,23 @@
                 {% endblock %}
             {% endembed %}
 
+            {# MEDIA #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Media{% endblock %}
+                {% block content %}
+                    <div class="styleguide-media">
+                        <div class="media">
+                          <img src="/images/petition-card-media.jpg" alt="">
+                          <button class="btn media__play"></button>
+                          <div class="media__meta">
+                            Posted by MoveOn <br>
+                            19,852 Views
+                          </div>
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+
           </div>
 
         </div>

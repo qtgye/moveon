@@ -1,0 +1,71 @@
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @include aspect-ratio(235, 154);
+
+  @include breakpoint(lg) {
+    @include aspect-ratio(580, 380);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: percentage(91/154);
+    opacity: .8;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0));
+    pointer-events: none;
+  }
+
+  img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__play {
+    background-image: url('../images/icons/play.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 5;
+    @include respond((
+      width: 35px null 84px,
+      height: 35px null 84px,
+    ));
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__meta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: $white;
+    @include font(roboto);
+    @include respond((
+      padding-left: 13px,
+      padding-bottom: 14.5px,
+      font-size: 11px,
+      line-height: 1.5,
+    ));
+  }
+
+}

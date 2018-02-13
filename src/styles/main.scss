@@ -13,45 +13,50 @@
 // CONFIGS
 @include define-breakpoints($breakpoints);
 
-// COMPONENTS
-@import 'components/container';
-@import 'components/headings';
 @import 'components/buttons';
-@import 'components/lists';
-@import 'components/links';
-@import 'components/blockquote';
-@import 'components/round-image';
-@import 'components/modal';
-@import 'components/form';
-@import 'components/media';
 
-@import 'components/header';
-@import 'components/nav';
-@import 'components/footer';
-@import 'components/sign-form';
-@import 'components/sign-form-modal';
-@import 'components/signers';
-@import 'components/signers-modal';
-@import 'components/share-modal';
-@import 'components/price-select';
-@import 'components/animated-underline';
+.giraffe {
 
-// PER PAGE COMPONENTS
-@import "components/home-hero";
-@import "components/home-illustration";
-@import "components/home-carousel";
-@import "components/cta-grid";
-@import "components/testimonial";
-@import "components/join";
-@import "components/petition-card";
-@import "components/petition-details";
-@import "components/donate-form";
-@import "components/donate-form-v1";
-@import "components/donate-form-v3";
-@import "components/donate-terms";
-@import "components/donate-terms-v3";
-@import "components/donate-terms-nocolumn";
-@import "components/donate-confirm";
+  // COMPONENTS
+  @import 'components/container';
+  @import 'components/headings';
+  @import 'components/lists';
+  @import 'components/links';
+  @import 'components/blockquote';
+  @import 'components/round-image';
+  @import 'components/modal';
+  @import 'components/form';
+  @import 'components/media';
+
+  @import 'components/header';
+  @import 'components/nav';
+  @import 'components/footer';
+  @import 'components/sign-form';
+  @import 'components/sign-form-modal';
+  @import 'components/signers';
+  @import 'components/signers-modal';
+  @import 'components/share-modal';
+  @import 'components/price-select';
+  @import 'components/animated-underline';
+
+  // PER PAGE COMPONENTS
+  @import "components/home-hero";
+  @import "components/home-illustration";
+  @import "components/home-carousel";
+  @import "components/cta-grid";
+  @import "components/testimonial";
+  @import "components/join";
+  @import "components/petition-card";
+  @import "components/petition-details";
+  @import "components/donate-form";
+  @import "components/donate-form-v1";
+  @import "components/donate-form-v3";
+  @import "components/donate-terms";
+  @import "components/donate-terms-v3";
+  @import "components/donate-terms-nocolumn";
+  @import "components/donate-confirm";
+
+}
 
 // PAGE STYLES
 @import "pages/petition";

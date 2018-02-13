@@ -6,6 +6,25 @@ body.styleguide {
   .wrapper {
     padding-top: 117px;
   }
+
+  .styleguide-description {
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: #999;
+    position: relative;
+    padding: 10px 15px;
+    border: 2px dashed darken($ice-blue, 10%);
+
+    &:before {
+      content: 'NOTE:';
+      display: inline-block;
+      position: absolute;
+      top: -16px;
+      background-color: darken($ice-blue, 10%);
+      padding: 0 5px;
+      color: $white;
+    }
+  }
 }
 
 @import "styleguide/header";
@@ -15,3 +34,4 @@ body.styleguide {
 @import "styleguide/headings";
 @import "styleguide/buttons";
 @import "styleguide/icons";
+@import "styleguide/blockquote";

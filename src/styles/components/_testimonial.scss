@@ -39,32 +39,4 @@
       margin-left: null null 100px,
     ));
   }
-
-
-  &__quote {
-    @include font(roboto-medium);
-    @include respond((
-      font-style: italic,
-      font-size: 16px null 24px,
-      line-height: 24px null 36px,
-    ));
-  }
-
-  &__source {
-    @include respond((
-      font-size: 16px,
-      line-height: 36px,
-      color: transparentize($black, 1-.54) null $black,
-      float: right,
-    ));
-
-    strong {
-      @include font(roboto-bold);
-    }
-  }
-
-  .clearfix {
-    display: block;
-    clear: both;
-  }
 }

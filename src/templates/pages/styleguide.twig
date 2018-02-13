@@ -117,6 +117,24 @@
                 {% endblock %}
             {% endembed %}
 
+            {# TYPOGRAPHY: BLOCKQUOTE #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Typography: Blockquote{% endblock %}
+                {% block content %}
+                    <div class="styleguide-description">
+                        The width of this component should be defined within its parent styles.
+                    </div>
+                    <div class="styleguide-blockquote">
+                        <blockquote>
+                            <p>
+                              “When a community starts to listen to each other, pull together, and work towards a common goal, the anything is possible.”
+                            </p>
+                            <cite>— <strong>Chuck</strong>, MoveOn Mobilizer</cite>
+                          </blockquote>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+
             {# BUTTONS #}
             {% embed 'styleguide/block' %}
                 {% block heading %}Buttons{% endblock %}

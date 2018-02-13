@@ -8,6 +8,7 @@
 @import "mixins/breakpoint";
 @import "mixins/respond";
 @import "mixins/aspect-ratio";
+@import "mixins/clearfix";
 
 // CONFIGS
 @include define-breakpoints($breakpoints);
@@ -18,6 +19,7 @@
 @import 'components/buttons';
 @import 'components/lists';
 @import 'components/links';
+@import 'components/blockquote';
 @import 'components/modal';
 @import 'components/form';
 

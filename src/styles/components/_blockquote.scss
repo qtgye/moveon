@@ -1,0 +1,31 @@
+blockquote {
+  @include clearfix;
+  @include respond((
+    margin-top: 36px null auto,
+    margin-bottom: auto,
+    margin-left: null null 100px,
+  ));
+
+  p {
+    @include font(roboto-medium);
+    @include respond((
+      font-style: italic,
+      font-size: 16px null 24px,
+      line-height: 24px null 36px,
+    ));
+  }
+
+  cite {
+    font-style: normal;
+    @include respond((
+      font-size: 16px,
+      line-height: 36px,
+      color: transparentize($black, 1-.54) null $black,
+      float: right,
+    ));
+
+    strong {
+      @include font(roboto-bold);
+    }
+  }
+}

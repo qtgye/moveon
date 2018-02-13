@@ -1,0 +1,50 @@
+.styleguide-cta {
+
+  .dark {
+    background-color: $black;
+    padding: 0 0 30px 20px;
+  }
+
+  .medium {
+    background-color: $azure;
+    padding: 0 0 30px 20px;
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $white;
+
+        svg {
+          fill: $white;
+        }
+      }
+
+      svg {
+        fill: $black;
+      }
+    }
+  }
+
+  .dropdown {
+
+    a:hover {
+
+      svg {
+        transform: rotate(270deg);
+      }
+    }
+
+    svg {
+      transform: rotate(90deg);
+    }
+
+    &-submenu {
+      display: none;
+    }
+  }
+
+  a {
+    display: inline-flex;
+  }
+}

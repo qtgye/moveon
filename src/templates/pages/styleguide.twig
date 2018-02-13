@@ -135,6 +135,60 @@
                 {% endblock %}
             {% endembed %}
 
+            {# CTA LINKS #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Typography: CTA Links{% endblock %}
+                {% block content %}
+                    <div class="styleguide-description">
+                        There is no global classname or mixin for these hover states, as the background will be defined in the parent component.
+                        <br>
+                        On a dark background use white all-caps links that transition to blue on hover, and on a medium to light background use black all-caps links that transition to white on hover.
+                        <br>
+                        Links that has dropdown should have animated caret icon.
+                    </div>
+                    <div class="styleguide-cta">
+                        <div class="dark">
+                            <a href="#" class="btn home-illustration__cta">
+                                Learn More About Us
+                                {% include 'components/svg' with {id: 'caret-right'} only %}
+                            </a>
+                            <br>
+                            <a href="#" class="btn home-illustration__cta">
+                                Join the Movement
+                                {% include 'components/svg' with {id: 'caret-right'} only %}
+                            </a>
+                        </div>
+                        <div class="medium">
+                            <a href="#" class="btn home-illustration__cta">
+                                Learn More About Us
+                                {% include 'components/svg' with {id: 'caret-right'} only %}
+                            </a>
+                            <br>
+                            <a href="#" class="btn home-illustration__cta">
+                                Join the Movement
+                                {% include 'components/svg' with {id: 'caret-right'} only %}
+                            </a>
+                        </div>
+                        <div class="dropdown dark">
+                            <div class="dropdown-menu">
+                                <a href="#" class="btn home-illustration__cta">
+                                    DROPDOWN
+                                    {% include 'components/svg' with {id: 'caret-right'} only %}
+                                </a>
+                                <div class="dropdown-submenu">
+                                    <ul class="dropdown">
+                                        <li>Some Item</li>
+                                        <li>Some Item</li>
+                                        <li>Some Item</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+
             {# TYPOGRAPHY: ANIMATED UNDERLINE #}
             {% embed 'styleguide/block' %}
                 {% block heading %}Typography: Animated Underline{% endblock %}

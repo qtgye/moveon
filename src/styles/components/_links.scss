@@ -5,12 +5,13 @@ a:active {
   transition: all .3s;
   color: $azure;
 
+  svg {
+    color: inherit;
+    fill: currentColor;
+  }
+
   &:hover {
     color: $azure;
-
-    svg {
-      fill: $azure;
-    }
   }
 
   svg {

@@ -135,6 +135,23 @@
                 {% endblock %}
             {% endembed %}
 
+            {# TYPOGRAPHY: ANIMATED UNDERLINE #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Typography: Animated Underline{% endblock %}
+                {% block content %}
+                    <div class="styleguide-description">
+                        This only applies the animated underline to the text. The overall styles, such as font size and colors should be defined within the parent component.
+                    </div>
+                    <div class="styleguide-animated-underline">
+                        <div>
+                            <p class="animated-underline"><span>Sign</span><span>a</span><span>Petition</span></p>
+                            <p class="animated-underline"><span>Support</span><span>a</span><span>Campaign</span></p>
+                            <p class="animated-underline"><span>Attend</span><span>an</span><span>Event</span></p>
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+
             {# BUTTONS #}
             {% embed 'styleguide/block' %}
                 {% block heading %}Buttons{% endblock %}

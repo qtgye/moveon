@@ -1,0 +1,18 @@
+.styleguide-animated-underline {
+  width: 50%;
+  background-color: $azure;
+  font-size: 46px;
+  line-height: 46px;
+  padding: 20px;
+
+  .animated-underline {
+    display: table;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include font(roboto-condensed-bold);
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+}

@@ -77,6 +77,65 @@
                 {% endblock %}
             {% endembed %}
 
+            {# BUTTONS #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Buttons{% endblock %}
+                {% block content %}
+                    <div class="styleguide-buttons">
+                        <button class="btn styleguide__button--azure">Simple Button</button>
+                        <button class="btn styleguide__button--azure">Button With Icon <svg><use xlink:href="#caret-right" /></svg></button>
+                        <button class="btn" disabled >Disabled Button</button>
+                        <br><br>
+                        <h3>Available SASS mixins:</h3>
+                        <br>
+                        <p><button class="btn styleguide__button--azure">Azure</button> <code class="SASS">@include btn--azure</code></p><br>
+                        <p><button class="btn styleguide__button--transparent">Transparent</button> <code class="SASS">@include btn--transparent</code></p><br>
+                        {# <p><button class="btn styleguide__button--transparent-dark">Transparent-Dark</button> <code class="SASS">@include btn--transparent-dark</code></p><br> #}
+                        <p><div style="background-color: #ddd"><button class="btn styleguide__button--transparent-light">Transparent-Light</button> <code class="SASS">@include btn--transparent-light</code></div></p><br>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+
+            {# ICONS #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Icons Set{% endblock %}
+                {% block content %}
+                    <div class="styleguide-icons">
+                        {% set icons = [
+                            'burger',
+                            'caret-down',
+                            'caret-right',
+                            'check',
+                            'close',
+                            'cta-banner',
+                            'cta-document',
+                            'cta-hand',
+                            'document-add',
+                            'edit',
+                            'facebook',
+                            'flag-outline',
+                            'flag-solid',
+                            'illustration-checkbox',
+                            'illustration-coins',
+                            'illustration-cross',
+                            'illustration-flag',
+                            'instagram',
+                            'link',
+                            'mail',
+                            'play',
+                            'times',
+                            'twitter'
+                        ] %}
+                        {% for icon in icons %}
+                            <div class="styleguide-icon__icon">
+                                <div class="styleguide-icon__icon__graphic"><svg><use xlink:href="#{{icon}}" x="" y=""/></svg></div>
+                                <div class="styleguide-icon__icon__name">{{icon}}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endblock %}
+            {% endembed %}
+
 
             {# TYPOGRAPHY #}
             {% embed 'styleguide/block' %}
@@ -202,65 +261,6 @@
                             <p class="animated-underline"><span>Support</span><span>a</span><span>Campaign</span></p>
                             <p class="animated-underline"><span>Attend</span><span>an</span><span>Event</span></p>
                         </div>
-                    </div>
-                {% endblock %}
-            {% endembed %}
-
-            {# BUTTONS #}
-            {% embed 'styleguide/block' %}
-                {% block heading %}Buttons{% endblock %}
-                {% block content %}
-                    <div class="styleguide-buttons">
-                        <button class="btn styleguide__button--azure">Simple Button</button>
-                        <button class="btn styleguide__button--azure">Button With Icon <svg><use xlink:href="#caret-right" /></svg></button>
-                        <button class="btn" disabled >Disabled Button</button>
-                        <br><br>
-                        <h3>Available SASS mixins:</h3>
-                        <br>
-                        <p><button class="btn styleguide__button--azure">Azure</button> <code class="SASS">@include btn--azure</code></p><br>
-                        <p><button class="btn styleguide__button--transparent">Transparent</button> <code class="SASS">@include btn--transparent</code></p><br>
-                        {# <p><button class="btn styleguide__button--transparent-dark">Transparent-Dark</button> <code class="SASS">@include btn--transparent-dark</code></p><br> #}
-                        <p><div style="background-color: #ddd"><button class="btn styleguide__button--transparent-light">Transparent-Light</button> <code class="SASS">@include btn--transparent-light</code></div></p><br>
-                    </div>
-                {% endblock %}
-            {% endembed %}
-
-            {# ICONS #}
-            {% embed 'styleguide/block' %}
-                {% block heading %}Icons Set{% endblock %}
-                {% block content %}
-                    <div class="styleguide-icons">
-                        {% set icons = [
-                            'burger',
-                            'caret-down',
-                            'caret-right',
-                            'check',
-                            'close',
-                            'cta-banner',
-                            'cta-document',
-                            'cta-hand',
-                            'document-add',
-                            'edit',
-                            'facebook',
-                            'flag-outline',
-                            'flag-solid',
-                            'illustration-checkbox',
-                            'illustration-coins',
-                            'illustration-cross',
-                            'illustration-flag',
-                            'instagram',
-                            'link',
-                            'mail',
-                            'play',
-                            'times',
-                            'twitter'
-                        ] %}
-                        {% for icon in icons %}
-                            <div class="styleguide-icon__icon">
-                                <div class="styleguide-icon__icon__graphic"><svg><use xlink:href="#{{icon}}" x="" y=""/></svg></div>
-                                <div class="styleguide-icon__icon__name">{{icon}}</div>
-                            </div>
-                        {% endfor %}
                     </div>
                 {% endblock %}
             {% endembed %}

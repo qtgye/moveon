@@ -1,4 +1,10 @@
-.flickity {
+.flickity-enabled {
+
+  .dot {
+    &::before {
+      content: '';
+    }
+  }
 
 }
 

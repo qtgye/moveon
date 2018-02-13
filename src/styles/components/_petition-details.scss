@@ -46,7 +46,7 @@
         transform: none;
       }
       .petition-details__comments__toggle {
-        color: $black;
+        color: $black !important;
 
         svg {
           fill: $black;
@@ -76,7 +76,7 @@
       white-space: nowrap;
       background-color: transparent;
       display: table;
-      color: $azure;
+      color: $azure !important;
       @include font(roboto-condensed-bold);
       @include respond((
         margin-top: 17px null 46px,

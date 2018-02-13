@@ -93,7 +93,7 @@
 
 
 button,
-.btn {
+.mo-btn {
   -webkit-appearance: none;
   display: inline-flex;
   justify-content: center;
@@ -102,7 +102,11 @@ button,
   cursor: pointer;
   transition: all .3s;
   text-transform: uppercase;
-  height: 36px;;
+  height: 36px;
+  background-image: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
   @include font(roboto-condensed-bold);
   @include btn--transparent;
 

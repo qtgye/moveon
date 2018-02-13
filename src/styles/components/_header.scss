@@ -11,7 +11,7 @@
     height: 57px null 120px,
   ));
 
-  .container {
+  .mo-container {
     position: relative;
     @include respond((
       height: null null 100%,

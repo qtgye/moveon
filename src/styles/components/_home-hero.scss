@@ -1,7 +1,7 @@
 .home-hero {
   background-color: $black;
 
-  .container {
+  .mo-container {
     @include respond((
       display: block null flex,
     ));
@@ -31,20 +31,31 @@
       ));
     }
 
-    .flickity-prev-next-button {
+    .flickity-prev-next-button.flickity-prev-next-button {
         background-color: transparent;
         width: 20px;
         height: 20px;
+
+        &, &:hover {
+          top: 50%;
+        }
+
         @include respond((
           display: block null none,
         ));
 
         &.previous {
-          left: 10px;
+          &, &:hover {
+            right: auto;
+            left: 10px;
+          }
         }
 
         &.next {
-          right: 10px;
+          &, &:hover {
+            left: auto;
+            right: 10px;
+          }
         }
 
         &:not([disabled]):hover {

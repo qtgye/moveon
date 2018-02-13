@@ -1,5 +1,5 @@
 form {
-
+  box-shadow: none;
 
   .input-block {
     position: relative;
@@ -43,6 +43,8 @@ form {
       position: relative;
       background-color: transparent;
       z-index: 1;
+      margin-bottom: 0;
+      box-shadow: none;
       @include respond((
         width: 100%,
         height: 50px null 30px,
@@ -50,8 +52,18 @@ form {
         border-bottom: (2px solid transparentize($black, 1-0.42)) null,
       ));
 
-      &:focus {
+      &:invalid:focus {
+        box-shadow: none;
+      }
+
+      &:focus,
+      &:invalid:focus {
+        color: rgba(0,0,0,.54);
         border-bottom-color: $azure;
+      }
+
+      &:hover {
+        background-color: transparent;
       }
 
       &:focus ~ label {
@@ -96,6 +108,8 @@ form {
       line-height: inherit;
       padding: 5px;
       transition: all .3s;
+      border-radius: 0;
+      box-shadow: none;
 
       & ~ label {
         top: 13px;
@@ -106,6 +120,7 @@ form {
       &:focus {
         color: $azure;
         border-color: $azure;
+        box-shadow: none;
       }
 
       &:focus ~ label {
@@ -225,6 +240,10 @@ form {
         border-color: $azure;
         background-color: $azure;
         opacity: 1;
+
+        &::after {
+          opacity: 1;
+        }
       }
 
       &::after {
@@ -238,10 +257,12 @@ form {
         color: $white;
         width: 100%;
         height: 100%;
-        background-image: url("/images/icons/check.svg");
+        background-image: url("/images/check-white.svg");
         background-repeat: no-repeat;
         background-size: 80%;
         background-position: center;
+        opacity: 0;
+        transition: all .3s;
       }
     }
 
@@ -290,6 +311,14 @@ form {
   }
 
 
+}
+
+
+// REMOVE BOX SHADOW ON INVALID FIELDS
+input:invalid:focus,
+input:focus:invalid:focus {
+  box-shadow: none !important;
+  border-color: $slate-gray;
 }
 
 

@@ -140,6 +140,7 @@
 
   &__cta {
     display: flex;
+    color: $black !important;
     @include btn--transparent;
     @include respond((
       margin-top: 16px null 37px,
@@ -148,6 +149,10 @@
       font-size: 14px null 18px,
       line-height: 21px null 24px,
     ));
+
+    &:hover {
+      color: $azure !important;
+    }
 
     svg {
       width: 24px;

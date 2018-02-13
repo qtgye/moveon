@@ -1,20 +1,20 @@
 <div
-  class="modal {% block modal_class %}{% endblock %}"
+  class="mo-modal {% block modal_class %}{% endblock %}"
   id="{% block modal_id %}{% endblock %}"
 >
-  <div class="modal__backdrop"></div>
+  <div class="mo-modal__backdrop"></div>
 
-  <div class="modal__frame">
-    <div class="modal__dialog">
+  <div class="mo-modal__frame">
+    <div class="mo-modal__dialog">
 
-      <div class="modal__content">
+      <div class="mo-modal__content">
         {% block modal_content %}
         {% endblock %}
       </div>
 
     </div>
 
-    <button class="modal__close">
+    <button class="mo-modal__close">
       {% include 'components/svg' with {id: 'times'} only %}
     </button>
   </div>

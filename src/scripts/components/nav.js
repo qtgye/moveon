@@ -1,10 +1,10 @@
 class Navigation {
 
   constructor() {
-    this.$nav = $('.nav');
-    this.$navToggle = $('.nav__toggle');
-    this.$navClose = $('.nav__close');
-    this.$dropdown = this.$nav.find('.nav__dropdown');
+    this.$nav = $('.mo-nav');
+    this.$navToggle = $('.mo-nav__toggle');
+    this.$navClose = $('.mo-nav__close');
+    this.$dropdown = this.$nav.find('.mo-nav__dropdown');
   }
 
   init() {

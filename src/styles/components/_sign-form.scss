@@ -3,7 +3,7 @@
   h4 {
     @include respond((
       display: none null block,
-      margin-bottom: 20px,
+      margin-bottom: 40px,
     ));
   }
 
@@ -49,9 +49,16 @@
     width: 100%;
     height: 50px;
     position: fixed;
-    bottom: 0;
-    left: 0;
     z-index: 500;
+
+    &,
+    &:hover {
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: 0;
+    }
+
     @include btn--azure;
     @include respond((
       font-size: 21px,

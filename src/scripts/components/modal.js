@@ -5,7 +5,7 @@ class Modal {
   constructor($element) {
 
     this.$element = $($element);
-    this.$close = this.$element.find('.modal__close');
+    this.$close = this.$element.find('.mo-modal__close');
     this.id = this.$element.attr('id');
 
     if ( this.id ) {
@@ -59,7 +59,7 @@ export default {
 
   init() {
 
-    let $modals = $('.modal');
+    let $modals = $('.mo-modal');
 
     $modals.each(function (index, modal) {
       let _form = new Modal(modal);

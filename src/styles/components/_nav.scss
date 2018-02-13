@@ -1,4 +1,4 @@
-.nav {
+.mo-nav {
   top: 0;
   left: 0;
   @include respond((
@@ -167,7 +167,7 @@
   &__dropdown {
     position: static;
 
-    .nav__primary__caret {
+    .mo-nav__primary__caret {
       padding: 5px;
     }
 
@@ -179,7 +179,7 @@
           color: $azure;
         }
 
-        .nav__primary__caret {
+        .mo-nav__primary__caret {
           transform: rotate(180deg);
 
           svg {
@@ -187,7 +187,7 @@
           }
         }
 
-        ul.nav__primary__subnav {
+        ul.mo-nav__primary__subnav {
           display: flex;
         }
       }
@@ -264,7 +264,7 @@
     }
   }
 
-  .nav__primary__subnav {
+  .mo-nav__primary__subnav {
     @include respond((
       display: null null none,
       align-items: center,
@@ -302,12 +302,12 @@
       display: none;
     }
 
-    &.nav--visible ~ .nav__toggle {
+    &.nav--visible ~ .mo-nav__toggle {
       opacity: 0;
       pointer-events: none;
     }
 
-    .nav__dropdown--expanded {
+    .mo-nav__dropdown--expanded {
 
       & > a:link,
       & > a:active,
@@ -315,7 +315,7 @@
         color: $azure;
       }
 
-      .nav__primary__caret {
+      .mo-nav__primary__caret {
         transform: rotate(180deg);
 
         svg {
@@ -324,7 +324,7 @@
       }
     }
 
-    .nav__dropdown:not(.nav__dropdown--expanded) {
+    .mo-nav__dropdown:not(.mo-nav__dropdown--expanded) {
       ul {
         display: none;
       }

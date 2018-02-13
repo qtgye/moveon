@@ -1,4 +1,6 @@
 blockquote {
+  border: none;
+  padding: 0;
   @include clearfix;
   @include respond((
     margin-top: 36px null auto,

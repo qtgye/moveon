@@ -82,16 +82,16 @@
                 {% block heading %}Buttons{% endblock %}
                 {% block content %}
                     <div class="styleguide-buttons">
-                        <button class="btn styleguide__button--azure">Simple Button</button>
-                        <button class="btn styleguide__button--azure">Button With Icon <svg><use xlink:href="#caret-right" /></svg></button>
-                        <button class="btn" disabled >Disabled Button</button>
+                        <button class="mo-btn styleguide__button--azure">Simple Button</button>
+                        <button class="mo-btn styleguide__button--azure">Button With Icon <svg><use xlink:href="#caret-right" /></svg></button>
+                        <button class="mo-btn" disabled >Disabled Button</button>
                         <br><br>
                         <h3>Available SASS mixins:</h3>
                         <br>
-                        <p><button class="btn styleguide__button--azure">Azure</button> <code class="SASS">@include btn--azure</code></p><br>
-                        <p><button class="btn styleguide__button--transparent">Transparent</button> <code class="SASS">@include btn--transparent</code></p><br>
-                        {# <p><button class="btn styleguide__button--transparent-dark">Transparent-Dark</button> <code class="SASS">@include btn--transparent-dark</code></p><br> #}
-                        <p><div style="background-color: #ddd"><button class="btn styleguide__button--transparent-light">Transparent-Light</button> <code class="SASS">@include btn--transparent-light</code></div></p><br>
+                        <p><button class="mo-btn styleguide__button--azure">Azure</button> <code class="SASS">@include mo-btn--azure</code></p><br>
+                        <p><button class="mo-btn styleguide__button--transparent">Transparent</button> <code class="SASS">@include mo-btn--transparent</code></p><br>
+                        {# <p><button class="mo-btn styleguide__button--transparent-dark">Transparent-Dark</button> <code class="SASS">@include mo-btn--transparent-dark</code></p><br> #}
+                        <p><div style="background-color: #ddd"><button class="mo-btn styleguide__button--transparent-light">Transparent-Light</button> <code class="SASS">@include mo-btn--transparent-light</code></div></p><br>
                     </div>
                 {% endblock %}
             {% endembed %}
@@ -207,30 +207,30 @@
                     </div>
                     <div class="styleguide-cta">
                         <div class="dark">
-                            <a href="#" class="btn home-illustration__cta">
+                            <a href="#" class="mo-btn home-illustration__cta">
                                 Learn More About Us
                                 {% include 'components/svg' with {id: 'caret-right'} only %}
                             </a>
                             <br>
-                            <a href="#" class="btn home-illustration__cta">
+                            <a href="#" class="mo-btn home-illustration__cta">
                                 Join the Movement
                                 {% include 'components/svg' with {id: 'caret-right'} only %}
                             </a>
                         </div>
                         <div class="medium">
-                            <a href="#" class="btn home-illustration__cta">
+                            <a href="#" class="mo-btn home-illustration__cta">
                                 Learn More About Us
                                 {% include 'components/svg' with {id: 'caret-right'} only %}
                             </a>
                             <br>
-                            <a href="#" class="btn home-illustration__cta">
+                            <a href="#" class="mo-btn home-illustration__cta">
                                 Join the Movement
                                 {% include 'components/svg' with {id: 'caret-right'} only %}
                             </a>
                         </div>
                         <div class="dropdown dark">
                             <div class="dropdown-menu">
-                                <a href="#" class="btn home-illustration__cta">
+                                <a href="#" class="mo-btn home-illustration__cta">
                                     DROPDOWN
                                     {% include 'components/svg' with {id: 'caret-right'} only %}
                                 </a>
@@ -287,7 +287,7 @@
                     <div class="styleguide-media">
                         <div class="media">
                           <img src="/images/petition-card-media.jpg" alt="">
-                          <button class="btn media__play"></button>
+                          <button class="mo-btn media__play"></button>
                           <div class="media__meta">
                             Posted by MoveOn <br>
                             19,852 Views

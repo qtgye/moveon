@@ -1,33 +1,33 @@
-<header id="header" class="header">
-  <div class="container">
+<header id="main-header" class="header">
+  <div class="mo-container">
     <a href="/" class="logo">
       <img src="/images/logo.svg" alt="Move On Logo">
     </a>
 
-    <nav id="nav" class="nav">
-      <span class="nav__title">Menu</span>
-      <ul class="nav__primary">
-        <li class="nav__dropdown">
+    <div id="nav" class="mo-nav">
+      <span class="mo-nav__title">Menu</span>
+      <ul class="mo-nav__primary">
+        <li class="mo-nav__dropdown">
           <a href="/">
             Petitions
-            <button class="nav__primary__caret">
+            <button class="mo-nav__primary__caret">
               <svg><use xlink:href="#caret-down"/></svg>
             </button>
           </a>
-          <ul class="nav__primary__subnav">
+          <ul class="mo-nav__primary__subnav">
             <li><a href="/petition.html">Browse Petitions</a></li>
             <li><a href="/petition.html">Start A Petition</a></li>
             <li><a href="/petition.html">Manage Petitions</a></li>
           </ul>
         </li>
-        <li class="nav__dropdown">
+        <li class="mo-nav__dropdown">
           <a href="/">
             Campaigns
-            <button class="nav__primary__caret">
+            <button class="mo-nav__primary__caret">
               <svg><use xlink:href="#caret-down"/></svg>
             </button>
           </a>
-          <ul class="nav__primary__subnav">
+          <ul class="mo-nav__primary__subnav">
             <li><a href="#">Sublink 2</a></li>
             <li><a href="#">Sublink 2</a></li>
             <li><a href="#">Sublink 2</a></li>
@@ -36,24 +36,24 @@
         <li><a href="/">Events</a></li>
         <li><a href="/">About Us</a></li>
       </ul>
-      <div class="nav__secondary">
-        <ul class="nav__secondary__top">
+      <div class="mo-nav__secondary">
+        <ul class="mo-nav__secondary__top">
           <li><a href="#">News</a></li>
           <li><a href="#">Store</a></li>
         </ul>
-        <ul class="nav__secondary__bottom">
+        <ul class="mo-nav__secondary__bottom">
           <li><a href="#">Join</a></li>
           <li><a href="/donate-v3.html">Donate</a></li>
           <li><a href="/petition.html">{% include 'components/svg' with {id: 'document-add'} %}Start A Petition</a></li>
         </ul>
       </div>
 
-      <button class="nav__close">
+      <button class="mo-nav__close">
         {% include 'components/svg' with {id: 'close' } only %}
       </button>
-    </nav>
+    </div>
 
-    <button class="nav__toggle">
+    <button class="mo-nav__toggle">
       {% include 'components/svg' with {id: 'burger' } only %}
     </button>
   </div>

@@ -96,20 +96,6 @@
       color: $white,
       margin-top: 20px null 40px,
     ));
-
-    ul {
-
-    }
-
-    li {
-      position: relative;
-
-      &::before {
-        content: '•';
-        margin-right: .3em;
-        font-size: .7em;
-      }
-    }
   }
 
 

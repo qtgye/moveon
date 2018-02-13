@@ -92,12 +92,27 @@
                 {% endblock %}
             {% endembed %}
 
-            {# TYPOGRAPHY #}
+            {# TYPOGRAPHY: BODY #}
             {% embed 'styleguide/block' %}
                 {% block heading %}Typography: Body{% endblock %}
                 {% block content %}
                     <div class="styleguide-headings">
                         <p>Lorem ipsum dolor sit <em>amet</em>, <a href="#">consectetur</a> <strong>adipisicing elit</strong>. Repellendus tenetur pariatur, nam natus est rerum sint minus maiores voluptas, facilis optio fugit delectus eligendi officiis dolorum ratione, quo numquam deserunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil placeat repudiandae minima non tempore odio cumque sit magnam temporibus nam quasi dolores deserunt est, aliquid nesciunt, eius, beatae debitis dolore!</p>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+
+            {# TYPOGRAPHY: LIST #}
+            {% embed 'styleguide/block' %}
+                {% block heading %}Typography: List{% endblock %}
+                {% block content %}
+                    <div class="styleguide-list">
+                        <ul>
+                            <li>2018 Elections</li>
+                            <li>Tax Reform</li>
+                            <li>Immigration</li>
+                            <li>Healthcare</li>
+                        </ul>
                     </div>
                 {% endblock %}
             {% endembed %}

@@ -5,5 +5,12 @@ ol {
   li {
     display: block;
     list-style-type: none;
+    position: relative;
+
+    &::before {
+      content: '•';
+      margin-right: .3em;
+      font-size: .7em;
+    }
   }
 }

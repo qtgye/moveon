@@ -1,27 +1,31 @@
 .styleguide-cta {
 
+  .home-illustration__cta {
+    margin-top: 0 !important;
+  }
+
   .dark {
     background-color: $black;
-    padding: 0 0 30px 20px;
+    padding: 24px 0 30px 20px;
   }
 
   .medium {
     background-color: $azure;
-    padding: 0 0 30px 20px;
+    padding: 24px 0 30px 20px;
 
     a {
-      color: $black;
+      color: $black !important;
 
       &:hover {
-        color: $white;
+        color: $white !important;
 
         svg {
-          fill: $white;
+          fill: $white !important;
         }
       }
 
       svg {
-        fill: $black;
+        fill: $black !important;
       }
     }
   }

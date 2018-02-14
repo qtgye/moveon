@@ -25,6 +25,36 @@ body.styleguide {
       color: $white;
     }
   }
+
+  .styleguide-markup {
+    padding: 10px 15px;
+    line-height: 1.5;
+    position: relative;
+
+    &:before {
+      content: 'MARKUP:';
+      display: inline-block;
+      position: absolute;
+      top: -5px;
+      left: 30px;
+      background-color: $black;
+      padding: 0 5px;
+      color: $white;
+      overflow: visible;
+      font-size: 15px;
+      z-index: 5;
+    }
+
+    code {
+      display: block;
+      position: relative;
+      font-size: 12px;
+      overflow: visible;
+      padding: 25px 15px;
+      overflow: auto;
+      border: 2px dashed $gray;
+    }
+  }
 }
 
 @import "styleguide/header";

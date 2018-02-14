@@ -3,4 +3,7 @@
   <div class="styleguide-block__content">
     {% block content %}{% endblock %}
   </div>
+  {% if 'markup' in blocks %}
+    <pre class="styleguide-markup"><code>{{ block('markup')|escape }}</code></pre>
+  {% endif %}
 </section>

@@ -19,18 +19,37 @@
 
     &--azure {
       @include btn--azure;
+
+      &:hover {
+
+        svg {
+          fill: $white;
+        }
+      }
     }
 
     &--transparent {
       @include btn--transparent;
+
+      &:hover {
+        color: $white;
+      }
     }
 
     &--transparent-dark {
       @include btn--transparent-dark;
+
+      &:hover {
+        color: $white;
+      }
     }
 
     &--transparent-light {
       @include btn--transparent-light;
+
+      &:hover {
+        color: $white;
+      }
     }
   }
 

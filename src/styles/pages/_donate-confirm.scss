@@ -1,0 +1,16 @@
+.giraffe.donate-confirm-page {
+
+  #content {
+    @include breakpoint(lg) {
+      width: percentage(1180/1440);
+    }
+  }
+
+  .donate-form__subheading {
+    @include breakpoint(lg) {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+  }
+
+}

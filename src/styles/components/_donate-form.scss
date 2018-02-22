@@ -23,6 +23,8 @@ $bouncy-easing: cubic-bezier(.43,2.9,.64,.99);
     @include respond((
       font-size: 24px,
       line-height: 36px,
+      padding-left: null null 48px 0,
+      padding-right: null null 48px 0,
     ));
   }
 

@@ -1,4 +1,4 @@
-.donate-quickpay-v3 {
+.giraffe.donate-quickpay-v3 {
 
     .donate-form__subheading {
       @include font(roboto-bold);
@@ -7,6 +7,11 @@
     .donate-form__fields {
       display: block;
       border-bottom: 0;
+
+      .donate-quickpay-form {
+        margin-left: 0;
+        margin-right: 0;
+      }
 
       p {
         font-size: 16px;
